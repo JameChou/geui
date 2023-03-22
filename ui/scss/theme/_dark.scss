@@ -1,0 +1,18 @@
+@mixin dark-theme {
+
+  /* 背景 暗黑模式 */
+  --ui-bg-primary:    #000000;
+  --ui-bg-glass:      rgba(0, 0, 0, 0.62);
+  --ui-bg-glass-blur: blur(37rpx);
+  --ui-bg-op-regular: rgba(67, 118, 254, 0.38);
+
+  /* 文字 */
+  --ui-text-highlight: #FFFFFF;
+  --ui-text-regular:   #FFFFFF;
+  --ui-text-active:    #FFFFFF;
+  --ui-text-inactive:  rgba(255, 255, 255, 0.62);
+
+  /* 导航栏 bg*/
+  --ui-nav-shadow-bg: rgba(255, 255, 255, 0.1);
+  --ui-nav-box-shadow: 0rpx 3.8rpx 11.5rpx rgba(0, 0, 0, 0.2);;
+}

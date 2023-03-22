@@ -1,0 +1,9 @@
+.ui-page {
+  z-index: 1;
+  position: relative;
+
+  &-body {
+    min-height: 100vh;
+    z-index: 1;
+  }
+}

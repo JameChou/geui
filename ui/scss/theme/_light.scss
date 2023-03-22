@@ -1,0 +1,21 @@
+@mixin light-theme {
+
+  /* 背景 */
+  --ui-bg-primary:    #FFFFFF;
+  --ui-bg-glass:      rgba(255, 255, 255, 0.62);
+  --ui-bg-glass-blur: blur(37rpx);
+  --ui-bg-op-regular:    rgba(255, 255, 255, 0.2);
+
+  /* 文字 */
+  --ui-text-highlight: #4376FE;
+  --ui-text-regular:   #000000;
+  --ui-text-active:    #000000;
+  --ui-text-inactive:  rgba(255, 255, 255, 0.62);
+
+
+  /* 导航栏 bg */
+  --ui-nav-shadow-bg: #FFFFFF;
+  --ui-nav-box-shadow: 0rpx 3.8rpx 11.5rpx rgba(0, 0, 0, 0.2);
+
+
+}

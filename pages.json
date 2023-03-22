@@ -3,10 +3,15 @@
 		{
 			"path": "pages/index/index",
 			"style": {
-				"navigationBarTitleText": "uni-app"
+				"app-plus": {
+					"titleNView": false
+				}
 			}
 		}
 	],
+	"easycom": {
+		"ge-(.*)": "@/ui/components/ge-$1/ge-$1.vue"
+	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
 		"navigationBarTitleText": "uni-app",

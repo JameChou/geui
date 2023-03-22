@@ -1,0 +1,16 @@
+@import "theme/dark";
+@import "theme/light";
+@import "icons/font";
+@import "color";
+
+.theme-dark {
+  @include dark-theme;
+}
+
+.theme-light {
+  @include light-theme;
+}
+
+button::after {
+  border: none;
+}
