@@ -10,10 +10,11 @@
 </script>
 <style lang="scss">
 .ui-page {
-  background-color: var(--ui-bg-primary);
+  background-image: url("../../../static/wallpaper.jpeg");
 
   &-body {
     min-height: 100vh;
+    background-color: var(--ui-bg-glass);
     color: var(--ui-text-regular);
   }
 }
