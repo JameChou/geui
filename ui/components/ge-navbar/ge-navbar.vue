@@ -1,8 +1,7 @@
 <template>
-  <view class="ui-navbar shadow">
+  <view class="ui-navbar" :style="[{height: height + 'px'}]">
     <view class="op">
-      <text class="ph ph-caret-left"></text>
-      <text class="text">返回</text>
+      <text class="ph ph-arrow-left"></text>
     </view>
     <view class="content">
       测试一下标题
@@ -15,22 +14,30 @@
 </template>
 
 <script>
+export default {
+  data() {
+    return {
+      height: this.customBar
+    }
+  }
+}
 </script>
 
 <style lang="scss">
 .ui-navbar {
-  height: 92rpx;
   width: 100%;
   display: flex;
-  align-items: center;
+  align-items: flex-end;
+  position: fixed;
   background-color: var(--ui-bg-primary);
 
   .op {
     height: 100%;
     color: var(--ui-text-highlight);
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     margin-left: 0.3em;
+    padding-bottom: 20rpx;
 
     :first-child[class*="ph-"] {
       font-size: 38rpx;
@@ -43,10 +50,11 @@
 
   .content {
     display: flex;
-    align-items: center;
+    align-items: flex-end;
     justify-content: center;
     margin-left: calc(100% - 600rpx);
     color: var(--ui-text-regular);
+    padding-bottom: 20rpx;
   }
 
   &.shadow {
@@ -62,6 +70,7 @@
     display: flex;
     align-items: center;
     color: var(--ui-text-regular);
+    padding-bottom: 20rpx;
 
     :first-child {
       margin-right: 7rpx;

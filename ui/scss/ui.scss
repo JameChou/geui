@@ -1,7 +1,8 @@
 @import "theme/dark";
 @import "theme/light";
-@import "icons/font";
+@import "icons/phicons";
 @import "color";
+@import "font";
 
 .theme-dark {
   @include dark-theme;
@@ -9,6 +10,10 @@
 
 .theme-light {
   @include light-theme;
+}
+
+body {
+  font-family: 'ui-num',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
 
 button::after {
