@@ -17,7 +17,11 @@
 			tabs: {
 				type: Array,
 				default: []
-			}
+			},
+      theme: {
+        type: String,
+        default: 'light'
+      }
 		},
 		data() {
 			return {
@@ -29,10 +33,7 @@
 </script>
 <style lang="scss">
 	.ui-page {
-		background-image: url("../../../static/wallpaper.jpeg");
-		background-repeat: no-repeat;
-		background-size: 100vh 100vh;
-		background-attachment: fixed;
+    color: var(--ui-text-regular);
 
 		&-body {
 			min-height: 100vh;

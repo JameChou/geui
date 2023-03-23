@@ -2,7 +2,8 @@
 	<ge-page :nav="false" :tabs="tabs">
 		<view class="index-header" :style="[{height: customBar + 'px'}]">
 			<text class="ph ph-magnifying-glass"></text>
-			<ge-switchseg style="width: 400rpx; margin-left: 20rpx;"></ge-switchseg>
+			<ge-switchseg style="width: 400rpx; margin-left: 20rpx;" :datas="themeSegmentedController"
+      :tapHandler="themeTapHandler"></ge-switchseg>
 		</view>
 
 		<view class="index-title header-48">
@@ -122,6 +123,9 @@
 						'notification': false
 					}
 				],
+        themeSegmentedController: [
+          { "name": 'light' }, { "name": 'dark' }
+        ],
 				customBar: this.customBar
 			};
 		},
@@ -129,7 +133,9 @@
 
 		},
 		methods: {
-
+      themeTapHandler(item, index) {
+        this.theme = index === 0 ? 'light' : 'dark';
+      }
 		}
 	}
 </script>
@@ -150,7 +156,7 @@
 		margin-left: 20rpx;
 		margin-top: 10rpx;
 		backdrop-filter: blur(10px);
-		color: #000000;
+		color: var(--ui-text-regular);
 
 		.sub {
 			color: #00B670;

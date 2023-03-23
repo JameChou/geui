@@ -1,21 +1,36 @@
 <template>
-  <view class="ui-switch-segment">
-    <view class="item" :class="activeIndex === 1 ? 'active' : ''" @tap="chooseTab" data-index="1">
-      Light
-    </view>
-    <view class="item" :class="activeIndex === 2 ? 'active' : ''" @tap="chooseTab" data-index="2">
-      Dark
+  <view class="ui-switch-segment" >
+    <view class="item" v-for="(item, index) in datas" :class="activeIndex === index ? 'active' : ''" @tap="chooseTab(item, index);">
+      {{item.name}}
     </view>
   </view>
 </template>
 
 <script>
 export default {
+  props: {
+
+    /*
+       数据必须有一个name,其他属性可以按需
+     */
+    datas: {
+      type: Array,
+      default: []
+    },
+    tapHandler: {
+      type: Function,
+      default: () => {
+        return Function;
+      }
+    }
+  },
   data() {
-    return {activeIndex: 1};
+    return {activeIndex: 0};
   },
   methods: {
-    chooseTab(event) {
+    chooseTab(item, index) {
+      this.activeIndex = index;
+      this.tapHandler(item, index);
     }
   }
 

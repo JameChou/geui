@@ -6,10 +6,15 @@
 
 .theme-dark {
   @include dark-theme;
+  background: #000000;
 }
 
 .theme-light {
   @include light-theme;
+  background-image: url("https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/fe83938a-0db6-4d15-a0db-f86376ab9680.jpeg");
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-attachment: fixed;
 }
 
 body {
