@@ -22,10 +22,10 @@
 					<view class="content">Flex<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/color">
-					<view class="ph ph-palette header-20 title"><text>配色</text></view>
+					<view class="ph ph-palette header-20 title"><text>配色、阴影</text></view>
 					<view class="content">Colors<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/icon">
 					<view class="ph ph-phosphor-logo header-20 title"><text>图标</text></view>
 					<view class="content">Icons<text class="ph ph-caret-right"></text></view>
 				</view>

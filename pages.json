@@ -23,6 +23,14 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/basic/icon",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"easycom": {

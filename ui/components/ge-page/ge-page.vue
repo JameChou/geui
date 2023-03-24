@@ -32,6 +32,10 @@
       noTabs: {
         type: Boolean,
         default: false
+      },
+      navHeight: {
+        type: Number,
+        default: 0
       }
 		},
 		data() {
@@ -44,7 +48,10 @@
     created() {
       let _this = this;
       if (this.noTabs) {
-        this.statusBarHeight = 0;
+        this.statusBarHeight = 20;
+      }
+      if (this.navHeight > 0) {
+        this.customBar = this.navHeight;
       }
       uni.$on('$onScrollTop' + this.$root._uid, (e) => {
         _this.pageScrollTop = e;
