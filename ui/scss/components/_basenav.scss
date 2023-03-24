@@ -1,0 +1,23 @@
+.ui-header-content {
+  display: flex;
+  align-items: flex-end;
+  z-index: 1024;
+  height: 100%;
+
+  text[class*="ph-"] {
+    padding-bottom: 20rpx;
+    font-size: 40rpx;
+    margin-left: 20rpx;
+    color: var(--ui-text-highlight);
+    width: 40rpx;
+  }
+
+  .title {
+    padding-bottom: 20rpx;
+    font-size: 30rpx;
+    align-items: center;
+    text-align: center;
+    width: 100%;
+    padding-right: 40rpx;
+  }
+}

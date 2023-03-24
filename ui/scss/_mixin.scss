@@ -1,0 +1,17 @@
+
+@mixin flex {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+@mixin flex-bar {
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+@mixin flex-center {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}

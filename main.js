@@ -1,4 +1,5 @@
-import App from './App'
+import App from './App';
+import ui from './ui';
 
 // #ifndef VUE3
 import Vue from 'vue'

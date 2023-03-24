@@ -7,6 +7,22 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/basic/flex",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/basic/color",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"easycom": {
