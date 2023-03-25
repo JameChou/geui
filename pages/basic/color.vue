@@ -1,236 +1,248 @@
 <template>
-  <ge-page :nav="true" noTabs>
-    <template v-slot:nav>
-      <view class="ui-header-content">
-        <text class="ph ph-arrow-left" @tap="naviBack"></text>
-        <view class="title">
-          配色
-        </view>
-      </view>
-    </template>
+	<ge-page :nav="true" noTabs>
+		<ge-nav hasIcon :title="'配色'">
+		</ge-nav>
 
-    <view class="margin-left margin-top" style="color: rgba(0, 0, 0, 0.5); margin-bottom: -40rpx;">
-      <view class="ui-flex color-section" style="background: transparent;">
-        <view class="pad ui-flex align-center justify-center">100%</view>
-        <view class="pad ui-flex align-center justify-center">60%</view>
-        <view class="pad ui-flex align-center justify-center">50%</view>
-        <view class="pad ui-flex align-center justify-center">40%</view>
-        <view class="pad ui-flex align-center justify-center">20%</view>
-        <view class="pad ui-flex align-center justify-center">10%</view>
-      </view>
-    </view>
+		<view class="margin-left margin-top" style="color: rgba(0, 0, 0, 0.5); margin-bottom: -40rpx;">
+			<view class="ui-flex color-section" style="background: transparent;">
+				<view class="pad ui-flex align-center justify-center">100%</view>
+				<view class="pad ui-flex align-center justify-center">60%</view>
+				<view class="pad ui-flex align-center justify-center">50%</view>
+				<view class="pad ui-flex align-center justify-center">40%</view>
+				<view class="pad ui-flex align-center justify-center">20%</view>
+				<view class="pad ui-flex align-center justify-center">10%</view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">White #000000</text>
-      <view class="ui-flex color-section" style="background: #000000; border: solid 1.8rpx black;">
-        <view v-for="(item, index) in 6" class="pad" :class="'white-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">White #000000</text>
+			<view class="ui-flex color-section" style="background: #000000; border: solid 1.8rpx black;">
+				<view v-for="(item, index) in 6" class="pad" :class="'white-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Black #FFFFFF</text>
-      <view class="ui-flex color-section">
-        <view v-for="(item, index) in 6" class="pad" :class="'black-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Black #FFFFFF</text>
+			<view class="ui-flex color-section">
+				<view v-for="(item, index) in 6" class="pad" :class="'black-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Blue #4376FE</text>
-      <view class="ui-flex color-section">
-        <view v-for="(item, index) in 6" class="pad" :class="'blue-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Blue #4376FE</text>
+			<view class="ui-flex color-section">
+				<view v-for="(item, index) in 6" class="pad" :class="'blue-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Green #00B670</text>
-      <view class="ui-flex color-section">
-        <view v-for="(item, index) in 6" class="pad" :class="'green-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Green #00B670</text>
+			<view class="ui-flex color-section">
+				<view v-for="(item, index) in 6" class="pad" :class="'green-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Orange #FE8E0B</text>
-      <view class="ui-flex color-section">
-        <view v-for="(item, index) in 6" class="pad" :class="'orange-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Orange #FE8E0B</text>
+			<view class="ui-flex color-section">
+				<view v-for="(item, index) in 6" class="pad" :class="'orange-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Red #FE8E0B</text>
-      <view class="ui-flex color-section">
-        <view v-for="(item, index) in 6" class="pad" :class="'red-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Red #FE8E0B</text>
+			<view class="ui-flex color-section">
+				<view v-for="(item, index) in 6" class="pad" :class="'red-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Light Background</text>
-      <view class="ui-flex color-light-section justify-between align-center">
-        <view v-for="(item, index) in 6" class="pad" :class="'light-bg-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Light Background</text>
+			<view class="ui-flex color-light-section justify-between align-center">
+				<view v-for="(item, index) in 6" class="pad" :class="'light-bg-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Dark Background</text>
-      <view class="ui-flex color-light-section justify-between align-center" style="background-color: #000000;">
-        <view v-for="(item, index) in 6" class="pad" :class="'dark-bg-' + index"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Dark Background</text>
+			<view class="ui-flex color-light-section justify-between align-center" style="background-color: #000000;">
+				<view v-for="(item, index) in 6" class="pad" :class="'dark-bg-' + index"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Black&Blue Shadow</text>
-      <view class="ui-flex color-shadow-section justify-between align-center" style="background-color: #FFFFFF;">
-        <view class="pad black-shadow-sm"></view>
-        <view class="pad black-shadow-reg"></view>
-        <view class="pad black-shadow-lg"></view>
-        <view class="pad blue-shadow-sm"></view>
-        <view class="pad blue-shadow-reg"></view>
-        <view class="pad blue-shadow-lg"></view>
-      </view>
-    </view>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Black&Blue Shadow</text>
+			<view class="ui-flex color-shadow-section justify-between align-center" style="background-color: #FFFFFF;">
+				<view class="pad black-shadow-sm"></view>
+				<view class="pad black-shadow-reg"></view>
+				<view class="pad black-shadow-lg"></view>
+				<view class="pad blue-shadow-sm"></view>
+				<view class="pad blue-shadow-reg"></view>
+				<view class="pad blue-shadow-lg"></view>
+			</view>
+		</view>
 
-    <view class="margin-left margin-top">
-      <text class="text-body-14 color-section-title">Green&Orange Shadow</text>
-      <view class="ui-flex color-shadow-section justify-between align-center" style="background-color: #FFFFFF;">
-        <view class="pad green-shadow-sm"></view>
-        <view class="pad green-shadow-reg"></view>
-        <view class="pad green-shadow-lg"></view>
-        <view class="pad orange-shadow-sm"></view>
-        <view class="pad orange-shadow-reg"></view>
-        <view class="pad orange-shadow-lg"></view>
-      </view>
-    </view>
-  </ge-page>
+		<view class="margin-left margin-top">
+			<text class="text-body-14 color-section-title">Green&Orange Shadow</text>
+			<view class="ui-flex color-shadow-section justify-between align-center" style="background-color: #FFFFFF;">
+				<view class="pad green-shadow-sm"></view>
+				<view class="pad green-shadow-reg"></view>
+				<view class="pad green-shadow-lg"></view>
+				<view class="pad orange-shadow-sm"></view>
+				<view class="pad orange-shadow-reg"></view>
+				<view class="pad orange-shadow-lg"></view>
+			</view>
+		</view>
+	</ge-page>
 </template>
 <script>
-export default {}
+	export default {}
 </script>
 <style lang="scss">
-@import "../../ui/scss/color";
-.color-section-title {
-  color: rgba(0, 0, 0, 0.5);
-}
+	@import "../../ui/scss/color";
 
-.color-section {
-  width: 710rpx;
-  height: 119rpx;
-  border-radius: 40rpx;
-  background: #FFFFFF;
-  :first-child {
-    border-radius: 40rpx 0px 0px 40rpx;
-  }
+	.color-section-title {
+		color: rgba(0, 0, 0, 0.5);
+	}
 
-  :last-child {
-    border-radius: 0px 40rpx 40rpx 0px;
-  }
+	.color-section {
+		width: 710rpx;
+		height: 119rpx;
+		border-radius: 40rpx;
+		background: #FFFFFF;
 
-  .pad {
-    width: 118.3rpx;
-    height: 118.3rpx;
-    background: transparent;
-  }
-}
+		:first-child {
+			border-radius: 40rpx 0px 0px 40rpx;
+		}
 
-.color-light-section {
-  width: 710rpx;
-  height: 119rpx;
-  border-radius: 40rpx;
-  background: #FFFFFF;
-  .pad {
-    width: 110rpx;
-    height: 110rpx;
-    background: transparent;
-    border-radius: 40rpx;
-  }
-}
+		:last-child {
+			border-radius: 0px 40rpx 40rpx 0px;
+		}
 
-.color-shadow-section {
-  width: 710rpx;
-  height: 119rpx;
-  border-radius: 40rpx;
-  background: #FFFFFF;
-  .pad {
-    width: 60rpx;
-    height: 60rpx;
-    background: #FFFFFF;
-    border-radius: 40rpx;
-  }
-}
+		.pad {
+			width: 118.3rpx;
+			height: 118.3rpx;
+			background: transparent;
+		}
+	}
 
-.white {
-  @each $class, $value in (0: $ui-color-white, 1: $ui-color-white-60, 2: $ui-color-white-50, 3: $ui-color-white-40, 4: $ui-color-white-20, 5: $ui-color-white-10) {
-    &-#{$class} {
-      background-color: $value !important;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
+	.color-light-section {
+		width: 710rpx;
+		height: 119rpx;
+		border-radius: 40rpx;
+		background: #FFFFFF;
 
-.black {
-  @each $class, $value in (0: $ui-color-black, 1: $ui-color-black-60, 2: $ui-color-black-50, 3: $ui-color-black-40, 4: $ui-color-black-20, 5: $ui-color-black-10) {
-    &-#{$class} {
-      background-color: $value !important;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
+		.pad {
+			width: 110rpx;
+			height: 110rpx;
+			background: transparent;
+			border-radius: 40rpx;
+		}
+	}
 
-.blue {
-  @each $class, $value in (0: $ui-color-blue, 1: $ui-color-blue-60, 2: $ui-color-blue-50, 3: $ui-color-blue-40, 4: $ui-color-blue-20, 5: $ui-color-blue-10) {
-    &-#{$class} {
-      background-color: $value !important;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
+	.color-shadow-section {
+		width: 710rpx;
+		height: 119rpx;
+		border-radius: 40rpx;
+		background: #FFFFFF;
 
-.green {
-  @each $class, $value in (0: $ui-color-green, 1: $ui-color-green-60, 2: $ui-color-green-50, 3: $ui-color-green-40, 4: $ui-color-green-20, 5: $ui-color-green-10) {
-    &-#{$class} {
-      background-color: $value !important;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
+		.pad {
+			width: 60rpx;
+			height: 60rpx;
+			background: #FFFFFF;
+			border-radius: 40rpx;
+		}
+	}
 
-.orange {
-  @each $class, $value in (0: $ui-color-orange, 1: $ui-color-orange-60, 2: $ui-color-orange-50, 3: $ui-color-orange-40, 4: $ui-color-orange-20, 5: $ui-color-orange-10) {
-    &-#{$class} {
-      background-color: $value !important;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
+	.white {
 
-.red {
-  @each $class, $value in (0: $ui-color-red, 1: $ui-color-red-60, 2: $ui-color-red-50, 3: $ui-color-red-40, 4: $ui-color-red-20, 5: $ui-color-red-10) {
-    &-#{$class} {
-      background-color: $value !important;
-      height: 100%;
-      width: 100%;
-    }
-  }
-}
+		@each $class,
+		$value in (0: $ui-color-white, 1: $ui-color-white-60, 2: $ui-color-white-50, 3: $ui-color-white-40, 4: $ui-color-white-20, 5: $ui-color-white-10) {
+			&-#{$class} {
+				background-color: $value !important;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
 
-.light-bg {
-  @each $class, $value in (0: $ui-light-bg-color-gray, 1: $ui-light-bg-color-yellow, 2: $ui-light-bg-color-blue, 3: $ui-light-bg-color-green, 4: $ui-light-bg-color-pink, 5: $ui-light-bg-color-orange) {
-    &-#{$class} {
-      background-color: $value !important;
-    }
-  }
-}
+	.black {
 
-.dark-bg {
-  @each $class, $value in (0: $ui-dark-bg-color-gray, 1: $ui-dark-bg-color-yellow, 2: $ui-dark-bg-color-blue, 3: $ui-dark-bg-color-green, 4: $ui-dark-bg-color-pink, 5: $ui-dark-bg-color-orange) {
-    &-#{$class} {
-      background-color: $value !important;
-    }
-  }
-}
+		@each $class,
+		$value in (0: $ui-color-black, 1: $ui-color-black-60, 2: $ui-color-black-50, 3: $ui-color-black-40, 4: $ui-color-black-20, 5: $ui-color-black-10) {
+			&-#{$class} {
+				background-color: $value !important;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
 
+	.blue {
 
+		@each $class,
+		$value in (0: $ui-color-blue, 1: $ui-color-blue-60, 2: $ui-color-blue-50, 3: $ui-color-blue-40, 4: $ui-color-blue-20, 5: $ui-color-blue-10) {
+			&-#{$class} {
+				background-color: $value !important;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.green {
+
+		@each $class,
+		$value in (0: $ui-color-green, 1: $ui-color-green-60, 2: $ui-color-green-50, 3: $ui-color-green-40, 4: $ui-color-green-20, 5: $ui-color-green-10) {
+			&-#{$class} {
+				background-color: $value !important;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.orange {
+
+		@each $class,
+		$value in (0: $ui-color-orange, 1: $ui-color-orange-60, 2: $ui-color-orange-50, 3: $ui-color-orange-40, 4: $ui-color-orange-20, 5: $ui-color-orange-10) {
+			&-#{$class} {
+				background-color: $value !important;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.red {
+
+		@each $class,
+		$value in (0: $ui-color-red, 1: $ui-color-red-60, 2: $ui-color-red-50, 3: $ui-color-red-40, 4: $ui-color-red-20, 5: $ui-color-red-10) {
+			&-#{$class} {
+				background-color: $value !important;
+				height: 100%;
+				width: 100%;
+			}
+		}
+	}
+
+	.light-bg {
+
+		@each $class,
+		$value in (0: $ui-light-bg-color-gray, 1: $ui-light-bg-color-yellow, 2: $ui-light-bg-color-blue, 3: $ui-light-bg-color-green, 4: $ui-light-bg-color-pink, 5: $ui-light-bg-color-orange) {
+			&-#{$class} {
+				background-color: $value !important;
+			}
+		}
+	}
+
+	.dark-bg {
+
+		@each $class,
+		$value in (0: $ui-dark-bg-color-gray, 1: $ui-dark-bg-color-yellow, 2: $ui-dark-bg-color-blue, 3: $ui-dark-bg-color-green, 4: $ui-dark-bg-color-pink, 5: $ui-dark-bg-color-orange) {
+			&-#{$class} {
+				background-color: $value !important;
+			}
+		}
+	}
 </style>

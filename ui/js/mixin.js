@@ -1,73 +1,72 @@
 import Vue from 'vue';
 const mixin = {
-    data() {
-        return {
-            _uid: this._uid,
-            pageScrollTop: 0
-        };
-    },
+	data() {
+		return {
+			_uid: this._uid,
+			pageScrollTop: 0
+		};
+	},
 
-    created() {
-        if (this._uid !== this.$root._uid) {
-            this.$onShow();
-        }
-    },
+	created() {
+		if (this._uid !== this.$root._uid) {
+			this.$onShow();
+		}
+	},
 
-    onLoad() {},
+	onLoad() {},
 
-    onShow() {
-        uni.$emit('$onShow' + this._uid);
-    },
+	onShow() {
+		uni.$emit('$onShow' + this._uid);
+	},
 
-    onReachBottom() {
-        uni.$emit('$onReachBottom' + this._uid);
-    },
+	onReachBottom() {
+		uni.$emit('$onReachBottom' + this._uid);
+	},
 
-    mounted() {
-        uni.$on('$onShow' + this.$root._uid, () => {
-            this.$onShow();
-        });
-        uni.$on('$onHide' + this.$root._uid, () => {
-            this.$onHide();
-        });
-        uni.$on('$onReachBottom' + this.$root._uid, () => {
-            this.$onReachBottom();
-        });
-    },
+	mounted() {
+		uni.$on('$onShow' + this.$root._uid, () => {
+			this.$onShow();
+		});
+		uni.$on('$onHide' + this.$root._uid, () => {
+			this.$onHide();
+		});
+		uni.$on('$onReachBottom' + this.$root._uid, () => {
+			this.$onReachBottom();
+		});
+	},
 
-    onHide() {
-        uni.$off('$onShow' + this._uid);
-        uni.$off('$onHide' + this._uid);
-    },
+	onHide() {
+		uni.$off('$onShow' + this._uid);
+		uni.$off('$onHide' + this._uid);
+	},
 
-    onPageScroll(e) {
-        this.pageScrollTop = e.scrollTop;
-        uni.$emit('$onScrollTop' + this._uid, e.scrollTop);
-        if (e.scrollTop < 0) {
-            return false;
-        }
-    },
+	onPageScroll(e) {
+		this.pageScrollTop = e.scrollTop;
+		uni.$emit('$onScrollTop' + this._uid, e.scrollTop);
+		if (e.scrollTop < 0) {
+			return false;
+		}
+	},
 
-    methods: {
-        $onShow() {
-        },
+	methods: {
+		$onShow() {},
 
-        $onHide() {
-        },
+		$onHide() {},
 
-        $onReachBottom() {
-        },
+		$onReachBottom() {},
 
-        naviBack() {
-            if (getCurrentPages().length < 2 && 'undefined' !== typeof __wxConfig) {
-                let url = '/' + __wxConfig.pages[0]
-                return uni.redirectTo({url})
-            }
-            uni.navigateBack({
-                delta: 1
-            });
-        }
-    }
+		naviBack() {
+			if (getCurrentPages().length < 2 && 'undefined' !== typeof __wxConfig) {
+				let url = '/' + __wxConfig.pages[0]
+				return uni.redirectTo({
+					url
+				})
+			}
+			uni.navigateBack({
+				delta: 1
+			});
+		}
+	}
 
 }
 

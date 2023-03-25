@@ -3,9 +3,9 @@
 		<template v-slot:nav>
 			<view class="ui-header-content">
 				<text class="ph ph-arrow-left" @tap="naviBack"></text>
-        <view class="title">
-          弹性布局
-        </view>
+				<view class="title">
+					弹性布局
+				</view>
 			</view>
 		</template>
 	</ge-page>

@@ -1,13 +1,11 @@
 <template>
-	<ge-page :nav="true" :tabs="tabs">
-
-    <template v-slot:nav>
-      <view class="index-header-content">
-        <text class="ph ph-magnifying-glass"></text>
-        <ge-switchseg style="width: 400rpx; margin-left: 20rpx;" :datas="themeSegmentedController"
-                      :tapHandler="themeTapHandler"></ge-switchseg>
-      </view>
-    </template>
+	<ge-page :tabs="tabs">
+		<ge-nav hasIcon :icon="'magnifying-glass'" :title="'主页'" customTitle>
+			<template v-slot:replaceTitle>
+				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController"
+					:tapHandler="themeTapHandler"></ge-switchseg>
+			</template>
+		</ge-nav>
 
 		<view class="index-title header-48">
 			GE-Ui
@@ -134,19 +132,18 @@
 				customBar: this.customBar
 			};
 		},
-		onLoad() {
-		},
+		onLoad() {},
 		methods: {
 			themeTapHandler(item, index) {
 				this.theme = index === 0 ? 'light' : 'dark';
 			},
 
-      tapListItem(event) {
-        let url = event.currentTarget.dataset.url;
-        uni.navigateTo({
-          url: url
-        });
-      }
+			tapListItem(event) {
+				let url = event.currentTarget.dataset.url;
+				uni.navigateTo({
+					url: url
+				});
+			}
 		}
 	}
 </script>
@@ -210,7 +207,7 @@
 		display: flex;
 		align-items: flex-end;
 		z-index: 1024;
-    height: 100%;
+		height: 100%;
 
 		text[class*="ph-"] {
 			padding-bottom: 20rpx;
