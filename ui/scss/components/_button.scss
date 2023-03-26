@@ -1,0 +1,130 @@
+.ui-button {
+  position: relative;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  backdrop-filter: blur(10px);
+  border-radius: 15.4rpx;
+  text-align: center;
+  text-decoration: none;
+  width: 163.5rpx;
+  height: 76.9rpx;
+  font-style: normal;
+  font-weight: 600;
+  font-size: 26.9rpx;
+  background: var(--ui-button-primary);
+  display: flex;
+
+  &.primary {
+    background: var(--ui-button-primary);
+    &.shadow {
+      box-shadow: var(--ui-button-primary-shadow);
+    }
+    color: var(--ui-button-primary-text);
+    border: var(--ui-button-primary-border);
+  }
+
+  &.blue {
+    background: var(--ui-button-blue);
+    &.shadow {
+      box-shadow: var(--ui-button-blue-shadow);
+    }
+    color: var(--ui-button-blue-text);
+    border: none;
+  }
+
+  &.gray {
+    background: var(--ui-button-gray);
+    &.shadow {
+      box-shadow: var(--ui-button-gray-shadow);
+    }
+    color: var(--ui-button-gray-text);
+    border: none;
+  }
+
+  &.lg {
+    width: 198.1rpx;
+    height: 92.3rpx;
+    font-style: normal;
+    font-weight: 600;
+    font-size: 30.8rpx;
+    border-radius: 19.2rpx;
+  }
+
+  &.sm {
+    width: 123.8rpx;
+    height: 46.2rpx;
+    font-style: normal;
+    font-weight: 400;
+    font-size: 23.1rpx;
+    border-radius: 7.7rpx;
+  }
+
+  &.round {
+    border-radius: 999px;
+  }
+
+  .icon {
+    padding: 4rpx;
+  }
+
+  &.round {
+    border-radius: 999px;
+  }
+}
+
+.ui-icon-button {
+  position: relative;
+  border: none;
+  align-items: center;
+  justify-content: center;
+  border-radius: 15.4rpx;
+  text-align: center;
+  text-decoration: none;
+  display: flex;
+  background: var(--ui-button-primary);
+  width: 92.3rpx;
+  height: 92.3rpx;
+  font-size: 40rpx;
+
+  &.primary {
+    background: var(--ui-button-primary);
+    &.shadow {
+      box-shadow: var(--ui-button-primary);
+    }
+    color: var(--ui-button-primary-text);
+    border: var(--ui-button-primary-border);
+  }
+
+  &.blue {
+    background: var(--ui-button-blue);
+    &.shadow {
+      box-shadow: var(--ui-button-blue-shadow);
+    }
+    color: var(--ui-button-blue-text);
+    border: none;
+  }
+
+  &.gray {
+    background: var(--ui-button-gray);
+    &.shadow {
+      box-shadow: var(--ui-button-gray-shadow);
+    }
+    color: var(--ui-button-gray-text);
+    border: none;
+  }
+
+  &.lg {
+    width: 107.7rpx;
+    height: 107.7rpx;
+  }
+
+  &.sm {
+    width: 76.9rpx;
+    height: 76.9rpx;
+  }
+
+  &.round {
+    border-radius: 999rpx;
+  }
+}

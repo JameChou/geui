@@ -21,4 +21,18 @@
   --ui-tabbar-bg-primary: rgba(255, 255, 255, 0.618);
   --ui-tabbar-active-color: #4376FE;
 
+  /* 按钮 */
+  --ui-button-blue: #4376FE;;
+  --ui-button-gray: rgba(0, 0, 0, 0.1);
+  --ui-button-primary: #FFFFFF;
+
+  --ui-button-blue-text: #FFFFFF;
+  --ui-button-gray-text: #000000;
+  --ui-button-primary-text: #000000;
+
+  --ui-button-blue-shadow: 0px 3.85rpx 11.5rpx rgba(67, 118, 254, 0.3);
+  --ui-button-gray-shadow: none;
+  --ui-button-primary-shadow: 0px 3.85rpx 11.5rpx rgba(0, 0, 0, 0.2);
+  --ui-button-primary-border: 1.9rpx solid rgba(0, 0, 0, 0.1);
+
 }

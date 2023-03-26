@@ -1,5 +1,5 @@
 <template>
-	<view class="ui-page theme-light">
+	<view class="ui-page theme-dark">
 		<view class="ui-page-body" :style="[{'padding-bottom': paddingBottomHeight + 'px'}]">
 			<slot></slot>
 		</view>

@@ -31,7 +31,7 @@
 					<view class="ph ph-text-aa header-20 title"><text>文本</text></view>
 					<view class="content">Fonts<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/button">
 					<view class="ph ph-radio-button header-20 title"><text>按钮</text></view>
 					<view class="content">Buttons<text class="ph ph-caret-right"></text></view>
 				</view>

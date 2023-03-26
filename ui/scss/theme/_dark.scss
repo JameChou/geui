@@ -1,7 +1,7 @@
 @mixin dark-theme {
 
   /* 背景 暗黑模式 */
-  --ui-bg-primary:    #000000;
+  --ui-bg-primary:   rgba(0, 0, 0, 0.5);
   --ui-bg-glass:      rgba(0, 0, 0, 0.62);
   --ui-bg-glass-blur: blur(37rpx);
   --ui-bg-op-regular: rgba(67, 118, 254, 0.38);
@@ -20,4 +20,17 @@
   --ui-tabbar-bg-primary: rgba(0, 0, 0, 0.618);
   --ui-tabbar-active-color: #00B670;
 
+  /* 按钮 */
+  --ui-button-blue: rgba(67, 118, 254, 0.618);
+  --ui-button-gray: rgba(255, 255, 255, 0.2);
+  --ui-button-primary: #000000;
+
+  --ui-button-blue-text: #FFFFFF;
+  --ui-button-gray-text: #FFFFFF;
+  --ui-button-primary-text: #FFFFFF;
+
+  --ui-button-blue-shadow: inset 0px 3.85rpx 11.5rpx rgba(255, 255, 255, 0.1);
+  --ui-button-gray-shadow: none;
+  --ui-button-primary-shadow: none;
+  --ui-button-primary-border: 3.8rpx solid rgba(255, 255, 255, 0.2);
 }
