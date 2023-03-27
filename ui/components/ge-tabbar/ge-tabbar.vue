@@ -1,6 +1,6 @@
 <template>
 	<view class="ui-tab-bottom">
-		<view class="ui-tabbar" :style="[{height: statusBarHeight + 'px'}]">
+		<view class="ui-tabbar">
 			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in data" :key="index"
 				:class="activeIndex === index ? 'active' : ''">
 				<text class="ph" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
@@ -30,8 +30,7 @@
 		},
 		data() {
 			return {
-				activeIndex: 0,
-				statusBarHeight: this.statusBar
+				activeIndex: 0
 			}
 		},
 		methods: {
@@ -56,6 +55,7 @@
 		position: fixed;
 		width: 100%;
 		bottom: 0;
+    z-index: 9999;
 	}
 
 	.ui-tabbar {

@@ -112,6 +112,7 @@
     }
     color: var(--ui-button-gray-text);
     border: none;
+    backdrop-filter: blur(36.7rpx);
   }
 
   &.lg {

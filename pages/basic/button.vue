@@ -63,12 +63,14 @@ export default {
     letter-spacing: 0.15em;
     text-transform: uppercase;
     color: rgba(0, 0, 0, 0.5);
-    border-bottom: solid 1.92rpx rgba(0, 0, 0, 0.1);
     padding-bottom: 34.6rpx;
     padding-left: 20rpx;
 
     &.compact {
       padding-bottom: 10rpx;
+    }
+    &.bottom-solid {
+      border-bottom: solid 1.92rpx rgba(0, 0, 0, 0.1);
     }
   }
 

@@ -39,6 +39,14 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/component/card",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"easycom": {

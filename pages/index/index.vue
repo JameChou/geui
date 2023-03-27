@@ -69,10 +69,43 @@
 					<view class="ph ph-browsers header-20 title"><text>弹出</text></view>
 					<view class="content">Popover<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/card">
 					<view class="ph ph-credit-card header-20 title"><text>卡片</text></view>
 					<view class="content">Cards<text class="ph ph-caret-right"></text></view>
 				</view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product1">
+          <view class="ph ph-credit-card header-20 title"><text>产品列表-1</text></view>
+          <view class="content">Product<text class="ph ph-caret-right"></text></view>
+        </view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product2">
+          <view class="ph ph-credit-card header-20 title"><text>产品列表-2</text></view>
+          <view class="content">Product<text class="ph ph-caret-right"></text></view>
+        </view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/waterfall">
+          <view class="ph ph-credit-card header-20 title"><text>瀑布流</text></view>
+          <view class="content">Waterfall<text class="ph ph-caret-right"></text></view>
+        </view>
+
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/interests">
+          <view class="ph ph-credit-card header-20 title"><text>喜好</text></view>
+          <view class="content">Interests<text class="ph ph-caret-right"></text></view>
+        </view>
+
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/preview">
+          <view class="ph ph-credit-card header-20 title"><text>预览表单</text></view>
+          <view class="content">Preview<text class="ph ph-caret-right"></text></view>
+        </view>
+
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/dashboard">
+          <view class="ph ph-credit-card header-20 title"><text>控制台</text></view>
+          <view class="content">Dashboard<text class="ph ph-caret-right"></text></view>
+        </view>
+
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/data-grid">
+          <view class="ph ph-credit-card header-20 title"><text>数据列表</text></view>
+          <view class="content">Datagrid<text class="ph ph-caret-right"></text></view>
+        </view>
+
 				<view class="section-list-item">
 					<view class="ph ph-sliders-horizontal header-20 title"><text>滑动</text></view>
 					<view class="content">Slides<text class="ph ph-caret-right"></text></view>
