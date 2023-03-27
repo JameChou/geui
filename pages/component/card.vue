@@ -172,7 +172,7 @@ export default {
       background: rgba(255, 255, 255, 0.5);
       backdrop-filter: blur(36.7rpx);
       width: 688rpx;
-      height: 99px;
+      height: 215.4rpx;
       border-radius: 0px 0px 19.2rpx 19.2rpx;
     }
 

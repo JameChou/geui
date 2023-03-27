@@ -47,6 +47,14 @@
 					"titleNView": false
 				}
 			}
+		},
+		{
+			"path": "pages/component/product1",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
 		}
 	],
 	"easycom": {

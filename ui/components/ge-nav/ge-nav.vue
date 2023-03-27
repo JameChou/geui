@@ -79,7 +79,6 @@
 				fixContent2Top: this.customBar,
 				opacity: 0,
 				custom: this.custom,
-				pageScrollTop: 0
 			}
 		},
 		created() {
@@ -96,15 +95,29 @@
 			let _this = this;
 			if (this.isOpacity) {
 				uni.$on('$onScrollTop' + this.$root._uid, (e) => {
-					_this.pageScrollTop = e;
-					_this.changeOpacity();
+          // 改变导航栏渐变颜色
+          if(e > 0){
+            if (e > _this.customBar) {
+              _this.opacity = 1;
+            } else if (e < _this.customBar / 2) {
+              _this.opacity = 0.3;
+            } else if (e > _this.customBar / 2 && e < _this.customBar) {
+              _this.opacity = 0.7;
+            } else {
+              _this.opacity = 0;
+            }
+          } else {
+            _this.opacity = 0;
+          }
 				});
 			}
 		},
+
+    destroyed() {
+      uni.$off('$onScrollTop' + this.$root._uid);
+    },
+
 		methods: {
-			changeOpacity() {
-				this.opacity = this.pageScrollTop > this.customBar ? 1 : this.pageScrollTop * 0.01;
-			}
 		}
 	}
 </script>
