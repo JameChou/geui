@@ -9,7 +9,7 @@
 			}
 		},
 		{
-			"path": "pages/basic/flex",
+			"path": "pages/basic/layout",
 			"style": {
 				"app-plus": {
 					"titleNView": false

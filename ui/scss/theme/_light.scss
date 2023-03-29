@@ -14,6 +14,8 @@
   --ui-text-regular-2: rgba(0, 0, 0, 0.62);
   --ui-text-regular-3: rgba(0, 0, 0, 0.5);
 
+  /* bottom border */
+  --ui-bottom-regular: solid 1.92rpx rgba(0, 0, 0, 0.1);
 
   /* 导航栏 bg */
   --ui-nav-shadow-bg: #FFFFFF;
@@ -37,9 +39,6 @@
   --ui-button-gray-shadow: none;
   --ui-button-primary-shadow: 0px 3.85rpx 11.5rpx rgba(0, 0, 0, 0.2);
   --ui-button-primary-border: 1.9rpx solid rgba(0, 0, 0, 0.1);
-
-  /* section */
-  --ui-section-title-bottom: solid 1.92rpx rgba(0, 0, 0, 0.1);
 
   /* segmented controller */
   --ui-segment-background: rgba(0, 0, 0, 0.1);

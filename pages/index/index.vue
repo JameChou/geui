@@ -16,9 +16,9 @@
 		<view class="ui-section" style="margin-top: 50rpx;">
 			<view class="section-title text-body-12">基本功能</view>
 			<view class="section-list">
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/flex">
-					<view class="ph ph-layout header-20 title"><text>弹性布局</text></view>
-					<view class="content">Flex<text class="ph ph-caret-right"></text></view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/layout">
+					<view class="ph ph-layout header-20 title"><text>布局</text></view>
+					<view class="content">Layout<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/color">
 					<view class="ph ph-palette header-20 title"><text>配色、阴影</text></view>
@@ -135,9 +135,9 @@
 		data() {
 			return {
 				themeSegmentedController: [{
-					"name": '白天'
+					"name": 'Light'
 				}, {
-					"name": '黑夜'
+					"name": 'Dark'
 				}],
 				customBar: this.customBar
 			};
@@ -184,7 +184,7 @@
 			letter-spacing: 0.15em;
 			text-transform: uppercase;
 			color: var(--ui-text-regular-3);
-			border-bottom: var(--ui-section-title-bottom);
+			border-bottom: var(--ui-bottom-regular);
 			padding-bottom: 34.6rpx;
 			padding-left: 20rpx;
 		}

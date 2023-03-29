@@ -70,38 +70,13 @@
 </template>
 <script>
 export default {
-  data() {
-    return {
-      tabs: [{
-        'name': '组件',
-        'url': '/pages/index/index',
-        'icon': 'ph-puzzle-piece',
-        'click': 'switch',
-        'notification': false
-      },
-        {
-          'name': '设置',
-          'url': '/pages/setting/index',
-          'icon': 'ph-gear',
-          'click': 'switch',
-          'notification': false
-        },
-        {
-          'name': '播放',
-          'url': '/pages/player/index',
-          'icon': 'ph-guitar',
-          'click': 'switch',
-          'notification': true
-        },
-        {
-          'name': '商品详情',
-          'url': '/pages/product/index',
-          'icon': 'ph-bank',
-          'click': 'new',
-          'notification': false
-        }
-      ]
+  computed: {
+    tabs() {
+      return this.$store.getters.getAppTabs;
     }
+  },
+  data() {
+    return {}
   }
 }
 </script>
