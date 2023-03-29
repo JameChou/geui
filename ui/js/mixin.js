@@ -1,10 +1,26 @@
 import Vue from 'vue';
+
+import {
+	mapState
+} from 'vuex';
+
 const mixin = {
 	data() {
 		return {
 			_uid: this._uid,
 			pageScrollTop: 0
 		};
+	},
+
+	watch: {},
+
+	computed: {
+		...mapState({
+			system_theme: state => state.system_theme
+		}),
+		system_capsule() {
+			return this.$store.getters.system_capsule;
+		}
 	},
 
 	created() {

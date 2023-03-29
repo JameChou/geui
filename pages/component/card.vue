@@ -169,7 +169,7 @@ export default {
     .background {
       z-index: -1;
       position: absolute;
-      background: rgba(255, 255, 255, 0.5);
+      background: var(--ui-card-glass-background);
       backdrop-filter: blur(36.7rpx);
       width: 688rpx;
       height: 215.4rpx;
@@ -197,7 +197,7 @@ export default {
       font-size: 30.8rpx;
       line-height: 150%;
       letter-spacing: 0.0168em;
-      color: rgba(0, 0, 0, 0.618);
+      color: var(--ui-card-subtitle-color);
       white-space: nowrap; overflow: hidden; text-overflow: ellipsis;
     }
 
@@ -240,7 +240,7 @@ export default {
       font-size: 30.8rpx;
       line-height: 150%;
       letter-spacing: 0.0168em;
-      color: rgba(0, 0, 0, 0.618);
+      color: var(--ui-card-subtitle-color);
     }
 
     .spec-info {

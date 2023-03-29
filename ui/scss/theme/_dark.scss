@@ -11,6 +11,8 @@
   --ui-text-regular:   #FFFFFF;
   --ui-text-active:    #FFFFFF;
   --ui-text-inactive:  rgba(255, 255, 255, 0.62);
+  --ui-text-regular-2: rgba(255, 255, 255, 0.62);
+  --ui-text-regular-3: rgba(255, 255, 255, 0.62);
 
   /* 导航栏 bg*/
   --ui-nav-shadow-bg: rgba(255, 255, 255, 0.1);
@@ -19,6 +21,7 @@
   /* 底部导航栏 */
   --ui-tabbar-bg-primary: rgba(0, 0, 0, 0.618);
   --ui-tabbar-active-color: #00B670;
+  --ui-tabbar-text-color: #FFFFFF;
 
   /* 按钮 */
   --ui-button-blue: rgba(67, 118, 254, 0.618);
@@ -33,4 +36,17 @@
   --ui-button-gray-shadow: none;
   --ui-button-primary-shadow: none;
   --ui-button-primary-border: 3.8rpx solid rgba(255, 255, 255, 0.2);
+
+  /* section */
+  --ui-section-title-bottom: solid 1.92rpx rgba(0, 182, 112, 0.382);
+
+  /* segmented controller */
+  --ui-segment-background: rgba(67, 118, 254, 0.382);
+  --ui-segment-active-color: #FFFFFF;
+  --ui-segment-active-background: #000000;
+  --ui-segment-text-color: rgba(255, 255, 255, 0.62);
+
+  /* card */
+  --ui-card-subtitle-color: rgba(255, 255, 255, 0.62);
+  --ui-card-glass-background: rgba(0, 0, 0, 0.1);
 }

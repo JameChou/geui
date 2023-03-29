@@ -23,11 +23,15 @@
 				default: () => {
 					return Function;
 				}
-			}
+			},
+      initActive: {
+        type: Number,
+        default: 0
+      }
 		},
 		data() {
 			return {
-				activeIndex: 0
+				activeIndex: this.initActive
 			};
 		},
 		methods: {
@@ -44,7 +48,7 @@
 		align-items: center;
 		display: flex;
 		min-width: 290rpx;
-		background: rgba(0, 0, 0, 0.1);
+		background: var(--ui-segment-background);
 		backdrop-filter: blur(19.1px);
 		border-radius: 19.2rpx;
 		height: 71.1rpx;
@@ -57,19 +61,19 @@
 			background: transparent;
 			height: 90%;
 			-webkit-font-smoothing: antialiased;
-			color: rgba(0, 0, 0, 0.618);
+			color: var(--ui-segment-text-color);
 			margin-left: 3.8rpx;
 			margin-right: 3.8rpx;
 			font-weight: 400;
 			font-size: 30.8rpx;
 
 			&.active {
-				background: #FFFFFF;
+				background: var(--ui-segment-active-background);
 				box-shadow: 0px 3.8rpx 11.5rpx rgba(0, 0, 0, 0.2);
 				backdrop-filter: blur(19.2rpx);
 				border-radius: 15.4rpx;
 				font-weight: 600;
-				color: #000000;
+				color: var(--ui-segment-active-color);
 			}
 		}
 	}

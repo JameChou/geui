@@ -3,15 +3,15 @@
 		<view class="ui-nav" :style="[{height: customBar + 'px'}] ">
 			<view class="background" :class="opacity >= 1 ? 'blur' : ''"
 				:style="[{height: customBar + 'px', opacity: opacity}]"></view>
-			<view class="ui-header-content" :style="[{height: custom.height + 'px'}]">
-				<text class="ph header-button" :style="[{top: custom.top + 'px', height: custom.height + 'px'}]"
+			<view class="ui-header-content" :style="[{height: system_capsule.height + 'px'}]">
+				<text class="ph header-button" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
 					:class="'ph-' + icon" v-if="hasIcon" @tap="tapHandler"></text>
-				<view class="title" :style="[{top: custom.top + 'px', height: custom.height + 'px'}]"
+				<view class="title" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
 					v-if="title !== '' && !customTitle">
 					{{title}}
 				</view>
 				<view class="custom-title" v-if="customTitle"
-					:style="[{top: custom.top + 'px', height: custom.height + 'px'}]">
+					:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]">
 					<slot name="replaceTitle"></slot>
 				</view>
 				<view class="fix-content" v-if="fixContent" :style="[{top: fixContent2Top + 'px'}]">
@@ -74,13 +74,16 @@
 		},
 		data() {
 			return {
-				statusBarHeight: this.statusBar,
-				customBar: this.customBar,
+				customBar: 0,
 				fixContent2Top: this.customBar,
-				opacity: 0,
-				custom: this.custom,
+				opacity: 0
 			}
 		},
+    computed: {
+      system_navbar_height() {
+        return this.$store.getters.system_navbar_height;
+      }
+    },
 		created() {
 			if (!this.isOpacity) {
 				this.opacity = 1;
@@ -89,8 +92,10 @@
 			}
 
 			if (this.navHeight > 0) {
-				this.customBar = this.customBar + uni.upx2px(this.navHeight) + 8;
-			}
+				this.customBar = this.system_navbar_height + uni.upx2px(this.navHeight) + 8;
+			} else {
+        this.customBar = this.system_navbar_height;
+      }
 
 			let _this = this;
 			if (this.isOpacity) {

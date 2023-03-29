@@ -1,14 +1,15 @@
 <template>
 	<ge-page :tabs="tabs">
-		<ge-nav hasIcon :icon="'magnifying-glass'" :title="'主页'" customTitle>
+		<ge-nav :isOpacity="true" hasIcon :icon="'magnifying-glass'" :title="'主页'" customTitle>
 			<template v-slot:replaceTitle>
 				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController"
-					:tapHandler="themeTapHandler"></ge-switchseg>
+					:tapHandler="themeTapHandler" :initActive="system_theme === 'light' ? 0 : 1"></ge-switchseg>
 			</template>
 		</ge-nav>
 
 		<view class="index-title header-48">
-			GE-Ui
+			<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/85b80a65-9579-4b63-9b43-0887bec03628.jpg"
+			 mode="aspectFill"/>
 			<view class="header-20 sub">明快、现代设计的Ui框架</view>
 		</view>
 
@@ -126,49 +127,27 @@
 
 <script>
 	export default {
+    computed: {
+      tabs() {
+        return this.$store.getters.getAppTabs;
+      }
+    },
 		data() {
 			return {
-				tabs: [{
-						'name': '组件',
-						'url': '/pages/index/index',
-						'icon': 'ph-puzzle-piece',
-						'click': 'switch',
-						'notification': false
-					},
-					{
-						'name': '设置',
-						'url': '/pages/setting/index',
-						'icon': 'ph-gear',
-						'click': 'switch',
-						'notification': false
-					},
-					{
-						'name': '播放',
-						'url': '/pages/player/index',
-						'icon': 'ph-guitar',
-						'click': 'switch',
-						'notification': true
-					},
-					{
-						'name': '商品详情',
-						'url': '/pages/product/index',
-						'icon': 'ph-bank',
-						'click': 'new',
-						'notification': false
-					}
-				],
 				themeSegmentedController: [{
-					"name": 'light'
+					"name": '白天'
 				}, {
-					"name": 'dark'
+					"name": '黑夜'
 				}],
 				customBar: this.customBar
 			};
 		},
-		onLoad() {},
+		onLoad() {
+    },
 		methods: {
 			themeTapHandler(item, index) {
-				this.theme = index === 0 ? 'light' : 'dark';
+				let theme = index === 0 ? 'light' : 'dark';
+        this.$store.commit('setTheme', theme);
 			},
 
 			tapListItem(event) {
@@ -191,6 +170,11 @@
 			color: #00B670;
 			margin-top: 5rpx;
 		}
+		
+		image {
+			width: 250rpx;
+			height: 250rpx;
+		}
 	}
 
 	.ui-section {
@@ -199,8 +183,8 @@
 			align-items: center;
 			letter-spacing: 0.15em;
 			text-transform: uppercase;
-			color: rgba(0, 0, 0, 0.5);
-			border-bottom: solid 1.92rpx rgba(0, 0, 0, 0.1);
+			color: var(--ui-text-regular-3);
+			border-bottom: var(--ui-section-title-bottom);
 			padding-bottom: 34.6rpx;
 			padding-left: 20rpx;
 		}
@@ -225,7 +209,7 @@
 					width: 30%;
 					align-items: center;
 					justify-content: left;
-					color: rgba(0, 0, 0, 0.618);
+					color: var(--ui-text-regular-2);
 
 					text {
 						position: absolute;

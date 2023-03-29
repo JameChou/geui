@@ -1,12 +1,17 @@
 <template>
 	<view class="ui-tab-bottom">
 		<view class="ui-tabbar">
-			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in data" :key="index"
-				:class="activeIndex === index ? 'active' : ''">
-				<text class="ph" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
-					<view class="badge" v-if="item.notification"></view>
-				</text>
-				<text class="action-text">{{item.name}}</text>
+			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in data" :key="index">
+        <view :class="activeIndex === index ? 'active': ''" v-if="item.type === 'icon'">
+          <text class="ph" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
+            <view class="badge" v-if="item.notification"></view>
+          </text>
+          <text class="action-text">{{item.name}}</text>
+        </view>
+
+        <view v-if="item.type === 'button'">
+          <button :class="'ph-' + item.icon" class="ph tab-button ui-button blue round"></button>
+        </view>
 			</view>
 		</view>
 	</view>
@@ -69,7 +74,7 @@
 		padding-top: 16.8rpx;
 
 		.item {
-			color: rgba(0, 0, 0, 0.618);
+			color: var(--ui-tabbar-text-color);
 
 			:first-child[class*="ph-"] {
 				text-align: center;
@@ -85,7 +90,7 @@
 				font-weight: 400;
 			}
 
-			&.active {
+			.active {
 				color: var(--ui-tabbar-active-color);
 			}
 
@@ -99,6 +104,10 @@
 				backdrop-filter: blur(10px);
 				border-radius: 99px;
 			}
+
+      .tab-button {
+        width: 119rpx;
+      }
 		}
 	}
 </style>
