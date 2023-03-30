@@ -24,10 +24,10 @@
 					return Function;
 				}
 			},
-      initActive: {
-        type: Number,
-        default: 0
-      }
+			initActive: {
+				type: Number,
+				default: 0
+			}
 		},
 		data() {
 			return {

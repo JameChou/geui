@@ -1,3 +1,5 @@
+@import "vars/colorvars";
+
 .header-96 {
   font-weight: 700;
   font-size: 184.6rpx;
@@ -84,4 +86,22 @@
   font-size: 19.2rpx;
   line-height: 158%;
   letter-spacing: 0.15em;
+}
+
+.text {
+  @each $class,
+  $value in ('white': $ui-color-white, 'black': $ui-color-black, 'blue': $ui-color-blue, 'green': $ui-color-green, 'orange': $ui-color-orange, 'red': $ui-color-red) {
+    &-#{$class} {
+      color: $value !important;
+    }
+  }
+}
+
+.text-align {
+  @each $class,
+  $value in ('center': center, 'left': left, 'right': right) {
+    &-#{$class} {
+      text-align: $value;
+    }
+  }
 }

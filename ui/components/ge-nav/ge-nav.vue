@@ -4,7 +4,8 @@
 			<view class="background" :class="opacity >= 1 ? 'blur' : ''"
 				:style="[{height: customBar + 'px', opacity: opacity}]"></view>
 			<view class="ui-header-content" :style="[{height: system_capsule.height + 'px'}]">
-				<text class="ph header-button" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
+				<text class="ph header-button"
+					:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
 					:class="'ph-' + icon" v-if="hasIcon" @tap="tapHandler"></text>
 				<view class="title" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
 					v-if="title !== '' && !customTitle">
@@ -79,11 +80,11 @@
 				opacity: 0
 			}
 		},
-    computed: {
-      system_navbar_height() {
-        return this.$store.getters.system_navbar_height;
-      }
-    },
+		computed: {
+			system_navbar_height() {
+				return this.$store.getters.system_navbar_height;
+			}
+		},
 		created() {
 			if (!this.isOpacity) {
 				this.opacity = 1;
@@ -94,36 +95,36 @@
 			if (this.navHeight > 0) {
 				this.customBar = this.system_navbar_height + uni.upx2px(this.navHeight) + 8;
 			} else {
-        this.customBar = this.system_navbar_height;
-      }
+				this.customBar = this.system_navbar_height;
+			}
+			console.log(this.customBar);
 
 			let _this = this;
 			if (this.isOpacity) {
 				uni.$on('$onScrollTop' + this.$root._uid, (e) => {
-          // 改变导航栏渐变颜色
-          if(e > 0){
-            if (e > _this.customBar) {
-              _this.opacity = 1;
-            } else if (e < _this.customBar / 2) {
-              _this.opacity = 0.3;
-            } else if (e > _this.customBar / 2 && e < _this.customBar) {
-              _this.opacity = 0.7;
-            } else {
-              _this.opacity = 0;
-            }
-          } else {
-            _this.opacity = 0;
-          }
+					// 改变导航栏渐变颜色
+					if (e > 0) {
+						if (e > _this.customBar) {
+							_this.opacity = 1;
+						} else if (e < _this.customBar / 2) {
+							_this.opacity = 0.3;
+						} else if (e > _this.customBar / 2 && e < _this.customBar) {
+							_this.opacity = 0.7;
+						} else {
+							_this.opacity = 0;
+						}
+					} else {
+						_this.opacity = 0;
+					}
 				});
 			}
 		},
 
-    destroyed() {
-      uni.$off('$onScrollTop' + this.$root._uid);
-    },
+		destroyed() {
+			uni.$off('$onScrollTop' + this.$root._uid);
+		},
 
-		methods: {
-		}
+		methods: {}
 	}
 </script>
 <style lang="scss">

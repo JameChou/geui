@@ -2,16 +2,16 @@
 	<view class="ui-tab-bottom">
 		<view class="ui-tabbar">
 			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in data" :key="index">
-        <view :class="activeIndex === index ? 'active': ''" v-if="item.type === 'icon'">
-          <text class="ph" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
-            <view class="badge" v-if="item.notification"></view>
-          </text>
-          <text class="action-text">{{item.name}}</text>
-        </view>
+				<view :class="activeIndex === index ? 'active': ''" v-if="item.type === 'icon'">
+					<text class="ph" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
+						<view class="badge" v-if="item.notification"></view>
+					</text>
+					<text class="action-text">{{item.name}}</text>
+				</view>
 
-        <view v-if="item.type === 'button'">
-          <button :class="'ph-' + item.icon" class="ph tab-button ui-button blue round"></button>
-        </view>
+				<view v-if="item.type === 'button'">
+					<button :class="'ph-' + item.icon" class="ph tab-button ui-button blue round"></button>
+				</view>
 			</view>
 		</view>
 	</view>
@@ -60,7 +60,7 @@
 		position: fixed;
 		width: 100%;
 		bottom: 0;
-    z-index: 9999;
+		z-index: 9999;
 	}
 
 	.ui-tabbar {
@@ -105,9 +105,9 @@
 				border-radius: 99px;
 			}
 
-      .tab-button {
-        width: 119rpx;
-      }
+			.tab-button {
+				width: 119rpx;
+			}
 		}
 	}
 </style>

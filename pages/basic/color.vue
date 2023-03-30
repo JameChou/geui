@@ -2,7 +2,7 @@
 	<ge-page no-tabs>
 		<ge-nav has-icon title="配色"></ge-nav>
 
-    <ge-title category category-content="基础" title-content="文字、边框、阴影" title-icon="palette" border></ge-title>
+		<ge-title category category-content="基础" title-content="文字、边框、阴影" title-icon="palette" border></ge-title>
 
 		<view class="margin-left">
 			<view class="ui-flex color-section color-section-title" style="background: transparent;">
@@ -57,7 +57,8 @@
 			</view>
 		</view>
 
-    <ge-title class="margin-top" category category-content="背景" title-content="浅色、深色的基础背景配色" title-icon="paint-roller" border></ge-title>
+		<ge-title class="margin-top" category category-content="背景" title-content="浅色、深色的基础背景配色"
+			title-icon="paint-roller" border></ge-title>
 
 		<view class="margin-left margin-top">
 			<text class="text-body-14 color-section-title">Light Background</text>
@@ -73,7 +74,8 @@
 			</view>
 		</view>
 
-    <ge-title class="margin-top" category category-content="阴影" title-content="阴影Shadow,三种大小可供选择" title-icon="paint-brush" border></ge-title>
+		<ge-title class="margin-top" category category-content="阴影" title-content="阴影Shadow,三种大小可供选择"
+			title-icon="paint-brush" border></ge-title>
 
 		<view class="margin-left margin-top">
 			<text class="text-body-14 color-section-title">Black&Blue Shadow</text>

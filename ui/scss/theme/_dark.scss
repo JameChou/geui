@@ -14,6 +14,7 @@
   --ui-text-inactive:  rgba(255, 255, 255, 0.62);
   --ui-text-regular-2: rgba(255, 255, 255, 0.62);
   --ui-text-regular-3: rgba(255, 255, 255, 0.62);
+  --ui-text-regular-4: #000000;
 
   /* 导航栏 bg*/
   --ui-nav-shadow-bg: rgba(255, 255, 255, 0.1);
@@ -54,4 +55,6 @@
 
   /* nav-tabs */
   --ui-navtabs-shadow: inset 0px 3.84rpx 11.5rpx rgba(255, 255, 255, 0.1);
+  --ui-navtabs-time-bg: #00B670;
+
 }
