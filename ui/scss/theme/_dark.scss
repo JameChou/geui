@@ -5,6 +5,7 @@
   --ui-bg-glass:      rgba(0, 0, 0, 0.62);
   --ui-bg-glass-blur: blur(37rpx);
   --ui-bg-op-regular: rgba(67, 118, 254, 0.38);
+  --ui-bg-pure-primary: #000000;
 
   /* 文字 */
   --ui-text-highlight: #FFFFFF;
@@ -37,8 +38,9 @@
   --ui-button-primary-shadow: none;
   --ui-button-primary-border: 3.8rpx solid rgba(255, 255, 255, 0.2);
 
-  /* section */
-  --ui-bottom-regular: solid 1.92rpx rgba(0, 182, 112, 0.382);
+  /* border */
+  --ui-border-regular: solid 3.85rpx rgba(255, 255, 255, 0.2);
+  --ui-bottom-border-regular: solid 1.92rpx rgba(0, 182, 112, 0.382);
 
   /* segmented controller */
   --ui-segment-background: rgba(67, 118, 254, 0.382);
@@ -49,4 +51,7 @@
   /* card */
   --ui-card-subtitle-color: rgba(255, 255, 255, 0.62);
   --ui-card-glass-background: rgba(0, 0, 0, 0.1);
+
+  /* nav-tabs */
+  --ui-navtabs-shadow: inset 0px 3.84rpx 11.5rpx rgba(255, 255, 255, 0.1);
 }

@@ -67,7 +67,7 @@ export default {
 
     &.border {
       padding-bottom: 25rpx;
-      border-bottom: var(--ui-bottom-regular);
+      border-bottom: var(--ui-bottom-border-regular);
     }
   }
 

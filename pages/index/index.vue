@@ -184,7 +184,7 @@
 			letter-spacing: 0.15em;
 			text-transform: uppercase;
 			color: var(--ui-text-regular-3);
-			border-bottom: var(--ui-bottom-regular);
+			border-bottom: var(--ui-bottom-border-regular);
 			padding-bottom: 34.6rpx;
 			padding-left: 20rpx;
 		}

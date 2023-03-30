@@ -4,7 +4,8 @@
   --ui-bg-primary:    #FFFFFF;
   --ui-bg-glass:      rgba(255, 255, 255, 0.62);
   --ui-bg-glass-blur: blur(37rpx);
-  --ui-bg-op-regular:    rgba(255, 255, 255, 0.2);
+  --ui-bg-op-regular:    rgba(0, 0, 0, 0.1);
+  --ui-bg-pure-primary: #FFFFFF;
 
   /* 文字 */
   --ui-text-highlight: #4376FE;
@@ -14,8 +15,9 @@
   --ui-text-regular-2: rgba(0, 0, 0, 0.62);
   --ui-text-regular-3: rgba(0, 0, 0, 0.5);
 
-  /* bottom border */
-  --ui-bottom-regular: solid 1.92rpx rgba(0, 0, 0, 0.1);
+  /* border */
+  --ui-border-regular: solid 1.92rpx rgba(0, 0, 0, 0.1);
+  --ui-bottom-border-regular: solid 1.92rpx rgba(0, 0, 0, 0.1);
 
   /* 导航栏 bg */
   --ui-nav-shadow-bg: #FFFFFF;
@@ -49,5 +51,8 @@
   /* card */
   --ui-card-subtitle-color: rgba(0, 0, 0, 0.1);
   --ui-card-glass-background:  rgba(255, 255, 255, 0.5);
+
+  /* nav-tabs */
+  --ui-navtabs-shadow: 0px 3.84rpx 11.5rpx rgba(0, 0, 0, 0.2);
 
 }
