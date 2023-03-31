@@ -7,7 +7,7 @@
         <!-- #ifndef MP-ALIPAY -->
 				<text class="ph header-button"
 					:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
-					:class="'ph-' + icon" v-if="hasIcon" @tap="tapHandler"></text>
+					:class="'ph-' + icon" v-if="hasIcon" @tap="headerButtonTap"></text>
         <!-- #endif -->
 				<view class="title" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
 					v-if="title !== '' && !customTitle">
@@ -82,6 +82,17 @@
 				opacity: 0
 			}
 		},
+    methods: {
+      headerButtonTap() {
+        // #ifdef H5
+        let handler = this.tapHandler();
+        handler();
+        // #endif
+        // #ifdef MP
+        this.tapHandler();
+        // #endif
+      }
+    },
 		computed: {
       ...mapState({
         system_statusBar_height: state => state.system_statusBar_height
@@ -131,9 +142,8 @@
 
 		destroyed() {
 			uni.$off('$onScrollTop' + this.$root._uid);
-		},
+		}
 
-		methods: {}
 	}
 </script>
 <style lang="scss">

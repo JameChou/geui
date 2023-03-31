@@ -43,7 +43,6 @@ const store = new Vuex.Store({
 
 		system_navbar_height() {
 			// #ifndef MP
-			console.log(uni.getSystemInfoSync().statusBarHeight + 50);
 			return uni.getSystemInfoSync().statusBarHeight + 50;
 			// #endif
 

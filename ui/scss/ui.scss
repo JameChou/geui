@@ -2,6 +2,7 @@
 @import "theme/dark";
 @import "theme/light";
 @import "icons/phicons";
+@import "components/page";
 @import "components/basenav";
 @import "components/margin";
 @import "components/flex";
@@ -17,6 +18,14 @@ view {
 .theme-dark {
   @include dark-theme;
   background: #2c2c2c;
+  /*
+    H5状态下若有浅色情况下,会有闪屏的情况,故设置成黑色
+    并且在ge-page created的时候也将.theme-dark设置在<html>标签上
+    详情见 ge-page.vue created生命周期内处理
+   */
+  /* #ifdef H5 */
+  background: #000000;
+  /* #endif */
 }
 
 .theme-light {

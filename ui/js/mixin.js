@@ -27,6 +27,9 @@ const mixin = {
 		if (this._uid !== this.$root._uid) {
 			this.$onShow();
 		}
+		// #ifdef H5
+		document.getElementsByTagName('html')[0].className = `theme-${this.system_theme}`;
+		// #endif
 	},
 
 	onLoad() {},

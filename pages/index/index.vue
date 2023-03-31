@@ -172,10 +172,11 @@
 			margin-top: 5rpx;
 		}
 
-		image {
+		img {
 			width: 250rpx;
 			height: 250rpx;
 		}
+
 	}
 
 	.ui-section {
