@@ -1,34 +1,37 @@
 <template>
 	<ge-page noTabs>
 		<ge-nav title="产品列表-1"></ge-nav>
-		<view class="ui-product-one">
-			<view class="body">
-				<view class="content">
-					<view class="tag" v-if="false">Hello</view>
-					<view class="title">Buna.Fits for you tunna. Buy One, get Second for FREE. Limited deal</view>
-					<view class="spec ph ph-book-bookmark">Non-fiction 1hr.50 min</view>
-					<view class="score">4.6</view>
-					<view class="operate"><button class="ui-button primary">Add to cart</button></view>
-				</view>
-				<view class="content-image">
-					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
-						mode="aspectFill" />
+		<view class="ui-container">
+
+			<view class="ui-product-one">
+				<view class="body">
+					<view class="content">
+						<view class="tag" v-if="false">Hello</view>
+						<view class="title">Buna.Fits for you tunna. Buy One, get Second for FREE. Limited deal</view>
+						<view class="spec ph ph-book-bookmark">Non-fiction 1hr.50 min</view>
+						<view class="score">4.6</view>
+						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
+					</view>
+					<view class="content-image">
+						<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
+							mode="aspectFill" />
+					</view>
 				</view>
 			</view>
-		</view>
 
-		<view class="ui-product-one">
-			<view class="body">
-				<view class="content">
-					<view class="tag">new Release</view>
-					<view class="title">Buna.Fits for you tunna. Buy One</view>
-					<view class="spec ph ph-book-bookmark">Non-fiction 1hr.50 min</view>
-					<view class="score">4.6</view>
-					<view class="operate"><button class="ui-button primary">Add to cart</button></view>
-				</view>
-				<view class="content-image">
-					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
-						mode="aspectFill" />
+			<view class="ui-product-one">
+				<view class="body">
+					<view class="content">
+						<view class="tag">new Release</view>
+						<view class="title">Buna.Fits for you tunna. Buy One</view>
+						<view class="spec ph ph-book-bookmark">Non-fiction 1hr.50 min</view>
+						<view class="score">4.6</view>
+						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
+					</view>
+					<view class="content-image">
+						<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
+							mode="aspectFill" />
+					</view>
 				</view>
 			</view>
 		</view>

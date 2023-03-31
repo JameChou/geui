@@ -2,9 +2,9 @@
 	<ge-page no-tabs>
 		<ge-nav has-icon title="配色"></ge-nav>
 
-		<ge-title category category-content="基础" title-content="文字、边框、阴影" title-icon="palette" border></ge-title>
+		<view class="ui-container">
+			<ge-title category category-content="基础" title-content="文字、边框、阴影" title-icon="palette" border></ge-title>
 
-		<view class="margin-left">
 			<view class="ui-flex color-section color-section-title" style="background: transparent;">
 				<view class="pad ui-flex align-center justify-center">100%</view>
 				<view class="pad ui-flex align-center justify-center">60%</view>
@@ -13,91 +13,94 @@
 				<view class="pad ui-flex align-center justify-center">20%</view>
 				<view class="pad ui-flex align-center justify-center">10%</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">White #000000</text>
-			<view class="ui-flex color-section" style="background: #000000; border: solid 1.8rpx black;">
-				<view v-for="(item, index) in 6" class="pad" :class="'white-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">White #000000</text>
+				<view class="ui-flex color-section" style="background: #000000;">
+					<view v-for="(item, index) in 6" class="pad" :class="'white-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Black #FFFFFF</text>
-			<view class="ui-flex color-section">
-				<view v-for="(item, index) in 6" class="pad" :class="'black-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Black #FFFFFF</text>
+				<view class="ui-flex color-section">
+					<view v-for="(item, index) in 6" class="pad" :class="'black-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Blue #4376FE</text>
-			<view class="ui-flex color-section">
-				<view v-for="(item, index) in 6" class="pad" :class="'blue-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Blue #4376FE</text>
+				<view class="ui-flex color-section">
+					<view v-for="(item, index) in 6" class="pad" :class="'blue-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Green #00B670</text>
-			<view class="ui-flex color-section">
-				<view v-for="(item, index) in 6" class="pad" :class="'green-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Green #00B670</text>
+				<view class="ui-flex color-section">
+					<view v-for="(item, index) in 6" class="pad" :class="'green-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Orange #FE8E0B</text>
-			<view class="ui-flex color-section">
-				<view v-for="(item, index) in 6" class="pad" :class="'orange-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Orange #FE8E0B</text>
+				<view class="ui-flex color-section">
+					<view v-for="(item, index) in 6" class="pad" :class="'orange-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Red #FE8E0B</text>
-			<view class="ui-flex color-section">
-				<view v-for="(item, index) in 6" class="pad" :class="'red-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Red #FE8E0B</text>
+				<view class="ui-flex color-section">
+					<view v-for="(item, index) in 6" class="pad" :class="'red-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<ge-title class="margin-top" category category-content="背景" title-content="浅色、深色的基础背景配色"
-			title-icon="paint-roller" border></ge-title>
+			<ge-title category category-content="背景" title-content="浅色、深色的基础背景配色" title-icon="paint-roller"
+				border></ge-title>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Light Background</text>
-			<view class="ui-flex color-light-section justify-between align-center">
-				<view v-for="(item, index) in 6" class="pad" :class="'light-bg-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Light Background</text>
+				<view class="ui-flex color-light-section justify-between align-center">
+					<view v-for="(item, index) in 6" class="pad" :class="'light-bg-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Dark Background</text>
-			<view class="ui-flex color-light-section justify-between align-center" style="background-color: #000000;">
-				<view v-for="(item, index) in 6" class="pad" :class="'dark-bg-' + index"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Dark Background</text>
+				<view class="ui-flex color-light-section justify-between align-center"
+					style="background-color: #000000;">
+					<view v-for="(item, index) in 6" class="pad" :class="'dark-bg-' + index"></view>
+				</view>
 			</view>
-		</view>
 
-		<ge-title class="margin-top" category category-content="阴影" title-content="阴影Shadow,三种大小可供选择"
-			title-icon="paint-brush" border></ge-title>
+			<ge-title class="margin-top" category category-content="阴影" title-content="阴影Shadow,三种大小可供选择"
+				title-icon="paint-brush" border></ge-title>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Black&Blue Shadow</text>
-			<view class="ui-flex color-shadow-section justify-between align-center" style="background-color: #FFFFFF;">
-				<view class="pad black-shadow-sm"></view>
-				<view class="pad black-shadow-reg"></view>
-				<view class="pad black-shadow-lg"></view>
-				<view class="pad blue-shadow-sm"></view>
-				<view class="pad blue-shadow-reg"></view>
-				<view class="pad blue-shadow-lg"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Black&Blue Shadow</text>
+				<view class="ui-flex color-shadow-section justify-between align-center"
+					style="background-color: #FFFFFF;">
+					<view class="pad black-shadow-sm"></view>
+					<view class="pad black-shadow-reg"></view>
+					<view class="pad black-shadow-lg"></view>
+					<view class="pad blue-shadow-sm"></view>
+					<view class="pad blue-shadow-reg"></view>
+					<view class="pad blue-shadow-lg"></view>
+				</view>
 			</view>
-		</view>
 
-		<view class="margin-left margin-top">
-			<text class="text-body-14 color-section-title">Green&Orange Shadow</text>
-			<view class="ui-flex color-shadow-section justify-between align-center" style="background-color: #FFFFFF;">
-				<view class="pad green-shadow-sm"></view>
-				<view class="pad green-shadow-reg"></view>
-				<view class="pad green-shadow-lg"></view>
-				<view class="pad orange-shadow-sm"></view>
-				<view class="pad orange-shadow-reg"></view>
-				<view class="pad orange-shadow-lg"></view>
+			<view class="margin-top">
+				<text class="text-body-14 color-section-title">Green&Orange Shadow</text>
+				<view class="ui-flex color-shadow-section justify-between align-center"
+					style="background-color: #FFFFFF;">
+					<view class="pad green-shadow-sm"></view>
+					<view class="pad green-shadow-reg"></view>
+					<view class="pad green-shadow-lg"></view>
+					<view class="pad orange-shadow-sm"></view>
+					<view class="pad orange-shadow-reg"></view>
+					<view class="pad orange-shadow-lg"></view>
+				</view>
 			</view>
 		</view>
 	</ge-page>
@@ -113,7 +116,6 @@
 	}
 
 	.color-section {
-		width: 710rpx;
 		height: 119rpx;
 		border-radius: 40rpx;
 		background: #FFFFFF;
@@ -134,7 +136,6 @@
 	}
 
 	.color-light-section {
-		width: 710rpx;
 		height: 119rpx;
 		border-radius: 40rpx;
 		background: #FFFFFF;
@@ -148,7 +149,6 @@
 	}
 
 	.color-shadow-section {
-		width: 710rpx;
 		height: 119rpx;
 		border-radius: 40rpx;
 		background: #FFFFFF;

@@ -12,9 +12,9 @@ const store = new Vuex.Store({
 	},
 	getters: {
 		system_capsule() {
+			let capsule = {};
 			// #ifdef MP
-			// #ifndef MP-ALIPAY
-			let capsule = uni.getMenuButtonBoundingClientRect();
+			capsule = uni.getMenuButtonBoundingClientRect();
 			if (!capsule) {
 				capsule = {
 					bottom: 56,
@@ -27,15 +27,14 @@ const store = new Vuex.Store({
 			}
 			return capsule;
 			// #endif
-			// #endif
 
 			// #ifndef MP
 			capsule = {
 				bottom: 56,
-				height: 32,
+				height: 50,
 				left: 278,
 				right: 365,
-				top: 24,
+				top: 0,
 				width: 87
 			}
 			return capsule;
@@ -44,11 +43,11 @@ const store = new Vuex.Store({
 
 		system_navbar_height() {
 			// #ifndef MP
+			console.log(uni.getSystemInfoSync().statusBarHeight + 50);
 			return uni.getSystemInfoSync().statusBarHeight + 50;
 			// #endif
 
 			// #ifdef MP
-			// #ifndef MP-ALIPAY
 			let capsule = uni.getMenuButtonBoundingClientRect();
 			if (!capsule) {
 				capsule = {
@@ -62,11 +61,6 @@ const store = new Vuex.Store({
 			}
 			let statusBarHeight = uni.getSystemInfoSync().statusBarHeight;
 			return (capsule.top - statusBarHeight) * 2 + statusBarHeight + capsule.height;
-			// #endif
-			// #endif
-
-			// #ifdef MP-ALIPAY
-			return uni.getSystemInfoSync().statusBarHeight + uni.getSystemInfoSync().titleBarHeight;
 			// #endif
 		}
 	},

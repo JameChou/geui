@@ -5,9 +5,14 @@
 @import "components/basenav";
 @import "components/margin";
 @import "components/flex";
+@import "components/grid";
 @import "components/button";
 @import "color";
 @import "font";
+
+view {
+  box-sizing: border-box;
+}
 
 .theme-dark {
   @include dark-theme;
@@ -25,6 +30,23 @@
 body {
   font-family: 'ui-num',system-ui,-apple-system,"Segoe UI",Roboto,"Helvetica Neue",Arial,"Noto Sans",sans-serif,"Apple Color Emoji","Segoe UI Emoji","Segoe UI Symbol","Noto Color Emoji";
 }
+
+.ui-container {
+  box-sizing: border-box;
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 30rpx;
+  padding-right: 30rpx;
+  width: 100%;
+  max-width: 1440px;
+
+  &-fluid {
+    max-width: 100%;
+    padding-left: 0;
+    padding-right: 0;
+  }
+}
+
 
 button::after {
   border: none;

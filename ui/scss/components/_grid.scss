@@ -1,0 +1,45 @@
+.ui-grid {
+  display: grid;
+
+  &.column-1 {
+    grid-template-columns: auto;
+  }
+
+  &.column-2 {
+    grid-template-columns: auto auto;
+  }
+
+  &.column-3 {
+    grid-template-columns: auto auto auto;
+  }
+
+  &.column-4 {
+    grid-template-columns: auto auto auto auto;
+  }
+
+  &.column-5 {
+    grid-template-columns: auto auto auto auto auto;
+  }
+
+  &.gap-xs {
+    column-gap: 5rpx;
+    row-gap: 5rpx;
+  }
+
+  &.gap-sm {
+    column-gap: 10rpx;
+    row-gap: 10rpx;
+  }
+
+  &.gap-df {
+    column-gap: 20rpx;
+    row-gap: 20rpx;
+  }
+
+  &.gap-lg {
+    column-gap: 25rpx;
+    row-gap: 25rpx;
+  }
+
+
+}

@@ -1,8 +1,6 @@
 .ui-button {
   position: relative;
   border: none;
-  align-items: center;
-  justify-content: center;
   backdrop-filter: blur(10px);
   border-radius: 15.4rpx;
   text-align: center;
@@ -13,7 +11,9 @@
   font-weight: 600;
   font-size: 26.9rpx;
   background: var(--ui-button-primary);
-  display: flex;
+  padding-top: 5rpx;
+  padding-bottom: 5rpx;
+  text-align: center;
 
   &.primary {
     background: var(--ui-button-primary);
@@ -71,6 +71,17 @@
   &.round {
     border-radius: 999px;
   }
+
+  &.block {
+    width: 100%;
+    display: block;
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    background: #FFFFFF;
+  }
+
 }
 
 .ui-icon-button {

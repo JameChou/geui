@@ -38,8 +38,9 @@
   .fix-content {
     display: flex;
     align-items: center;
+    justify-content: center;
     position: absolute;
-    left: 20rpx;
     width: 100%;
+    bottom: 8rpx;
   }
 }

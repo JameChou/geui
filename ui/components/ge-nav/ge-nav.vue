@@ -4,9 +4,11 @@
 			<view class="background" :class="opacity >= 1 ? 'blur' : ''"
 				:style="[{height: customBar + 'px', opacity: opacity}]"></view>
 			<view class="ui-header-content" :style="[{height: system_capsule.height + 'px'}]">
+        <!-- #ifndef MP-ALIPAY -->
 				<text class="ph header-button"
 					:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
 					:class="'ph-' + icon" v-if="hasIcon" @tap="tapHandler"></text>
+        <!-- #endif -->
 				<view class="title" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
 					v-if="title !== '' && !customTitle">
 					{{title}}
@@ -15,7 +17,7 @@
 					:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]">
 					<slot name="replaceTitle"></slot>
 				</view>
-				<view class="fix-content" v-if="fixContent" :style="[{top: fixContent2Top + 'px'}]">
+				<view class="fix-content" v-if="fixContent">
 					<slot name="fixContent"></slot>
 				</view>
 			</view>
@@ -23,6 +25,7 @@
 	</view>
 </template>
 <script>
+  import {mapState} from 'vuex';
 	export default {
 		props: {
 			title: {
@@ -76,11 +79,13 @@
 		data() {
 			return {
 				customBar: 0,
-				fixContent2Top: this.customBar,
 				opacity: 0
 			}
 		},
 		computed: {
+      ...mapState({
+        system_statusBar_height: state => state.system_statusBar_height
+      }),
 			system_navbar_height() {
 				return this.$store.getters.system_navbar_height;
 			}
@@ -118,6 +123,10 @@
 					}
 				});
 			}
+
+      // #ifdef MP-ALIPAY
+      my.hideAllFavoriteMenu();
+      // #endif
 		},
 
 		destroyed() {

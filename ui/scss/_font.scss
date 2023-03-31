@@ -105,3 +105,35 @@
     }
   }
 }
+
+.text {
+  @each $class,
+  $value in ('normal': normal, 'italic': italic, 'oblique': oblique) {
+    &-#{$class} {
+      font-style: $value;
+    }
+  }
+}
+
+.text-bold {
+  font-weight: bold;
+}
+
+.text-lighter {
+  font-weight: lighter;
+}
+
+.text-underline {
+  text-decoration: underline;
+}
+
+.text-line-through {
+  text-decoration: line-through;
+}
+
+.text-cut {
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  display: block;
+}

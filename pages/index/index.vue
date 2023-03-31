@@ -1,12 +1,13 @@
 <template>
 	<ge-page :tabs="tabs">
-		<ge-nav :isOpacity="true" hasIcon :icon="'magnifying-glass'" :title="'主页'" customTitle>
+		<ge-nav :is-opacity="true" has-icon :icon="'magnifying-glass'" :title="'主页'" custom-title>
 			<template v-slot:replaceTitle>
 				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController" :tapHandler="themeTapHandler"
 					:initActive="system_theme === 'light' ? 0 : 1"></ge-switchseg>
 			</template>
 		</ge-nav>
 
+    <view class="ui-container">
 		<view class="index-title header-48">
 			<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/85b80a65-9579-4b63-9b43-0887bec03628.jpg"
 				mode="aspectFill" />
@@ -16,21 +17,21 @@
 		<view class="ui-section" style="margin-top: 50rpx;">
 			<view class="section-title text-body-12">基本功能</view>
 			<view class="section-list">
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/fonts">
+          <view class="ph ph-text-aa header-20 title"><text>文本</text></view>
+          <view class="content">Fonts<text class="ph ph-caret-right"></text></view>
+        </view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/icon">
+          <view class="ph ph-phosphor-logo header-20 title"><text>图标</text></view>
+          <view class="content">Icons<text class="ph ph-caret-right"></text></view>
+        </view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/color">
+          <view class="ph ph-palette header-20 title"><text>配色、阴影</text></view>
+          <view class="content">Colors<text class="ph ph-caret-right"></text></view>
+        </view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/layout">
 					<view class="ph ph-layout header-20 title"><text>布局</text></view>
 					<view class="content">Layout<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/color">
-					<view class="ph ph-palette header-20 title"><text>配色、阴影</text></view>
-					<view class="content">Colors<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/icon">
-					<view class="ph ph-phosphor-logo header-20 title"><text>图标</text></view>
-					<view class="content">Icons<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item">
-					<view class="ph ph-text-aa header-20 title"><text>文本</text></view>
-					<view class="content">Fonts<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/button">
 					<view class="ph ph-radio-button header-20 title"><text>按钮</text></view>
@@ -121,6 +122,8 @@
 				</view>
 			</view>
 		</view>
+    </view>
+
 
 	</ge-page>
 </template>
@@ -161,7 +164,6 @@
 
 <style lang="scss">
 	.index-title {
-		margin-left: 20rpx;
 		margin-top: 10rpx;
 		color: var(--ui-text-regular);
 
@@ -185,14 +187,13 @@
 			color: var(--ui-text-regular-3);
 			border-bottom: var(--ui-bottom-border-regular);
 			padding-bottom: 34.6rpx;
-			padding-left: 20rpx;
 		}
 
 		.section-list {
+      position: relative;
 
 			&-item {
 				margin-top: 57.7rpx;
-				text-indent: 20rpx;
 				display: flex;
 
 				:first-child[class*="ph-"]>text {
@@ -200,7 +201,7 @@
 				}
 
 				.title {
-					width: 70%;
+					width: 80%;
 				}
 
 				.content {
@@ -212,7 +213,7 @@
 
 					text {
 						position: absolute;
-						right: 30rpx;
+						right: 20rpx;
 					}
 				}
 			}

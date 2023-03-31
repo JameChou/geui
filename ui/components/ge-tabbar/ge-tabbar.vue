@@ -3,10 +3,10 @@
 		<view class="ui-tabbar">
 			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in data" :key="index">
 				<view :class="activeIndex === index ? 'active': ''" v-if="item.type === 'icon'">
-					<text class="ph" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
-						<view class="badge" v-if="item.notification"></view>
-					</text>
-					<text class="action-text">{{item.name}}</text>
+					<view class="ph tab-icon" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
+            <view class="badge" v-if="item.notification"></view>
+					</view>
+					<view class="action-text">{{item.name}}</view>
 				</view>
 
 				<view v-if="item.type === 'button'">
@@ -69,9 +69,9 @@
 		justify-content: space-around;
 		background-color: var(--ui-tabbar-bg-primary);
 		backdrop-filter: blur(36.7rpx);
-		min-height: 120rpx;
+		min-height: 140rpx;
 		z-index: 9999 !important;
-		padding-top: 16.8rpx;
+		padding-top: 14rpx;
 
 		.item {
 			color: var(--ui-tabbar-text-color);
@@ -88,24 +88,34 @@
 				bottom: 9rpx;
 				font-size: 23rpx;
 				font-weight: 400;
+        margin-top: 10rpx;
 			}
 
 			.active {
 				color: var(--ui-tabbar-active-color);
 			}
 
+      .tab-icon {
+        position: relative;
+      }
+
 			.badge {
-				width: 6.24rpx;
-				height: 6.24rpx;
-				position: absolute;
+				width: 15rpx;
+				height: 15rpx;
+				position: relative;
+        top: 0rpx;
+        right: 0rpx;
 				background: #E55539;
-				border: 2px solid #FFFFFF;
-				box-shadow: 0px 2px 6px rgba(0, 0, 0, 0.2);
-				backdrop-filter: blur(10px);
+				border: 4rpx solid #FFFFFF;
+				box-shadow: 0px 4rpx 11.5rpx rgba(0, 0, 0, 0.2);
+				backdrop-filter: blur(19.2rpx);
 				border-radius: 99px;
 			}
 
 			.tab-button {
+        display: flex;
+        align-items: center;
+        justify-content: center;
 				width: 119rpx;
 			}
 		}

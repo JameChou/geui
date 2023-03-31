@@ -1,9 +1,17 @@
 .ui-page {
-  z-index: 1;
+  color: var(--ui-text-regular);
   position: relative;
+  display: flex;
+  -webkit-overflow-scrolling: touch;
 
   &-body {
+    flex: 1;
     min-height: 100vh;
-    z-index: 1;
+    position: relative;
+    background-color: var(--ui-bg-glass);
+    color: var(--ui-text-regular);
+    z-index: 1024;
+    -webkit-backdrop-filter: var(--ui-bg-glass-blur);
   }
+
 }

@@ -25,6 +25,14 @@
 			}
 		},
 		{
+			"path": "pages/basic/fonts",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
 			"path": "pages/basic/icon",
 			"style": {
 				"app-plus": {
@@ -65,7 +73,16 @@
 		"navigationBarTitleText": "uni-app",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
-		"navigationStyle": "custom"
+		"navigationStyle": "custom",
+		"mp-alipay": {
+			"defaultTitle": "",
+			"transparentTitle": "always",
+			"titlePenetrate": "YES",
+			"allowsBounceVertical": "NO"
+		},
+		"mp-toutiao": {
+			"navigationStyle": "custom"
+		}
 	},
 	"uniIdRouter": {}
 }

@@ -1,8 +1,10 @@
 <template>
-	<view class="ui-nav-tabs">
-		<view class="item" @tap="tapItem" v-for="(item, index) in items" :key="index" :data-id="index"
-			:class="activeIndex === index ? 'active' : ''"><text>{{item}}</text></view>
-	</view>
+  <view style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative">
+    <view class="ui-navtabs">
+      <view class="item" @tap="tapItem" v-for="(item, index) in items" :key="index" :data-id="index" :data-name="item"
+        :class="activeIndex === index ? 'active' : ''"><text>{{item}}</text></view>
+    </view>
+  </view>
 </template>
 <script>
 	export default {
@@ -14,7 +16,15 @@
 			active: {
 				type: Number,
 				default: 0
-			}
+			},
+      tapHandler: {
+        type: Function,
+        default: (data) => {
+          return (data) => {
+            console.log('nav-tabs default tap handler.');
+          }
+        }
+      }
 		},
 		data() {
 			return {
@@ -27,12 +37,14 @@
 		methods: {
 			tapItem(e) {
 				this.activeIndex = e.currentTarget.dataset.id;
+        this.tapHandler({index: e.currentTarget.dataset.id, name: e.currentTarget.dataset.name});
 			}
 		}
 	}
 </script>
 <style lang="scss">
-	.ui-nav-tabs {
+	.ui-navtabs {
+
 		height: 61.2rpx;
 		width: 688rpx;
 		background: var(--ui-bg-op-regular);

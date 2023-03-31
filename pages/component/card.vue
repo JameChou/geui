@@ -2,65 +2,68 @@
 	<ge-page :tabs="tabs">
 		<ge-nav title="卡片">
 		</ge-nav>
-		<!-- 常规二 603839 -->
-		<view class="ui-card compact">
-			<view class="card-tag">
-				推荐
+		<view class="ui-container">
+
+			<!-- 常规二 603839 -->
+			<view class="ui-card compact">
+				<view class="card-tag">
+					推荐
+				</view>
+				<view class="card-button">
+					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
+				</view>
+				<view class="card-image">
+					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/09445d7c-049e-4c72-ac29-b492218efecd.jpeg"
+						mode="aspectFill" />
+				</view>
+				<view class="cover-content">
+					<view class="background"></view>
+					<text class="title">What is react? Test test test 测试测试</text>
+					<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
+					<text class="spec-info ph ph-map-pin">Nanjing, China</text>
+				</view>
 			</view>
-			<view class="card-button">
-				<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
+
+			<!-- 常规一 -->
+			<view class="ui-card" style="margin-top: 30.8rpx;">
+				<view class="card-tag">
+					标签
+				</view>
+				<view class="card-button">
+					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
+				</view>
+				<view class="card-image">
+					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/e61027cc-0cac-40f5-83e6-47bf071feb97.jpeg"
+						mode="aspectFill" />
+				</view>
+
+				<view class="content">
+					<text class="title">What is react? Test test test 测试测试</text>
+					<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
+					<text class="spec-info ph ph-map-pin">Nanjing, China</text>
+				</view>
 			</view>
-			<view class="card-image">
-				<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/09445d7c-049e-4c72-ac29-b492218efecd.jpeg"
-					mode="aspectFill" />
+
+			<view class="ui-card compact">
+				<view class="card-tag">
+					推荐
+				</view>
+				<view class="card-button">
+					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
+				</view>
+				<view class="card-image">
+					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/6f10b8b4-2bea-465c-80e3-0db765b68aff.jpeg"
+						mode="aspectFill" />
+				</view>
+				<view class="cover-content">
+					<view class="background"></view>
+					<text class="title">What is react? Test test test 测试测试</text>
+					<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
+					<text class="spec-info ph ph-map-pin">Nanjing, China</text>
+				</view>
 			</view>
-			<view class="cover-content">
-				<view class="background"></view>
-				<text class="title">What is react? Test test test 测试测试</text>
-				<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
-				<text class="spec-info ph ph-map-pin">Nanjing, China</text>
-			</view>
+
 		</view>
-
-		<!-- 常规一 -->
-		<view class="ui-card" style="margin-top: 30.8rpx;">
-			<view class="card-tag">
-				标签
-			</view>
-			<view class="card-button">
-				<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
-			</view>
-			<view class="card-image">
-				<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/e61027cc-0cac-40f5-83e6-47bf071feb97.jpeg"
-					mode="aspectFill" />
-			</view>
-
-			<view class="content">
-				<text class="title">What is react? Test test test 测试测试</text>
-				<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
-				<text class="spec-info ph ph-map-pin">Nanjing, China</text>
-			</view>
-		</view>
-
-		<view class="ui-card compact">
-			<view class="card-tag">
-				推荐
-			</view>
-			<view class="card-button">
-				<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
-			</view>
-			<view class="card-image">
-				<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/6f10b8b4-2bea-465c-80e3-0db765b68aff.jpeg"
-					mode="aspectFill" />
-			</view>
-			<view class="cover-content">
-				<view class="background"></view>
-				<text class="title">What is react? Test test test 测试测试</text>
-				<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
-				<text class="spec-info ph ph-map-pin">Nanjing, China</text>
-			</view>
-		</view>
-
 		<button class="ui-icon-button lg round ph ph-plus blue shadow float-button"></button>
 
 	</ge-page>
