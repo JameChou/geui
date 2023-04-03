@@ -17,7 +17,7 @@ view {
 
 .theme-dark {
   @include dark-theme;
-  background: #2c2c2c;
+  background: #222222;
   /*
     H5状态下若有浅色情况下,会有闪屏的情况,故设置成黑色
     并且在ge-page created的时候也将.theme-dark设置在<html>标签上

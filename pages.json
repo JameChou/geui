@@ -49,6 +49,30 @@
 			}
 		},
 		{
+			"path": "pages/basic/table",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/basic/avatar",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
+			"path": "pages/basic/form",
+			"style": {
+				"app-plus": {
+					"titleNView": false
+				}
+			}
+		},
+		{
 			"path": "pages/component/card",
 			"style": {
 				"app-plus": {

@@ -49,7 +49,7 @@
                 category-content="BLOCK"></ge-title>
       <view class="ui-flex align-center ui-flex-wrap">
         <button class="ui-button blue block">提交 commit</button>
-        <button class="ui-button blue block" disabled>提交 commit</button>
+        <button class="ui-button blue block margin-top" disabled>提交 commit</button>
       </view>
 		</view>
 	</ge-page>

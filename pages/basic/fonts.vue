@@ -8,8 +8,8 @@
 				<view class="basis-xs sub-title-16">
 					96px
 				</view>
-				<view class="basis-xl text-align-center">
-					<text class="header-96 ph ph-lightning"></text>
+				<view class="basis-xl text-align-left">
+					<text class="header-96 ph ph-apple-logo"></text>
 				</view>
 			</view>
 
@@ -17,8 +17,8 @@
 				<view class="basis-xs sub-title-16">
 					60px
 				</view>
-				<view class="basis-xl text-align-center">
-					<text class="header-60">60</text>
+				<view class="basis-xl text-align-left">
+					<text class="header-60">H2</text>
 				</view>
 			</view>
 

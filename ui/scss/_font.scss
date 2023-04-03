@@ -137,3 +137,9 @@
   text-overflow: ellipsis;
   display: block;
 }
+
+.text-money {
+  &::before {
+    content: '¥';
+  }
+}

@@ -37,24 +37,24 @@
 					<view class="ph ph-radio-button header-20 title"><text>按钮</text></view>
 					<view class="content">Buttons<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/table">
 					<view class="ph ph-microsoft-excel-logo header-20 title"><text>表格</text></view>
 					<view class="content">Table<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/avatar">
 					<view class="ph ph-user-circle header-20 title"><text>头像</text></view>
 					<view class="content">Avatar<text class="ph ph-caret-right"></text></view>
 				</view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/form">
+          <view class="ph ph-textbox header-20 title"><text>表单</text></view>
+          <view class="content">Forms<text class="ph ph-caret-right"></text></view>
+        </view>
 			</view>
 		</view>
 
 		<view class="ui-section" style="margin-top: 50rpx;">
 			<view class="section-title text-body-12">Ui组件</view>
 			<view class="section-list">
-				<view class="section-list-item">
-					<view class="ph ph-textbox header-20 title"><text>表单</text></view>
-					<view class="content">Forms<text class="ph ph-caret-right"></text></view>
-				</view>
 				<view class="section-list-item">
 					<view class="ph ph-list-dashes header-20 title"><text>列表</text></view>
 					<view class="content">Lists<text class="ph ph-caret-right"></text></view>
