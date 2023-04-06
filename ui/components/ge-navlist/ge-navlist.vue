@@ -9,7 +9,7 @@
 <script>
 	export default {
 		props: {
-			index: {
+			active: {
 				type: Number,
 				default: 0
 			},
@@ -29,7 +29,7 @@
 			}
 		},
 		created() {
-			this.activeIndex = this.index;
+			this.activeIndex = this.active;
 			this.scrollLeft = this.activeIndex * 60;
 		},
 		methods: {

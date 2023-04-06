@@ -12,11 +12,11 @@ export default {
 				'type': 'icon'
 			},
 			{
-				'name': '设置',
-				'url': '/pages/setting/index',
-				'icon': 'ph-gear',
+				'name': '模板',
+				'url': '/pages/template/index',
+				'icon': 'ph-planet',
 				'click': 'switch',
-				'notification': false,
+				'notification': true,
 				'type': 'icon'
 			},
 			{
@@ -26,17 +26,17 @@ export default {
 				'type': 'button'
 			},
 			{
-				'name': '播放',
-				'url': '/pages/player/index',
-				'icon': 'ph-guitar',
+				'name': '关于',
+				'url': '/pages/dash/index',
+				'icon': 'ph-coffee',
 				'click': 'switch',
-				'notification': true,
+				'notification': false,
 				'type': 'icon'
 			},
 			{
-				'name': '商品详情',
-				'url': '/pages/product/index',
-				'icon': 'ph-bank',
+				'name': '设置',
+				'url': '/pages/setting/index',
+				'icon': 'ph-gear',
 				'click': 'new',
 				'notification': false,
 				'type': 'icon'

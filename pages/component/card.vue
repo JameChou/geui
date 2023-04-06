@@ -122,7 +122,7 @@
 			align-items: center;
 			justify-content: center;
 
-			image {
+			img {
 				width: 688rpx;
 				height: 544rpx;
 				border-radius: 19.2rpx;
@@ -140,7 +140,7 @@
 			align-items: center;
 			justify-content: center;
 			flex-direction: column;
-			z-index: 1024;
+			z-index: 1;
 
 			.background {
 				z-index: -1;
@@ -241,6 +241,6 @@
 		position: fixed;
 		right: 30rpx;
 		bottom: 180rpx;
-		z-index: 4068;
+		z-index: 2048;
 	}
 </style>

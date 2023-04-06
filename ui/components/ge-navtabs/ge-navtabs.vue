@@ -46,7 +46,7 @@
 	.ui-navtabs {
 
 		height: 61.2rpx;
-		width: 688rpx;
+    width: 100%;
 		background: var(--ui-bg-op-regular);
 		display: flex;
 		align-items: center;

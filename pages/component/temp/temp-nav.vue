@@ -3,28 +3,28 @@
 		<view class="ui-nav" :style="[{height: customBar + 'px'}] ">
 			<view class="background" :class="opacity >= 1 ? 'blur' : ''"
 				:style="[{height: customBar + 'px', opacity: opacity}]"></view>
-			<view class="ui-header-content" :style="[{height: system_capsule.height + 'px'}]">
-				<block v-if="!customLeft">
-					<!-- #ifndef MP-ALIPAY -->
-					<text class="ph header-button"
-						:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
-						:class="'ph-' + backIcon" v-if="showBack" @tap="headerButtonTap">
-						<text v-if="backText !== ''">{{backText}}</text>
-					</text>
-					<!-- #endif -->
-				</block>
-				<block v-else>
-					<!-- 自定义左侧button -->
-					<view class="ph custom-left" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]">
-						<slot name="customLeft"></slot>
-					</view>
-				</block>
-				<view class="title" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
+			<view class="ui-header-content" :style="[{height: capsule.height + 'px'}]">
+        <block v-if="!customLeft">
+          <!-- #ifndef MP-ALIPAY -->
+          <text class="ph header-button"
+                :style="[{top: capsule.top + 'px', height: capsule.height + 'px'}]"
+                :class="'ph-' + backIcon" v-if="showBack" @tap="headerButtonTap">
+            <text v-if="backText !== ''">{{backText}}</text>
+          </text>
+          <!-- #endif -->
+        </block>
+        <block v-else>
+          <!-- 自定义左侧button -->
+          <view class="ph custom-left" :style="[{height: capsule.height + 'px'}]">
+            <slot name="customLeft"></slot>
+          </view>
+        </block>
+				<view class="title" :style="[{top: capsule.top + 'px', height: capsule.height + 'px'}]"
 					v-if="title !== '' && !customTitle">
 					{{title}}
 				</view>
 				<view class="custom-title" v-if="customTitle"
-					:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]">
+					:style="[{top: capsule.top + 'px', height: capsule.height + 'px'}]">
 					<slot name="replaceTitle"></slot>
 				</view>
 				<view class="fix-content" v-if="fixContent">
@@ -35,10 +35,9 @@
 	</view>
 </template>
 <script>
-	import {
-		mapState
-	} from 'vuex';
+  import {mapState} from 'vuex';
 	export default {
+    name: 'TempNav',
 		props: {
 			title: {
 				type: String,
@@ -48,18 +47,18 @@
 				type: Boolean,
 				default: true
 			},
-			customLeft: {
-				type: Boolean,
-				default: false
-			},
+      customLeft: {
+        type: Boolean,
+        default: false
+      },
 			backIcon: {
 				type: String,
 				default: 'arrow-left'
 			},
-			backText: {
-				type: String,
-				default: ''
-			},
+      backText: {
+        type: String,
+        default: ''
+      },
 			// 是否沉浸式导航，当向上滑动再固定显示
 			isOpacity: {
 				type: Boolean,
@@ -99,24 +98,31 @@
 		data() {
 			return {
 				customBar: 0,
-				opacity: 0
+				opacity: 0,
+        capsule: {
+          top: 0,
+          bottom: 56,
+          left: 278,
+          height: 50,
+          width: 87
+        }
 			}
 		},
-		methods: {
-			headerButtonTap() {
-				// #ifdef H5
-				let handler = this.tapHandler();
-				handler();
-				// #endif
-				// #ifdef MP
-				this.tapHandler();
-				// #endif
-			}
-		},
+    methods: {
+      headerButtonTap() {
+        // #ifdef H5
+        let handler = this.tapHandler();
+        handler();
+        // #endif
+        // #ifdef MP
+        this.tapHandler();
+        // #endif
+      }
+    },
 		computed: {
-			...mapState({
-				system_statusBar_height: state => state.system_statusBar_height
-			}),
+      ...mapState({
+        system_statusBar_height: state => state.system_statusBar_height
+      }),
 			system_navbar_height() {
 				return this.$store.getters.system_navbar_height;
 			}
@@ -129,9 +135,9 @@
 			}
 
 			if (this.navHeight > 0) {
-				this.customBar = this.system_navbar_height + uni.upx2px(this.navHeight) + 8;
+				this.customBar = 50 + uni.upx2px(this.navHeight) + 8;
 			} else {
-				this.customBar = this.system_navbar_height;
+				this.customBar = 50;
 			}
 
 			let _this = this;
@@ -154,9 +160,9 @@
 				});
 			}
 
-			// #ifdef MP-ALIPAY
-			my.hideAllFavoriteMenu();
-			// #endif
+      // #ifdef MP-ALIPAY
+      my.hideAllFavoriteMenu();
+      // #endif
 		},
 
 		destroyed() {
@@ -167,8 +173,7 @@
 </script>
 <style lang="scss">
 	.ui-nav {
-		position: fixed;
-		top: 0;
+		position: relative;
 		width: 100%;
 		z-index: 2048;
 		transform: translateY(0);

@@ -1,6 +1,10 @@
 <template>
 	<ge-page :tabs="tabs">
-		<ge-nav :is-opacity="true" has-icon :icon="'magnifying-glass'" :title="'主页'" custom-title>
+		<ge-nav :is-opacity="true" has-icon :icon="'magnifying-glass'" :title="'主页'" custom-title custom-left>
+      <template v-slot:customLeft>
+        <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')">
+        </view>
+      </template>
 			<template v-slot:replaceTitle>
 				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController" :tapHandler="themeTapHandler"
 					:initActive="system_theme === 'light' ? 0 : 1"></ge-switchseg>
@@ -55,71 +59,23 @@
 		<view class="ui-section" style="margin-top: 50rpx;">
 			<view class="section-title text-body-12">Ui组件</view>
 			<view class="section-list">
-				<view class="section-list-item">
-					<view class="ph ph-list-dashes header-20 title"><text>列表</text></view>
-					<view class="content">Lists<text class="ph ph-caret-right"></text></view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/navtabs">
+          <view class="ph ph-tabs header-20 title"><text>导航栏</text></view>
+          <view class="content">Navtabs<text class="ph ph-caret-right"></text></view>
+        </view>
+        <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/opbar">
+          <view class="ph ph-faders-horizontal header-20 title"><text>操作条</text></view>
+          <view class="content">Navbar<text class="ph ph-caret-right"></text></view>
+        </view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/user-list">
+					<view class="ph ph-list-dashes header-20 title"><text>用户列表</text></view>
+					<view class="content">Userlists<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item">
-					<view class="ph ph-tabs header-20 title"><text>导航</text></view>
-					<view class="content">Nav<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item">
-					<view class="ph ph-calendar header-20 title"><text>时间</text></view>
-					<view class="content">Calendar<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item">
-					<view class="ph ph-browsers header-20 title"><text>弹出</text></view>
-					<view class="content">Popover<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/card">
-					<view class="ph ph-credit-card header-20 title"><text>卡片</text></view>
-					<view class="content">Cards<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product1">
-					<view class="ph ph-credit-card header-20 title"><text>产品列表-1</text></view>
-					<view class="content">Product<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product2">
-					<view class="ph ph-credit-card header-20 title"><text>产品列表-2</text></view>
-					<view class="content">Product<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/waterfall">
-					<view class="ph ph-credit-card header-20 title"><text>瀑布流</text></view>
-					<view class="content">Waterfall<text class="ph ph-caret-right"></text></view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/news-list">
+					<view class="ph ph-newspaper-clipping header-20 title"><text>新闻列表</text></view>
+					<view class="content">Newslists<text class="ph ph-caret-right"></text></view>
 				</view>
 
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/interests">
-					<view class="ph ph-credit-card header-20 title"><text>喜好</text></view>
-					<view class="content">Interests<text class="ph ph-caret-right"></text></view>
-				</view>
-
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/preview">
-					<view class="ph ph-credit-card header-20 title"><text>预览表单</text></view>
-					<view class="content">Preview<text class="ph ph-caret-right"></text></view>
-				</view>
-
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/dashboard">
-					<view class="ph ph-credit-card header-20 title"><text>控制台</text></view>
-					<view class="content">Dashboard<text class="ph ph-caret-right"></text></view>
-				</view>
-
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/data-grid">
-					<view class="ph ph-credit-card header-20 title"><text>数据列表</text></view>
-					<view class="content">Datagrid<text class="ph ph-caret-right"></text></view>
-				</view>
-
-				<view class="section-list-item">
-					<view class="ph ph-sliders-horizontal header-20 title"><text>滑动</text></view>
-					<view class="content">Slides<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item">
-					<view class="ph ph-puzzle-piece header-20 title"><text>小组件</text></view>
-					<view class="content">Widgets<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item">
-					<view class="ph ph-list header-20 title"><text>菜单</text></view>
-					<view class="content">Menus<text class="ph ph-caret-right"></text></view>
-				</view>
 			</view>
 		</view>
     </view>

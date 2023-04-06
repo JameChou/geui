@@ -18,15 +18,6 @@
 </template>
 <script>
 	export default {
-		/*
-		    {
-		      name: '首页 ',
-		      url: '/pages/index/index',
-		      icon: 'ph-house',
-		      click: 'switch' // switch 切换tab, new 转向新页面,
-		      notification: true  // 是否有提示红点
-		    }
-		 */
 		props: {
 			data: {
 				type: Array,
@@ -60,7 +51,7 @@
 		position: fixed;
 		width: 100%;
 		bottom: 0;
-		z-index: 9999;
+		z-index: 2048;
 	}
 
 	.ui-tabbar {
@@ -70,8 +61,8 @@
 		background-color: var(--ui-tabbar-bg-primary);
 		backdrop-filter: blur(36.7rpx);
 		min-height: 140rpx;
-		z-index: 9999 !important;
-		padding-top: 14rpx;
+		z-index: 2048 !important;
+		padding-top: 25rpx;
 
 		.item {
 			color: var(--ui-tabbar-text-color);

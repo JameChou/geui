@@ -11,7 +11,27 @@
     left: 20rpx;
     display: flex;
     align-items: center;
-    z-index: 1021;
+    z-index: 2068;
+
+    text {
+      font-size: 30rpx;
+      display: flex;
+      align-items: center;
+    }
+  }
+
+  .custom-left {
+    position: absolute;
+    /* 支付宝小程序不可以隐藏 "<" 按钮，所以向右侧留出相应的位置 */
+    /* #ifndef MP-ALIPAY */
+    left: 20rpx;
+    /* #endif */
+    /* #ifdef MP-ALIPAY */
+    left: 40rpx;
+    /* #endif */
+    display: flex;
+    align-items: center;
+    z-index: 2068;
   }
 
   .title {
@@ -22,7 +42,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 1020;
+    z-index: 1024;
   }
 
   .custom-title {
@@ -32,7 +52,7 @@
     justify-content: center;
     left: 0;
     right: 0;
-    z-index: 1020;
+    z-index: 1024;
   }
 
   .fix-content {

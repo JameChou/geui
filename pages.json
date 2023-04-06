@@ -1,92 +1,49 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/index/index",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/index/index"
 		},
 		{
-			"path": "pages/basic/layout",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/layout"
 		},
 		{
-			"path": "pages/basic/color",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/color"
 		},
 		{
-			"path": "pages/basic/fonts",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/fonts"
 		},
 		{
-			"path": "pages/basic/icon",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/icon"
 		},
 		{
-			"path": "pages/basic/button",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/button"
 		},
 		{
-			"path": "pages/basic/table",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/table"
 		},
 		{
-			"path": "pages/basic/avatar",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/avatar"
 		},
 		{
-			"path": "pages/basic/form",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/basic/form"
 		},
 		{
-			"path": "pages/component/card",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/component/navtabs"
 		},
 		{
-			"path": "pages/component/product1",
-			"style": {
-				"app-plus": {
-					"titleNView": false
-				}
-			}
+			"path": "pages/component/opbar"
+		},
+		{
+			"path": "pages/component/card"
+		},
+		{
+			"path": "pages/component/user-list"
+		},
+		{
+			"path": "pages/component/news-list"
+		},
+		{
+			"path": "pages/component/product1"
 		}
 	],
 	"easycom": {
@@ -106,6 +63,9 @@
 		},
 		"mp-toutiao": {
 			"navigationStyle": "custom"
+		},
+		"app-plus": {
+			"titleNView": false
 		}
 	},
 	"uniIdRouter": {}

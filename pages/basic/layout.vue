@@ -2,7 +2,9 @@
 	<ge-page no-tabs>
 		<ge-nav title="布局" :is-opacity="false" fix-content :nav-height="navHeight">
 			<template v-slot:fixContent>
-				<ge-navtabs :items="navItems" :tap-handler="switchTab"></ge-navtabs>
+				<view style="width: 95%;">
+					<ge-navtabs :items="navItems" :tap-handler="switchTab"></ge-navtabs>
+				</view>
 			</template>
 		</ge-nav>
 
@@ -86,64 +88,66 @@
 			</view>
 		</view>
 
-    <view class="ui-container" v-if="index === 1">
-      <ge-title category category-content="排列" title-content="等分列" title-icon="grid-four" border></ge-title>
-      <view class="ui-grid layout-grid-section column-1 margin-top">
-        <view v-for="(item, index) in 2" class="text-white" :class="index % 2 == 0 ? 'bg-blue' : 'bg-green'">1</view>
-      </view>
+		<view class="ui-container" v-if="index === 1">
+			<ge-title category category-content="排列" title-content="等分列" title-icon="grid-four" border></ge-title>
+			<view class="ui-grid layout-grid-section column-1 margin-top">
+				<view v-for="(item, index) in 2" class="text-white" :class="index % 2 == 0 ? 'bg-blue' : 'bg-green'">1
+				</view>
+			</view>
 
-      <view class="ui-grid layout-grid-section column-2 margin-top">
-        <view class="bg-green text-white">1</view>
-        <view class="bg-blue text-white">2</view>
-        <view class="bg-blue text-white">3</view>
-        <view class="bg-green text-white">4</view>
-      </view>
+			<view class="ui-grid layout-grid-section column-2 margin-top">
+				<view class="bg-green text-white">1</view>
+				<view class="bg-blue text-white">2</view>
+				<view class="bg-blue text-white">3</view>
+				<view class="bg-green text-white">4</view>
+			</view>
 
-      <view class="ui-grid layout-grid-section column-3 margin-top">
-        <view class="bg-green text-white">1</view>
-        <view class="bg-blue text-white">2</view>
-        <view class="bg-green text-white">3</view>
-        <view class="bg-blue text-white">4</view>
-        <view class="bg-green text-white">5</view>
-        <view class="bg-blue text-white">6</view>
-      </view>
+			<view class="ui-grid layout-grid-section column-3 margin-top">
+				<view class="bg-green text-white">1</view>
+				<view class="bg-blue text-white">2</view>
+				<view class="bg-green text-white">3</view>
+				<view class="bg-blue text-white">4</view>
+				<view class="bg-green text-white">5</view>
+				<view class="bg-blue text-white">6</view>
+			</view>
 
-      <view class="ui-grid layout-grid-section column-4 margin-top">
-        <view class="bg-green text-white">1</view>
-        <view class="bg-blue text-white">2</view>
-        <view class="bg-green text-white">3</view>
-        <view class="bg-blue text-white">4</view>
-        <view class="bg-blue text-white">5</view>
-        <view class="bg-green text-white">6</view>
-        <view class="bg-blue text-white">7</view>
-        <view class="bg-green text-white">8</view>
-      </view>
+			<view class="ui-grid layout-grid-section column-4 margin-top">
+				<view class="bg-green text-white">1</view>
+				<view class="bg-blue text-white">2</view>
+				<view class="bg-green text-white">3</view>
+				<view class="bg-blue text-white">4</view>
+				<view class="bg-blue text-white">5</view>
+				<view class="bg-green text-white">6</view>
+				<view class="bg-blue text-white">7</view>
+				<view class="bg-green text-white">8</view>
+			</view>
 
-      <view class="ui-grid layout-grid-section column-5 margin-top">
-        <view class="bg-green text-white">1</view>
-        <view class="bg-blue text-white">2</view>
-        <view class="bg-green text-white">3</view>
-        <view class="bg-blue text-white">4</view>
-        <view class="bg-green text-white">5</view>
-        <view class="bg-blue text-white">6</view>
-        <view class="bg-green text-white">7</view>
-        <view class="bg-blue text-white">8</view>
-        <view class="bg-green text-white">9</view>
-        <view class="bg-blue text-white">10</view>
-      </view>
+			<view class="ui-grid layout-grid-section column-5 margin-top">
+				<view class="bg-green text-white">1</view>
+				<view class="bg-blue text-white">2</view>
+				<view class="bg-green text-white">3</view>
+				<view class="bg-blue text-white">4</view>
+				<view class="bg-green text-white">5</view>
+				<view class="bg-blue text-white">6</view>
+				<view class="bg-green text-white">7</view>
+				<view class="bg-blue text-white">8</view>
+				<view class="bg-green text-white">9</view>
+				<view class="bg-blue text-white">10</view>
+			</view>
 
-      <ge-title category category-content="GAP" title-content="Grid之间缝隙控制" title-icon="squares-four" border></ge-title>
-      <view class="ui-grid layout-grid-section column-2 margin-top gap-df">
-        <view class="bg-green text-white">1</view>
-        <view class="bg-blue text-white">2</view>
-        <view class="bg-blue text-white">3</view>
-        <view class="bg-green text-white">4</view>
-      </view>
-    </view>
+			<ge-title category category-content="GAP" title-content="Grid之间缝隙控制" title-icon="squares-four"
+				border></ge-title>
+			<view class="ui-grid layout-grid-section column-2 margin-top gap-df">
+				<view class="bg-green text-white">1</view>
+				<view class="bg-blue text-white">2</view>
+				<view class="bg-blue text-white">3</view>
+				<view class="bg-green text-white">4</view>
+			</view>
+		</view>
 	</ge-page>
 </template>
 <script>
-  let _this = null;
+	let _this = null;
 	export default {
 		data() {
 			return {
@@ -152,16 +156,16 @@
 					'Grid'
 				],
 				navHeight: uni.upx2px(100),
-        index: 0
+				index: 0
 			}
 		},
-    created() {
-      _this = this;
-    },
+		created() {
+			_this = this;
+		},
 		methods: {
 			switchTab(data) {
-        _this.index = data.index;
-      }
+				_this.index = data.index;
+			}
 		}
 	}
 </script>
@@ -218,12 +222,11 @@
 		}
 	}
 
-  .layout-grid-section {
-    view {
-      padding: 10rpx;
-      text-align: center;
-      height: 60rpx;
-    }
-  }
-
+	.layout-grid-section {
+		view {
+			padding: 10rpx;
+			text-align: center;
+			height: 60rpx;
+		}
+	}
 </style>
