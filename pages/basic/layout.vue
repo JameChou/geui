@@ -3,7 +3,7 @@
 		<ge-nav title="布局" :is-opacity="false" fix-content :nav-height="navHeight">
 			<template v-slot:fixContent>
 				<view style="width: 95%;">
-					<ge-navtabs :items="navItems" :tap-handler="switchTab"></ge-navtabs>
+					<ge-navtabs :items="navItems" v-on:_navTabsTap_="switchTab"></ge-navtabs>
 				</view>
 			</template>
 		</ge-nav>

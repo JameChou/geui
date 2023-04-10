@@ -22,7 +22,7 @@
       <view class="margin-top bg-blue" >
         <temp-nav :is-opacity="false" custom-title back-icon="caret-left" back-text="返回">
           <template v-slot:replaceTitle>
-            <img style="height: 100%; width: 96px;" mode="aspectFill" src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/c748cc9a-0b58-40b4-981b-386ceb678b46.png" />
+            <image style="height: 100%; width: 96px;" mode="aspectFill" src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/c748cc9a-0b58-40b4-981b-386ceb678b46.png" />
           </template>
         </temp-nav>
       </view>

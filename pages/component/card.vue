@@ -1,9 +1,14 @@
 <template>
 	<ge-page :tabs="tabs">
-		<ge-nav title="卡片">
+		<ge-nav title="卡片" fix-content :nav-height="60">
+			<template v-slot:fixContent>
+				<view style="width: 95%;">
+					<ge-navtabs :items="items" :active="tabSelectedIndex" v-on:_navTabsTap_="navTabsChange"></ge-navtabs>
+				</view>
+			</template>
 		</ge-nav>
-		<view class="ui-container">
-
+		<view class="ui-container" v-show="tabSelectedIndex === 0">
+			<ge-title category category-content="CARD-1" title-content="大卡片类(样式一)" title-icon="number-circle-one" border></ge-title>
 			<!-- 常规二 603839 -->
 			<view class="ui-card compact">
 				<view class="card-tag">
@@ -13,7 +18,7 @@
 					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
 				</view>
 				<view class="card-image">
-					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/09445d7c-049e-4c72-ac29-b492218efecd.jpeg"
+					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/09445d7c-049e-4c72-ac29-b492218efecd.jpeg"
 						mode="aspectFill" />
 				</view>
 				<view class="cover-content">
@@ -33,7 +38,7 @@
 					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
 				</view>
 				<view class="card-image">
-					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/e61027cc-0cac-40f5-83e6-47bf071feb97.jpeg"
+					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/e61027cc-0cac-40f5-83e6-47bf071feb97.jpeg"
 						mode="aspectFill" />
 				</view>
 
@@ -52,7 +57,7 @@
 					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
 				</view>
 				<view class="card-image">
-					<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/6f10b8b4-2bea-465c-80e3-0db765b68aff.jpeg"
+					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/6f10b8b4-2bea-465c-80e3-0db765b68aff.jpeg"
 						mode="aspectFill" />
 				</view>
 				<view class="cover-content">
@@ -63,6 +68,120 @@
 				</view>
 			</view>
 
+		</view>
+
+		<view class="ui-container" v-show="tabSelectedIndex === 1">
+			<ge-title category category-content="CARD-2" title-content="小卡片样式" title-icon="number-circle-two" border></ge-title>
+			<view class="ui-card-small">
+				<view class="body">
+					<view class="content">
+						<view class="tag" v-if="false">Hello</view>
+						<view class="title">Buna.Fits for you tunna. Buy One, get Second for FREE. Limited deal test test test</view>
+						<view class="spec">
+							<text class="ph ph-book-bookmark"></text>
+								Non-fiction 1hr.50 min
+						</view>
+						<view class="score">4<ge-rates disabled :value="4"></ge-rates></view>
+						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
+					</view>
+					<view class="content-image">
+						<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
+								 mode="aspectFill" />
+					</view>
+				</view>
+			</view>
+
+			<view class="ui-card-small">
+				<view class="body">
+					<view class="content">
+						<view class="tag">new Release</view>
+						<view class="title">Buna.Fits for you tunna. Buy One</view>
+						<view class="spec">
+							<text class="ph ph-book-bookmark"></text>
+							Non-fiction 1hr.50 min
+						</view>
+						<view class="score">4.6<ge-rates disabled :value="4"></ge-rates></view>
+						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
+					</view>
+					<view class="content-image">
+						<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
+								 mode="aspectFill" />
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="ui-container" v-show="tabSelectedIndex === 2">
+			<ge-title category category-content="CARD-3" title-content="Grid样式卡片布局" title-icon="number-circle-three" border></ge-title>
+			<view class="ui-card-grid margin-top">
+				<view class="grid-card-item">
+					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/4403bc3a-b3d5-40c9-b9af-43277fc3ba01.jpeg" mode="aspectFill" />
+					<view class="card-content">
+						<view class="card-title">
+							美食&烹饪
+						</view>
+						<view class="card-sub">
+							2700已关注
+						</view>
+					</view>
+				</view>
+				<view class="grid-card-item">
+					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/f3dc9158-1de5-4b32-8dbf-2b82e810617a.jpeg" mode="aspectFill" />
+					<view class="card-content">
+						<view class="card-title">
+							萌宠
+						</view>
+						<view class="card-sub">
+							8000已关注
+						</view>
+					</view>
+				</view>
+				<view class="grid-card-item">
+					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/1f576154-2464-4434-84ee-6497b53dcf7d.jpeg" mode="aspectFill" />
+					<view class="card-content">
+						<view class="card-title">
+							篮球&体育
+						</view>
+						<view class="card-sub">
+							7280已关注
+						</view>
+					</view>
+				</view>
+				<view class="grid-card-item">
+					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/bcf191f1-08b8-4814-befd-4819f6363cc0.jpeg" mode="aspectFill" />
+					<view class="card-content">
+						<view class="card-title">
+							工业设计&手办&手绘哈哈哈哈
+						</view>
+						<view class="card-sub">
+							3已关注
+						</view>
+					</view>
+				</view>
+			</view>
+		</view>
+
+		<view class="ui-container" v-show="tabSelectedIndex === 3">
+			<view class="ui-card-shopping margin-top">
+				<view class="shopping-card-item">
+					<image mode="aspectFill" src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/bcf191f1-08b8-4814-befd-4819f6363cc0.jpeg" />
+					<view class="card-content">
+						<view class="card-title">清风手办设计稿</view>
+						<view class="card-sub">可利用3D FDM打印机来进行打印</view>
+						<view class="card-price"><text class="promote-price">28.2</text></view>
+						<view class="card-score"><ge-rates :value="5" disabled></ge-rates></view>
+					</view>
+				</view>
+				<view class="shopping-card-item">
+					<image mode="aspectFill" src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/bcf191f1-08b8-4814-befd-4819f6363cc0.jpeg" />
+					<view class="card-content">
+						<view class="card-title">这是一个两行的标题，数据，数据。上色喷漆，测试</view>
+						<view class="card-sub">Subtitle, description, add something you like. learn how to spray color on module.</view>
+						<view class="card-price"><text class="original-price">28.2</text><text class="promote-price">18.2</text></view>
+						<view class="card-score"><ge-rates :value="2" disabled></ge-rates></view>
+					</view>
+				</view>
+			</view>
 		</view>
 		<button class="ui-icon-button lg round ph ph-plus blue shadow float-button"></button>
 
@@ -76,171 +195,23 @@
 			}
 		},
 		data() {
-			return {}
+			return {
+				items: [
+						'样式一',
+						'样式二',
+						'样式三',
+						'样式四'
+				],
+				tabSelectedIndex: 0
+			}
+		},
+		methods: {
+			navTabsChange(item) {
+				this.tabSelectedIndex = item.index;
+			}
 		}
 	}
 </script>
 <style lang="scss">
-	.ui-card {
-		display: block;
-		width: 100%;
 
-		&.compact {
-			height: 555rpx;
-			margin-top: 30.8rpx;
-		}
-
-		.card-tag {
-			position: absolute;
-			left: 50rpx;
-			height: 46.2rpx;
-			width: auto;
-			min-width: 100rpx;
-			font-style: normal;
-			font-weight: 400;
-			font-size: 23.1rpx;
-			line-height: 130%;
-			margin-top: 15.4rpx;
-
-			background-color: #00B670;
-			border-radius: 999rpx;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			color: #FFFFFF;
-		}
-
-		.card-button {
-			position: absolute;
-			right: 50rpx;
-			margin-top: 15.4rpx;
-		}
-
-
-		.card-image {
-			display: flex;
-			align-items: center;
-			justify-content: center;
-
-			img {
-				width: 688rpx;
-				height: 544rpx;
-				border-radius: 19.2rpx;
-			}
-
-		}
-
-		.cover-content {
-			position: relative;
-			top: -205rpx;
-			width: 100%;
-			height: 215.4rpx;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-			z-index: 1;
-
-			.background {
-				z-index: -1;
-				position: absolute;
-				background: var(--ui-card-glass-background);
-				backdrop-filter: blur(36.7rpx);
-				width: 688rpx;
-				height: 215.4rpx;
-				border-radius: 0px 0px 19.2rpx 19.2rpx;
-			}
-
-			.title {
-				margin-top: 23.1rpx;
-				width: 642.3rpx;
-				height: 53.8rpx;
-				font-style: normal;
-				font-weight: 600;
-				font-size: 38.5rpx;
-				line-height: 135%;
-				color: var(--ui-text-regular);
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-
-			.sub-title {
-				margin-top: 15.4rpx;
-				font-style: normal;
-				font-weight: 400;
-				height: 46.2rpx;
-				width: 642.3rpx;
-				font-size: 30.8rpx;
-				line-height: 150%;
-				letter-spacing: 0.0168em;
-				color: var(--ui-card-subtitle-color);
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-
-			.spec-info {
-				margin-top: 15.4rpx;
-				font-style: normal;
-				font-weight: 400;
-				height: 38.5rpx;
-				font-size: 26.9rpx;
-				line-height: 142%;
-				color: var(--ui-text-regular);
-				width: 642.3rpx;
-				white-space: nowrap;
-				overflow: hidden;
-				text-overflow: ellipsis;
-			}
-		}
-
-		.content {
-			width: 100%;
-
-			display: flex;
-			align-items: center;
-			justify-content: center;
-			flex-direction: column;
-
-			.title {
-				margin-top: 23.1rpx;
-				width: 688rpx;
-				font-style: normal;
-				font-weight: 600;
-				font-size: 38.5rpx;
-				line-height: 135%;
-				color: var(--ui-text-regular);
-			}
-
-			.sub-title {
-				margin-top: 15.4rpx;
-				font-style: normal;
-				font-weight: 400;
-				width: 688rpx;
-				font-size: 30.8rpx;
-				line-height: 150%;
-				letter-spacing: 0.0168em;
-				color: var(--ui-card-subtitle-color);
-			}
-
-			.spec-info {
-				margin-top: 15.4rpx;
-				font-style: normal;
-				font-weight: 400;
-				font-size: 26.9rpx;
-				line-height: 142%;
-				color: var(--ui-text-regular);
-				width: 688rpx;
-			}
-		}
-	}
-
-	.float-button {
-		position: fixed;
-		right: 30rpx;
-		bottom: 180rpx;
-		z-index: 2048;
-	}
 </style>

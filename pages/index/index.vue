@@ -13,7 +13,7 @@
 
     <view class="ui-container">
 		<view class="index-title header-48">
-			<img src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/85b80a65-9579-4b63-9b43-0887bec03628.jpg"
+			<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/85b80a65-9579-4b63-9b43-0887bec03628.jpg"
 				mode="aspectFill" />
 			<view class="header-20 sub">明快、现代设计的Ui框架</view>
 		</view>
@@ -75,6 +75,14 @@
 					<view class="ph ph-newspaper-clipping header-20 title"><text>新闻列表</text></view>
 					<view class="content">Newslists<text class="ph ph-caret-right"></text></view>
 				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/waterfall">
+					<view class="ph ph-columns header-20 title"><text>瀑布流</text></view>
+					<view class="content">Waterfall<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/card">
+					<view class="ph ph-cards header-20 title"><text>卡片</text></view>
+					<view class="content">Card<text class="ph ph-caret-right"></text></view>
+				</view>
 
 			</view>
 		</view>
@@ -128,7 +136,7 @@
 			margin-top: 5rpx;
 		}
 
-		img {
+		img, image {
 			width: 250rpx;
 			height: 250rpx;
 		}

@@ -16,15 +16,7 @@
 			active: {
 				type: Number,
 				default: 0
-			},
-      tapHandler: {
-        type: Function,
-        default: (data) => {
-          return (data) => {
-            console.log('nav-tabs default tap handler.');
-          }
-        }
-      }
+			}
 		},
 		data() {
 			return {
@@ -37,7 +29,7 @@
 		methods: {
 			tapItem(e) {
 				this.activeIndex = e.currentTarget.dataset.id;
-        this.tapHandler({index: e.currentTarget.dataset.id, name: e.currentTarget.dataset.name});
+				this.$emit('_navTabsTap_', {index: e.currentTarget.dataset.id, name: e.currentTarget.dataset.name});
 			}
 		}
 	}
