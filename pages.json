@@ -43,10 +43,16 @@
 			"path": "pages/component/news-list"
 		},
 		{
-			"path": "pages/component/product1"
+			"path": "pages/component/waterfall"
 		},
 		{
-			"path": "pages/component/waterfall"
+			"path": "pages/component/product"
+		},
+		{
+			"path": "pages/component/modal"
+		},
+		{
+			"path": "pages/component/toast"
 		}
 	],
 	"easycom": {

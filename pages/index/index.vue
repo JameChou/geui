@@ -83,7 +83,18 @@
 					<view class="ph ph-cards header-20 title"><text>卡片</text></view>
 					<view class="content">Card<text class="ph ph-caret-right"></text></view>
 				</view>
-
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product">
+					<view class="ph ph-shopping-bag header-20 title"><text>产品</text></view>
+					<view class="content">Product<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/modal">
+					<view class="ph ph-shopping-bag header-20 title"><text>弹出</text></view>
+					<view class="content">Modal<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/toast">
+					<view class="ph ph-shopping-bag header-20 title"><text>提示</text></view>
+					<view class="content">Toast<text class="ph ph-caret-right"></text></view>
+				</view>
 			</view>
 		</view>
     </view>
