@@ -9,9 +9,23 @@
 				<view>加载中</view>
 			</view>
 		</view>
+
+		<ge-toast name="system_dialog"
+							:title="toast.title"
+							:sub-title="toast.subTitle"
+							:toast-style="toast.toastStyle"
+							:icon="toast.icon"
+							:duration="toast.duration"
+							:mask="toast.mask"
+							:is-loading="toast.isLoading"
+							@success="$event => toast.success($event)"
+		>
+
+		</ge-toast>
 	</view>
 </template>
 <script>
+	import {mapState} from 'vuex';
 	export default {
 		props: {
 			tabs: {
@@ -38,6 +52,11 @@
 				paddingBottomHeight: 62,
 				isLoading: true
 			};
+		},
+		computed: {
+			...mapState ({
+				toast: state => state.modal.toast
+			})
 		},
 		created() {
 			let _this = this;

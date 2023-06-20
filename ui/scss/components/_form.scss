@@ -124,5 +124,20 @@
     background-color: var(--ui-bg-primary);
     padding: 3.8rpx 7.7rpx 3.8rpx 7.7rpx;
   }
+}
 
+switch .wx-switch-input::before,
+switch .uni-switch-input::before {
+  background-color: var(--ui-switch-before-bg);
+}
+
+switch .wx-switch-input::after,
+switch .uni-switch-input::after {
+  background-color: var(--ui-switch-after-color);
+}
+
+switch .wx-switch-input-checked,
+switch .uni-switch-input-checked {
+  border-color: #00B670 !important;
+  background-color: #00B670 !important;
 }

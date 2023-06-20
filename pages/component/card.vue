@@ -18,7 +18,7 @@
 					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
 				</view>
 				<view class="card-image">
-					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/09445d7c-049e-4c72-ac29-b492218efecd.jpeg"
+					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food3.jpeg"
 						mode="aspectFill" />
 				</view>
 				<view class="cover-content">
@@ -38,7 +38,7 @@
 					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
 				</view>
 				<view class="card-image">
-					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/e61027cc-0cac-40f5-83e6-47bf071feb97.jpeg"
+					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food5.jpeg"
 						mode="aspectFill" />
 				</view>
 
@@ -57,7 +57,7 @@
 					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
 				</view>
 				<view class="card-image">
-					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/6f10b8b4-2bea-465c-80e3-0db765b68aff.jpeg"
+					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food6.jpeg"
 						mode="aspectFill" />
 				</view>
 				<view class="cover-content">
@@ -85,7 +85,7 @@
 						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
 					</view>
 					<view class="content-image">
-						<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
+						<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/book.jpeg"
 								 mode="aspectFill" />
 					</view>
 				</view>
@@ -104,7 +104,7 @@
 						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
 					</view>
 					<view class="content-image">
-						<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/5a42395f-00b7-4eda-bf62-5b27d75c7614.jpeg"
+						<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/book.jpeg"
 								 mode="aspectFill" />
 					</view>
 				</view>
@@ -115,7 +115,7 @@
 			<ge-title category category-content="CARD-3" title-content="Grid样式卡片布局" title-icon="number-circle-three" border></ge-title>
 			<view class="ui-card-grid margin-top">
 				<view class="grid-card-item">
-					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/4403bc3a-b3d5-40c9-b9af-43277fc3ba01.jpeg" mode="aspectFill" />
+					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food5.jpeg" mode="aspectFill" />
 					<view class="card-content">
 						<view class="card-title">
 							美食&烹饪
@@ -126,7 +126,7 @@
 					</view>
 				</view>
 				<view class="grid-card-item">
-					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/f3dc9158-1de5-4b32-8dbf-2b82e810617a.jpeg" mode="aspectFill" />
+					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/dog-avatar.jpeg" mode="aspectFill" />
 					<view class="card-content">
 						<view class="card-title">
 							萌宠
@@ -137,7 +137,7 @@
 					</view>
 				</view>
 				<view class="grid-card-item">
-					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/1f576154-2464-4434-84ee-6497b53dcf7d.jpeg" mode="aspectFill" />
+					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/basketball.jpeg" mode="aspectFill" />
 					<view class="card-content">
 						<view class="card-title">
 							篮球&体育
@@ -148,7 +148,7 @@
 					</view>
 				</view>
 				<view class="grid-card-item">
-					<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/bcf191f1-08b8-4814-befd-4819f6363cc0.jpeg" mode="aspectFill" />
+					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/design.jpeg" mode="aspectFill" />
 					<view class="card-content">
 						<view class="card-title">
 							工业设计&手办&手绘哈哈哈哈

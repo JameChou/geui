@@ -1,5 +1,6 @@
 import Vue from 'vue';
 import Vuex from 'vuex';
+import modal from '@/ui/js/store/modal.js';
 import app from '@/app/store';
 
 Vue.use(Vuex);
@@ -78,7 +79,8 @@ const store = new Vuex.Store({
 	},
 	actions: {},
 	modules: {
-		app
+		app,
+		modal
 	}
 });
 

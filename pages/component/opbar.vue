@@ -22,14 +22,14 @@
       <view class="margin-top bg-blue" >
         <temp-nav :is-opacity="false" custom-title back-icon="caret-left" back-text="返回">
           <template v-slot:replaceTitle>
-            <image style="height: 100%; width: 96px;" mode="aspectFill" src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/c748cc9a-0b58-40b4-981b-386ceb678b46.png" />
+            <image style="height: 100%; width: 96px;" mode="aspectFill" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/title.png" />
           </template>
         </temp-nav>
       </view>
       <view class="margin-top bg-blue-40">
         <temp-nav :is-opacity="false" title="自定义左侧操作" custom-left>
           <template v-slot:customLeft>
-            <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')">
+            <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')">
             </view>
           </template>
         </temp-nav>

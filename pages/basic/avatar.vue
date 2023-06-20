@@ -5,15 +5,15 @@
     <view class="ui-container">
       <ge-title category category-content="AVATAR" title-content="头像基础形状" title-icon="user-circle" border></ge-title>
       <view class="margin-top ui-flex align-center justify-around">
-        <view class="ui-avatar" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')"></view>
-        <view class="ui-avatar round-avatar" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')"></view>
+        <view class="ui-avatar" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')"></view>
+        <view class="ui-avatar round-avatar" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')"></view>
       </view>
 
       <ge-title category category-content="SIZE" title-content="三个头像大小" title-icon="arrows-out-simple" border></ge-title>
       <view class="margin-top ui-flex align-center justify-around">
-        <view class="ui-avatar xs" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')"></view>
-        <view class="ui-avatar sm" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')"></view>
-        <view class="ui-avatar" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')"></view>
+        <view class="ui-avatar xs" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')"></view>
+        <view class="ui-avatar sm" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')"></view>
+        <view class="ui-avatar" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')"></view>
       </view>
 
       <ge-title category category-content="文字" title-content="非图片的头像" title-icon="text-a-underline" border></ge-title>
@@ -30,13 +30,13 @@
           <view class="ui-avatar round-avatar avatar-bg-yellow"><text>S</text></view>
           <view class="ui-avatar round-avatar avatar-bg-green"><text>R</text></view>
           <view class="ui-avatar round-avatar avatar-bg-blue"><text>T</text></view>
-          <view class="ui-avatar round-avatar" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')"></view>
+          <view class="ui-avatar round-avatar" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')"></view>
         </view>
       </view>
 
       <ge-title category category-content="标签" title-content="标签,提示" title-icon="notification" border></ge-title>
       <view class="margin-top ui-flex align-center justify-around">
-        <view class="ui-avatar round-avatar" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')">
+        <view class="ui-avatar round-avatar" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')">
           <text class="avatar-badge"></text>
         </view>
         <view class="ui-avatar">

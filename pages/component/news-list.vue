@@ -55,13 +55,13 @@ export default {
 			news: [
 				{
 					"title": '中美之间全面对抗升级，双方在经济、军事冲突不断',
-					"cover": "https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/caa9b5e6-e7d0-4511-be6c-94115c9fa75f.jpeg",
+					"cover": "https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/china-usa.jpeg",
 					"views": "9280",
 					"created": "1小时前"
 				},
 				{
 					"title": '欧神仙终于认为地球是圆的',
-					"cover": "https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/e810a140-0527-4788-ba7c-34e613b8d560.jpeg",
+					"cover": "https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/irving.jpeg",
 					"views": '210M',
 					'created': '4年前'
 				}

@@ -2,7 +2,7 @@
 	<ge-page :tabs="tabs">
 		<ge-nav :is-opacity="true" has-icon :icon="'magnifying-glass'" :title="'主页'" custom-title custom-left>
       <template v-slot:customLeft>
-        <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/2f09ce13-4fc4-435c-be24-6b68b77c3a21.jpeg')">
+        <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')">
         </view>
       </template>
 			<template v-slot:replaceTitle>
@@ -13,7 +13,7 @@
 
     <view class="ui-container">
 		<view class="index-title header-48">
-			<image src="https://mp-c639d255-1c45-4802-946b-874beaaa72cd.cdn.bspapp.com/cloudstorage/85b80a65-9579-4b63-9b43-0887bec03628.jpg"
+			<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/logo.jpg"
 				mode="aspectFill" />
 			<view class="header-20 sub">明快、现代设计的Ui框架</view>
 		</view>
@@ -88,11 +88,11 @@
 					<view class="content">Product<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/modal">
-					<view class="ph ph-shopping-bag header-20 title"><text>弹出</text></view>
+					<view class="ph ph-app-window header-20 title"><text>弹出</text></view>
 					<view class="content">Modal<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/toast">
-					<view class="ph ph-shopping-bag header-20 title"><text>提示</text></view>
+					<view class="ph ph-info header-20 title"><text>提示</text></view>
 					<view class="content">Toast<text class="ph ph-caret-right"></text></view>
 				</view>
 			</view>
