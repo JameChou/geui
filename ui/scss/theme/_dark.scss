@@ -6,6 +6,7 @@
   --ui-bg-glass-blur: blur(37rpx);
   --ui-bg-op-regular: rgba(67, 118, 254, 0.38);
   --ui-bg-pure-primary: #000000;
+  --ui-bg-dashboard: rgba(255, 255, 255, 0.1);
 
   /* 文字 */
   --ui-text-highlight: #FFFFFF;
@@ -71,4 +72,7 @@
   /* form-switch */
   --ui-switch-before-bg: rgba(255, 255, 255, 0.38);
   --ui-switch-after-color: #000000;
+
+  /* dashboard */
+  --ui-dashboard-boxshadow: 0px 3.8rpx 11.5rpx 0px rgba(255, 255, 255, 0.10) inset;
 }

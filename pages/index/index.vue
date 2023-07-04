@@ -53,6 +53,10 @@
           <view class="ph ph-textbox header-20 title"><text>表单</text></view>
           <view class="content">Forms<text class="ph ph-caret-right"></text></view>
         </view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/dashboard">
+					<view class="ph ph-gauge header-20 title"><text>控制面板</text></view>
+					<view class="content">Dashboard<text class="ph ph-caret-right"></text></view>
+				</view>
 			</view>
 		</view>
 
@@ -86,6 +90,10 @@
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product">
 					<view class="ph ph-shopping-bag header-20 title"><text>产品</text></view>
 					<view class="content">Product<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product-detail">
+					<view class="ph ph-storefront header-20 title"><text>产品详情</text></view>
+					<view class="content">P-Detail<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/modal">
 					<view class="ph ph-app-window header-20 title"><text>弹出</text></view>

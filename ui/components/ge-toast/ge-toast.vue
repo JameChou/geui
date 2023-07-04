@@ -104,6 +104,8 @@ export default {
 	z-index: 1025;
 	padding-left: 30rpx;
 	padding-right: 30rpx;
+	background-color: var(--ui-bg-pure-primary);
+	max-height: 123rpx;
 
 	&.show {
 		transform: scale(1);

@@ -69,16 +69,16 @@
 					<view class="ph ph-x"></view>
 				</view>
 			</view>
+			<button class="ui-button blue margin-top block" @tap="clickMethod">点击查看示例</button>
 		</view>
 
-		<button class="ui-button" @tap="clickMethod">Click</button>
 	</ge-page>
 </template>
 <script>
 export default {
 	methods: {
 		clickMethod() {
-			this.$uiSuccess('成功', '成功的信息');
+			this.$uiSuccess('成功', '您成功触发了一个成功提示！');
 		}
 	}
 }

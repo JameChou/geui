@@ -28,6 +28,9 @@
 			"path": "pages/basic/form"
 		},
 		{
+			"path": "pages/basic/dashboard"
+		},
+		{
 			"path": "pages/component/navtabs"
 		},
 		{
@@ -47,6 +50,9 @@
 		},
 		{
 			"path": "pages/component/product"
+		},
+		{
+			"path": "pages/component/product-detail"
 		},
 		{
 			"path": "pages/component/modal"

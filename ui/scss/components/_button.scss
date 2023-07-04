@@ -3,7 +3,6 @@
   border: none;
   backdrop-filter: blur(10px);
   border-radius: 15.4rpx;
-  text-align: center;
   text-decoration: none;
   width: 163.5rpx;
   height: 76.9rpx;
@@ -49,6 +48,7 @@
     font-weight: 600;
     font-size: 30.8rpx;
     border-radius: 19.2rpx;
+    padding-top: 23.1rpx;
   }
 
   &.sm {
@@ -58,6 +58,7 @@
     font-weight: 400;
     font-size: 23.1rpx;
     border-radius: 7.7rpx;
+    padding-top: 10rpx;
   }
 
   &.round {
