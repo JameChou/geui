@@ -1,0 +1,31 @@
+.animation-scale-top {
+  @include keyframes(scaleTop)  {
+    0% {
+      opacity: 0;
+      transform: scale(.2);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @include animate(scaleTop $scale-bounce-timing ease-out 1);
+}
+
+.animation-scale-bottom {
+  @include keyframes(scaleBottom) {
+    0% {
+      opacity: 0;
+      transform: scale(1.8);
+    }
+
+    100% {
+      opacity: 1;
+      transform: scale(1);
+    }
+  }
+
+  @include animate(scaleBottom $scale-bounce-timing ease-out 1);
+}

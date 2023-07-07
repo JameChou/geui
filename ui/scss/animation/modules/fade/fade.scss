@@ -1,0 +1,71 @@
+/* 从底部fadeIn  */
+.animation-fade-bottom {
+  @include keyframes(fadeInBottom) {
+    0% {
+      transform: translateY(100%);
+      opacity: 0;
+    }
+
+    70% {
+      transform: translateY(70%);
+      opacity: 1;
+    }
+
+    100% {
+      transform: translateY(0);
+    }
+  }
+
+  @include animate(fadeInBottom $fade-timing ease-out 1);
+}
+
+/* 从底部fadeIn */
+.animation-fade-top {
+  @include keyframes(fadeInTop) {
+    0% {
+      transform: translateY(-100%);
+      opacity: 0;
+    }
+
+    70% {
+      transform: translateY(0);
+      opacity: 1;
+    }
+  }
+
+  @include animate(fadeInTop $fade-timing ease-out 1);
+}
+
+/* 从左侧fadeIn */
+.animation-fade-left {
+  @include keyframes(fadeInLeft) {
+    0% {
+      transform: translateX(-100%);
+      opacity: 0;
+    }
+
+    70% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @include animate(fadeInLeft $fade-timing ease-out 1);
+}
+
+/* 从右侧fadeIn */
+.animation-fade-right {
+  @include keyframes(fadeInRight) {
+    0% {
+      transform: translateX(100%);
+      opacity: 0;
+    }
+
+    70% {
+      transform: translateX(0);
+      opacity: 1;
+    }
+  }
+
+  @include animate(fadeInRight $fade-timing ease-out 1);
+}

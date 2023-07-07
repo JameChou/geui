@@ -57,6 +57,10 @@
 					<view class="ph ph-gauge header-20 title"><text>控制面板</text></view>
 					<view class="content">Dashboard<text class="ph ph-caret-right"></text></view>
 				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/animation">
+					<view class="ph ph-moon-stars header-20 title"><text>动画</text></view>
+					<view class="content">Animation<text class="ph ph-caret-right"></text></view>
+				</view>
 			</view>
 		</view>
 
@@ -74,6 +78,10 @@
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/user-list">
 					<view class="ph ph-list-dashes header-20 title"><text>用户列表</text></view>
 					<view class="content">Userlists<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/preview">
+					<view class="ph ph-list-numbers header-20 title"><text>预览表单</text></view>
+					<view class="content">Preview<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/news-list">
 					<view class="ph ph-newspaper-clipping header-20 title"><text>新闻列表</text></view>
