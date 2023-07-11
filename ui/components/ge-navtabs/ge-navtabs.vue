@@ -29,7 +29,7 @@
 		methods: {
 			tapItem(e) {
 				this.activeIndex = e.currentTarget.dataset.id;
-				this.$emit('_navTabsTap_', {index: e.currentTarget.dataset.id, name: e.currentTarget.dataset.name});
+				this.$emit('tab-select', {index: e.currentTarget.dataset.id, name: e.currentTarget.dataset.name});
 			}
 		}
 	}

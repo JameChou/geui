@@ -31,15 +31,6 @@
 			fullDay: {
 				type: Boolean,
 				default: false
-			},
-			// 点击的handler
-			tapHandler: {
-				type: Function,
-				default: () => {
-					return (item) => {
-						console.log(`ge-navbars default click ${item.date}`);
-					}
-				}
 			}
 		},
 		data() {
@@ -105,8 +96,7 @@
 				this.selectDate.active = false;
 				this.selectDate = item;
 				item.active = true;
-
-				this.tapHandler(item);
+				this.$emit('tap-handler', item);
 			},
 			formatSelectDate() {
 				return `${this.selectDate.date.getFullYear()}年${this.selectDate.date.getMonth() + 1}月${this.selectDate.date.getDate()}日`;

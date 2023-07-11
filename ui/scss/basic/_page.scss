@@ -8,10 +8,21 @@
     flex: 1;
     min-height: 100vh;
     position: relative;
-    background-color: var(--ui-bg-glass);
     color: var(--ui-text-regular);
     z-index: 1024;
+    background: transparent;
     -webkit-backdrop-filter: var(--ui-bg-glass-blur);
+
+  }
+
+  &-back {
+    height: 100%;
+    background-color: var(--ui-bg-glass);
+    width: 100%;
+    z-index: 1023;
+    position: absolute;
+    top: 0;
+    backdrop-filter: blur(20rpx);
   }
 
 }

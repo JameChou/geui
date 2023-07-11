@@ -36,6 +36,7 @@
 			tabSelect(e) {
 				this.activeIndex = e.currentTarget.dataset.id;
 				this.scrollLeft = (e.currentTarget.dataset.id - 1) * 60;
+				this.$emit('tab-select', this.activeIndex);
 			}
 		}
 	}

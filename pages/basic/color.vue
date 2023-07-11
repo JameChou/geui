@@ -17,42 +17,42 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">White #000000</text>
 				<view class="ui-flex color-section" style="background: #000000;">
-					<view v-for="(item, index) in 6" class="pad" :class="'white-' + index"></view>
+					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-white' : 'bg-white-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Black #FFFFFF</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in 6" class="pad" :class="'black-' + index"></view>
+					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-black' : 'bg-black-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
-				<text class="text-body-14 color-section-title">Blue #4376FE</text>
+				<text class="text-body-14 color-section-title">Blue #437colorFillFE</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in 6" class="pad" :class="'blue-' + index"></view>
+					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-blue' : 'bg-blue-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
-				<text class="text-body-14 color-section-title">Green #00B670</text>
+				<text class="text-body-14 color-section-title">Green #00BcolorFill70</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in 6" class="pad" :class="'green-' + index"></view>
+					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-green' : 'bg-green-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Orange #FE8E0B</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in 6" class="pad" :class="'orange-' + index"></view>
+					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-orange' : 'bg-orange-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Red #FE8E0B</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in 6" class="pad" :class="'red-' + index"></view>
+					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-red' : 'bg-red-' + item"></view>
 				</view>
 			</view>
 
@@ -62,7 +62,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Light Background</text>
 				<view class="ui-flex color-light-section justify-between align-center">
-					<view v-for="(item, index) in 6" class="pad" :class="'light-bg-' + index"></view>
+					<view v-for="(item, index) in themeBgArr" class="pad" :class="'light-bg-' + item"></view>
 				</view>
 			</view>
 
@@ -70,7 +70,7 @@
 				<text class="text-body-14 color-section-title">Dark Background</text>
 				<view class="ui-flex color-light-section justify-between align-center"
 					style="background-color: #000000;">
-					<view v-for="(item, index) in 6" class="pad" :class="'dark-bg-' + index"></view>
+					<view v-for="(item, index) in themeBgArr" class="pad" :class="'dark-bg-' + item"></view>
 				</view>
 			</view>
 
@@ -106,10 +106,27 @@
 	</ge-page>
 </template>
 <script>
-	export default {}
+	export default {
+		data() {
+			return {
+				colorFill: [
+						100, 60, 50, 40, 20, 10
+				],
+				themeBgArr: [
+						'gray', 'yellow', 'blue', 'green', 'pink', 'orange'
+				]
+			}
+		}
+	}
 </script>
 <style lang="scss">
-	@import "../../ui/scss/color";
+
+	@import "../../ui/scss/vars/colorvars";
+
+	[class*='bg-'] {
+		width: 100%;
+		height: 100%;
+	}
 
 	.color-section-title {
 		color: var(--ui-text-regular-3);
@@ -161,95 +178,4 @@
 		}
 	}
 
-	.white {
-
-		@each $class,
-		$value in (0: $ui-color-white, 1: $ui-color-white-60, 2: $ui-color-white-50, 3: $ui-color-white-40, 4: $ui-color-white-20, 5: $ui-color-white-10) {
-			&-#{$class} {
-				background-color: $value !important;
-				height: 100%;
-				width: 100%;
-			}
-		}
-	}
-
-	.black {
-
-		@each $class,
-		$value in (0: $ui-color-black, 1: $ui-color-black-60, 2: $ui-color-black-50, 3: $ui-color-black-40, 4: $ui-color-black-20, 5: $ui-color-black-10) {
-			&-#{$class} {
-				background-color: $value !important;
-				height: 100%;
-				width: 100%;
-			}
-		}
-	}
-
-	.blue {
-
-		@each $class,
-		$value in (0: $ui-color-blue, 1: $ui-color-blue-60, 2: $ui-color-blue-50, 3: $ui-color-blue-40, 4: $ui-color-blue-20, 5: $ui-color-blue-10) {
-			&-#{$class} {
-				background-color: $value !important;
-				height: 100%;
-				width: 100%;
-			}
-		}
-	}
-
-	.green {
-
-		@each $class,
-		$value in (0: $ui-color-green, 1: $ui-color-green-60, 2: $ui-color-green-50, 3: $ui-color-green-40, 4: $ui-color-green-20, 5: $ui-color-green-10) {
-			&-#{$class} {
-				background-color: $value !important;
-				height: 100%;
-				width: 100%;
-			}
-		}
-	}
-
-	.orange {
-
-		@each $class,
-		$value in (0: $ui-color-orange, 1: $ui-color-orange-60, 2: $ui-color-orange-50, 3: $ui-color-orange-40, 4: $ui-color-orange-20, 5: $ui-color-orange-10) {
-			&-#{$class} {
-				background-color: $value !important;
-				height: 100%;
-				width: 100%;
-			}
-		}
-	}
-
-	.red {
-
-		@each $class,
-		$value in (0: $ui-color-red, 1: $ui-color-red-60, 2: $ui-color-red-50, 3: $ui-color-red-40, 4: $ui-color-red-20, 5: $ui-color-red-10) {
-			&-#{$class} {
-				background-color: $value !important;
-				height: 100%;
-				width: 100%;
-			}
-		}
-	}
-
-	.light-bg {
-
-		@each $class,
-		$value in (0: $ui-light-bg-color-gray, 1: $ui-light-bg-color-yellow, 2: $ui-light-bg-color-blue, 3: $ui-light-bg-color-green, 4: $ui-light-bg-color-pink, 5: $ui-light-bg-color-orange) {
-			&-#{$class} {
-				background-color: $value !important;
-			}
-		}
-	}
-
-	.dark-bg {
-
-		@each $class,
-		$value in (0: $ui-dark-bg-color-gray, 1: $ui-dark-bg-color-yellow, 2: $ui-dark-bg-color-blue, 3: $ui-dark-bg-color-green, 4: $ui-dark-bg-color-pink, 5: $ui-dark-bg-color-orange) {
-			&-#{$class} {
-				background-color: $value !important;
-			}
-		}
-	}
 </style>

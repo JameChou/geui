@@ -5,7 +5,7 @@
       <ge-title category category-content="TIME" title-content="时间类型的tabs" title-icon="calendar" border></ge-title>
       <view class="margin-top">
         <view class="ph ph-number-circle-one text-orange" style="font-size: 45rpx;"></view>
-        <ge-nav-timetabs></ge-nav-timetabs>
+        <ge-nav-timetabs @tap-handler="tapHandler"></ge-nav-timetabs>
       </view>
 
       <view class="margin-top">
@@ -63,7 +63,12 @@ export default {
     for (let i = 1; i <= 10; i++) {
       this.items3.push(`Tab-${i}`);
     }
-  }
+  },
+	methods: {
+		tapHandler(item) {
+			console.log(item);
+		}
+	}
 
 }
 </script>

@@ -3,7 +3,7 @@
 		<ge-nav title="卡片" fix-content :nav-height="60">
 			<template v-slot:fixContent>
 				<view style="width: 95%;">
-					<ge-navtabs :items="items" :active="tabSelectedIndex" v-on:_navTabsTap_="navTabsChange"></ge-navtabs>
+					<ge-navtabs :items="items" :active="tabSelectedIndex" @tab-select="navTabsChange"></ge-navtabs>
 				</view>
 			</template>
 		</ge-nav>

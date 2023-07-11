@@ -1,5 +1,5 @@
 <template>
-  <ge-page>
+  <ge-page no-tabs>
     <ge-nav title="表单"></ge-nav>
     <view class="ui-container">
       <ge-title category category-content="INPUT" title-content="Input输入框" title-icon="textbox" border></ge-title>
@@ -52,6 +52,9 @@
 					<switch type="switch"></switch>
 				</view>
 			</view>
+
+			<ge-title category category-content="SLIDER" title-content="滑块" title-icon="sliders-horizontal" border></ge-title>
+			<slider :value="30"></slider>
     </view>
   </ge-page>
 </template>

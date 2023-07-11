@@ -5,7 +5,7 @@
 			<view class="title-body">
 				<text class="ph" v-if="titleIcon !== ''" :class="'ph-' + titleIcon"></text>
 				<text class="content">{{titleContent}}</text>
-				<view class="action" v-if="action">
+				<view class="action" v-if="action" @click="actionClick">
 					<text>{{actionName}}</text>
 					<text class="ph" :class="'ph-' + actionIcon"></text>
 				</view>
@@ -47,6 +47,11 @@
 			border: {
 				type: Boolean,
 				default: false
+			}
+		},
+		methods: {
+			actionClick() {
+				this.$emit('action-click');
 			}
 		}
 	}

@@ -18,12 +18,6 @@
 				type: Array,
 				default: []
 			},
-			tapHandler: {
-				type: Function,
-				default: () => {
-					return Function;
-				}
-			},
 			initActive: {
 				type: Number,
 				default: 0
@@ -37,7 +31,7 @@
 		methods: {
 			chooseTab(item, index) {
 				this.activeIndex = index;
-				this.tapHandler(item, index);
+				this.$emit('tap-handler', {item: item, index: index});
 			}
 		}
 

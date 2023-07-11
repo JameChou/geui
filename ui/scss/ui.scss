@@ -2,18 +2,18 @@
 @import "theme/dark";
 @import "theme/light";
 @import "icons/phicons";
-@import "components/page";
+@import "basic/page";
+@import "basic/flex";
+@import "basic/grid";
 @import "components/basenav";
 @import "components/margin";
-@import "components/flex";
-@import "components/grid";
 @import "components/button";
 @import "components/avatar";
 @import "components/form";
 @import "components/card";
 @import "components/toast";
 @import "background";
-@import "color";
+@import "shadow";
 @import "font";
 @import "animation/_animation";
 

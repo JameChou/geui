@@ -141,3 +141,20 @@ switch .uni-switch-input-checked {
   border-color: #00B670 !important;
   background-color: #00B670 !important;
 }
+
+uni-slider .uni-slider-handle-wrapper,
+uni-slider .wx-slider-handle-wrapper
+{
+  background-color: var(--ui-slider-handle-color) !important;
+}
+
+uni-slider .uni-slider-track,
+uni-slider .wx-slider-track {
+  background-color: var(--ui-slider-track-color) !important;
+}
+
+uni-slider .uni-slider-thumb,
+uni-slider .wx-slider-thumb
+{
+  background-color: var(--ui-slider-thumb-color) !important;
+}

@@ -3,7 +3,7 @@
 		<ge-nav title="布局" :is-opacity="false" fix-content :nav-height="navHeight">
 			<template v-slot:fixContent>
 				<view style="width: 95%;">
-					<ge-navtabs :items="navItems" v-on:_navTabsTap_="switchTab"></ge-navtabs>
+					<ge-navtabs :items="navItems" @tab-select="switchTab"></ge-navtabs>
 				</view>
 			</template>
 		</ge-nav>
@@ -11,11 +11,11 @@
 		<view class="ui-container" v-if="index === 0">
 			<ge-title category category-content="尺寸" title-content="弹性布局,不同的尺寸" title-icon="layout" border></ge-title>
 			<view class="ui-flex align-center justify-center layout-flex-section margin-top">
-				<view class="basis-xs bg-green text-white">20%</view>
-				<view class="basis-sm bg-red text-white">40%</view>
-				<view class="basis-df bg-blue text-white">50%</view>
-				<view class="basis-lg bg-orange text-white">60%</view>
-				<view class="basis-xl bg-black text-white">80%</view>
+				<view class="flex-basis-xs bg-green text-white">20%</view>
+				<view class="flex-basis-sm bg-red text-white">40%</view>
+				<view class="flex-basis-df bg-blue text-white">50%</view>
+				<view class="flex-basis-lg bg-orange text-white">60%</view>
+				<view class="flex-basis-xl bg-black text-white">80%</view>
 			</view>
 
 			<view class="ui-flex align-start ui-flex-column layout-flex-section layout-left">
@@ -85,6 +85,15 @@
 			<view class="ui-flex justify-start align-end layout-flex-section align margin-top">
 				<view class="bg-blue text-white">consult</view>
 				<view class="bg-red text-white">end</view>
+			</view>
+
+			<ge-title category category-content="SELF" title-content="单项对齐" title-icon="align-top" border></ge-title>
+			<view class="ui-flex justify-start align-center layout-flex-section justify margin-top" style="height: 134rpx;">
+				<view class="bg-blue text-white">center</view>
+				<view class="bg-blue text-white">center</view>
+				<view class="bg-blue text-white self-end">end</view>
+				<view class="bg-blue text-white">center</view>
+				<view class="bg-blue text-white">center</view>
 			</view>
 		</view>
 

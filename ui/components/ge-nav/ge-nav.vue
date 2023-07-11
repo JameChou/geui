@@ -1,13 +1,13 @@
 <template>
 	<view :style="[{height: customBar + 'px'}]" style="z-index: 2048">
-		<view class="ui-nav" :style="[{height: customBar + 'px'}] ">
-			<view class="background" :class="opacity >= 1 ? 'blur' : ''"
-				:style="[{height: customBar + 'px', opacity: opacity}]"></view>
+		<view class="ui-nav">
+			<view class="background blur"
+				:style="[{opacity: opacity}]"></view>
 			<view class="ui-header-content" :style="[{height: system_capsule.height + 'px'}]">
 				<block v-if="!customLeft">
 					<!-- #ifndef MP-ALIPAY -->
 					<text class="ph header-button"
-						:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
+						:style="[{top: system_capsule.top + 'px'}]"
 						:class="'ph-' + backIcon" v-if="showBack" @tap="headerButtonTap">
 						<text v-if="backText !== ''">{{backText}}</text>
 					</text>
@@ -15,16 +15,16 @@
 				</block>
 				<block v-else>
 					<!-- 自定义左侧button -->
-					<view class="ph custom-left" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]">
+					<view class="ph custom-left" :style="[{top: system_capsule.top + 'px'}]">
 						<slot name="customLeft"></slot>
 					</view>
 				</block>
-				<view class="title" :style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]"
+				<view class="title" :style="[{top: system_capsule.top + 'px'}]"
 					v-if="title !== '' && !customTitle">
 					{{title}}
 				</view>
 				<view class="custom-title" v-if="customTitle"
-					:style="[{top: system_capsule.top + 'px', height: system_capsule.height + 'px'}]">
+					:style="[{top: system_capsule.top + 'px'}]">
 					<slot name="replaceTitle"></slot>
 				</view>
 				<view class="fix-content" v-if="fixContent">
@@ -78,22 +78,6 @@
 			fixContent: {
 				type: Boolean,
 				default: false
-			},
-			tapHandler: {
-				type: Function,
-				default: () => {
-					return () => {
-						if (getCurrentPages().length < 2 && 'undefined' !== typeof __wxConfig) {
-							let url = '/' + __wxConfig.pages[0]
-							return uni.redirectTo({
-								url
-							})
-						}
-						uni.navigateBack({
-							delta: 1
-						});
-					};
-				}
 			}
 		},
 		data() {
@@ -104,13 +88,15 @@
 		},
 		methods: {
 			headerButtonTap() {
-				// #ifdef H5
-				let handler = this.tapHandler();
-				handler();
-				// #endif
-				// #ifdef MP
-				this.tapHandler();
-				// #endif
+				if (getCurrentPages().length < 2 && 'undefined' !== typeof __wxConfig) {
+					let url = '/' + __wxConfig.pages[0]
+					return uni.redirectTo({
+						url
+					})
+				}
+				uni.navigateBack({
+					delta: 1
+				});
 			}
 		},
 		computed: {
@@ -137,20 +123,7 @@
 			let _this = this;
 			if (this.isOpacity) {
 				uni.$on('$onScrollTop' + this.$root._uid, (e) => {
-					// 改变导航栏渐变颜色
-					if (e > 0) {
-						if (e > _this.customBar) {
-							_this.opacity = 1;
-						} else if (e < _this.customBar / 2) {
-							_this.opacity = 0.3;
-						} else if (e > _this.customBar / 2 && e < _this.customBar) {
-							_this.opacity = 0.7;
-						} else {
-							_this.opacity = 0;
-						}
-					} else {
-						_this.opacity = 0;
-					}
+					_this.opacity = e > 0 && e > _this.customBar ? 1 : 0;
 				});
 			}
 
@@ -170,6 +143,7 @@
 		position: fixed;
 		top: 0;
 		width: 100%;
+		height: inherit;
 		z-index: 2048;
 		transform: translateY(0);
 		transition: transform 0.3s ease;
@@ -189,6 +163,7 @@
 			padding: 0;
 			border: 0;
 			display: block;
+			height: inherit;
 
 			&.blur {
 				backdrop-filter: blur(38.5rpx);

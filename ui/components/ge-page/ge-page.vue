@@ -1,5 +1,6 @@
 <template>
-	<view class="ui-page" :class="'theme-' + system_theme">
+	<view class="ui-page" :class="'theme-' + system_theme" :style="[{'background-image': backgroundImage === '' ? '' : backgroundImage}]">
+		<view class="ui-page-back" v-if="!isLoading"></view>
 		<view class="ui-page-body" :style="[{'padding-bottom': paddingBottomHeight + 'px'}]">
 			<slot></slot>
       <ge-tabbar :data="tabs" v-if="!noTabs"></ge-tabbar>
@@ -45,6 +46,10 @@
 			loading: {
 				type: [String, Boolean],
 				default: 'auto'
+			},
+			backgroundImage: {
+				type: String,
+				default: ''
 			}
 		},
 		data() {

@@ -82,7 +82,6 @@
         </view>
       </view>
     </view>
-    </view>
 	</ge-page>
 </template>
 <script>

@@ -42,6 +42,8 @@
 						url: item.url
 					})
 				}
+
+				this.$emit('tabbar-change', {item: item, index: index});
 			}
 		}
 	}

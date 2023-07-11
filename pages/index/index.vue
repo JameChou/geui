@@ -6,7 +6,7 @@
         </view>
       </template>
 			<template v-slot:replaceTitle>
-				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController" :tapHandler="themeTapHandler"
+				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController" @tap-handler="themeTapHandler"
 					:initActive="system_theme === 'light' ? 0 : 1"></ge-switchseg>
 			</template>
 		</ge-nav>
@@ -138,8 +138,8 @@
 		},
 		onLoad() {},
 		methods: {
-			themeTapHandler(item, index) {
-				let theme = index === 0 ? 'light' : 'dark';
+			themeTapHandler(data) {
+				let theme = data.index === 0 ? 'light' : 'dark';
 				this.$store.commit('setTheme', theme);
 			},
 

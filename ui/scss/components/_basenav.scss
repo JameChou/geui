@@ -12,6 +12,7 @@
     display: flex;
     align-items: center;
     z-index: 2068;
+    height: inherit;
 
     text {
       font-size: 30rpx;
@@ -30,6 +31,7 @@
     left: 40rpx;
     /* #endif */
     display: flex;
+    height: inherit;
     align-items: center;
     z-index: 2068;
   }
@@ -43,6 +45,7 @@
     left: 0;
     right: 0;
     z-index: 1024;
+    height: inherit;
   }
 
   .custom-title {
@@ -53,6 +56,7 @@
     left: 0;
     right: 0;
     z-index: 1024;
+    height: inherit;
   }
 
   .fix-content {

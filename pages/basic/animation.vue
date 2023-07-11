@@ -1,5 +1,5 @@
 <template>
-	<ge-page no-tabs>
+	<ge-page no-tabs background-image="url(https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/pie.jpeg)">
 		<ge-nav title="动画" fix-content :nav-height="navHeight" :is-opacity="false">
 			<template v-slot:fixContent>
 				<view class="ani-image">
