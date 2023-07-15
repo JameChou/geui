@@ -73,6 +73,7 @@
 				box-shadow: var(--ui-nav-box-shadow);
 				backdrop-filter: blur(19.2rpx);
 				border-left: none !important;
+				transition: 1s;
 
 				text {
 					border-left: none;

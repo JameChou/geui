@@ -5,7 +5,7 @@
       <ge-title category category-content="TIME" title-content="时间类型的tabs" title-icon="calendar" border></ge-title>
       <view class="margin-top">
         <view class="ph ph-number-circle-one text-orange" style="font-size: 45rpx;"></view>
-        <ge-nav-timetabs @tap-handler="tapHandler"></ge-nav-timetabs>
+        <ge-nav-timetabs @tab-select="tapHandler"></ge-nav-timetabs>
       </view>
 
       <view class="margin-top">

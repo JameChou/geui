@@ -45,7 +45,7 @@
         </view>
       </view>
 
-      <ge-title category category-content="CHECK" title-content="单选、复选等" title-icon="radio-button" border></ge-title>
+      <ge-title category category-content="SWITCH" title-content="开关" title-icon="radio-button" border></ge-title>
 			<view class="ui-form-group top-title">
 				<view class="form-title">What's your sex?</view>
 				<view class="form-main">
@@ -53,8 +53,16 @@
 				</view>
 			</view>
 
+			<ge-title category category-content="CHECK" title-content="单选" title-icon="radio-button" border></ge-title>
+			<radio-group class="margin-top">
+				<view>
+					<radio></radio>
+					<view class="title">No Design System</view>
+				</view>
+			</radio-group>
+
 			<ge-title category category-content="SLIDER" title-content="滑块" title-icon="sliders-horizontal" border></ge-title>
-			<slider :value="30"></slider>
+			<slider class="margin-top" :value="30"></slider>
     </view>
   </ge-page>
 </template>

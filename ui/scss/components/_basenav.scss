@@ -1,7 +1,6 @@
 .ui-header-content {
   display: flex;
   align-items: flex-end;
-  z-index: 1024;
   height: 100%;
 
   .header-button {
@@ -11,8 +10,8 @@
     left: 20rpx;
     display: flex;
     align-items: center;
-    z-index: 2068;
     height: inherit;
+    z-index: 3;
 
     text {
       font-size: 30rpx;
@@ -33,7 +32,7 @@
     display: flex;
     height: inherit;
     align-items: center;
-    z-index: 2068;
+    z-index: 3;
   }
 
   .title {
@@ -44,7 +43,7 @@
     position: absolute;
     left: 0;
     right: 0;
-    z-index: 1024;
+    z-index: 2;
     height: inherit;
   }
 
@@ -55,7 +54,7 @@
     justify-content: center;
     left: 0;
     right: 0;
-    z-index: 1024;
+    z-index: 2;
     height: inherit;
   }
 

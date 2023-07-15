@@ -3,8 +3,7 @@
 		<view class="ui-page-back" v-if="!isLoading"></view>
 		<view class="ui-page-body" :style="[{'padding-bottom': paddingBottomHeight + 'px'}]">
 			<slot></slot>
-      <ge-tabbar :data="tabs" v-if="!noTabs"></ge-tabbar>
-
+      <ge-tabbar :items="tabs" v-if="!noTabs"></ge-tabbar>
 			<view class="loading-body" v-if="isLoading">
 				<view class="ph ph-arrow-clockwise ui-icon-spin header-34"></view>
 				<view>加载中</view>
@@ -41,7 +40,7 @@
 			},
 			noTabs: {
 				type: Boolean,
-				default: false
+				default: true
 			},
 			loading: {
 				type: [String, Boolean],
@@ -92,7 +91,7 @@
 	flex-direction: column;
 	justify-content: center;
 	align-items: center;
-	z-index: 2068;
+	z-index: 6;
 	background-color: var(--ui-bg-glass);
 	backdrop-filter: blur(19.8rpx);
 }

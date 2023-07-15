@@ -1,10 +1,9 @@
 .ui-card {
-  display: block;
-  width: 100%;
+  margin-top: 30.8rpx;
+  z-index: 0;
 
   &.compact {
     height: 555rpx;
-    margin-top: 30.8rpx;
   }
 
   .card-tag {
@@ -25,13 +24,14 @@
     justify-content: center;
     align-items: center;
     color: #FFFFFF;
-    z-index: 1025;
+    z-index: 1;
   }
 
   .card-button {
     position: absolute;
     right: 50rpx;
     margin-top: 15.4rpx;
+    z-index: 1;
   }
 
 
@@ -159,7 +159,7 @@
   position: fixed;
   right: 30rpx;
   bottom: 180rpx;
-  z-index: 2048;
+  z-index: 1;
 }
 
 .ui-card-small {

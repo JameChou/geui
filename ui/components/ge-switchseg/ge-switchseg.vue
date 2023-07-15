@@ -10,13 +10,9 @@
 <script>
 	export default {
 		props: {
-
-			/*
-			   数据必须有一个name,其他属性可以按需
-			 */
 			datas: {
 				type: Array,
-				default: []
+				default: () => { return []; }
 			},
 			initActive: {
 				type: Number,
@@ -68,6 +64,7 @@
 				border-radius: 15.4rpx;
 				font-weight: 600;
 				color: var(--ui-segment-active-color);
+				transition: 1s;
 			}
 		}
 	}

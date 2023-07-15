@@ -96,7 +96,7 @@
 				this.selectDate.active = false;
 				this.selectDate = item;
 				item.active = true;
-				this.$emit('tap-handler', item);
+				this.$emit('tab-select', item);
 			},
 			formatSelectDate() {
 				return `${this.selectDate.date.getFullYear()}年${this.selectDate.date.getMonth() + 1}月${this.selectDate.date.getDate()}日`;
@@ -127,6 +127,7 @@
 						border-radius: 19.2rpx;
 						color: var(--ui-text-regular-4);
 						box-shadow: var(--ui-navtabs-shadow);
+						transition: background 1s ease-out;
 					}
 
 					.week {

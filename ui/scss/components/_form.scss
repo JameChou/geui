@@ -27,7 +27,7 @@
           content: '\edc0';
           position: absolute;
           right: 30rpx;
-          z-index: 1024;
+          z-index: 1;
           font-size: 38rpx;
           color: rgba(229, 85, 57, 0.618);
         }
@@ -45,7 +45,7 @@
           content: '\ea30';
           position: absolute;
           right: 30rpx;
-          z-index: 1024;
+          z-index: 1;
           font-size: 38rpx;
           color: rgba(0, 182, 112, 0.5);
         }
@@ -92,7 +92,7 @@
     text[class*="ph-"] {
       padding-left: 15rpx;
       position: absolute;
-      z-index: 1024;
+      z-index: 1;
       font-size: 32rpx;
       color: #7F7F7F;
       font-weight: 600;
@@ -115,7 +115,7 @@
     top: -20rpx;
     left: 23rpx;
     position: absolute;
-    z-index: 1024;
+    z-index: 1;
     height: 46rpx;
     font-style: normal;
     font-weight: 400;

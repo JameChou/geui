@@ -9,156 +9,53 @@
 		</ge-nav>
 		<view class="ui-container" v-show="tabSelectedIndex === 0">
 			<ge-title category category-content="CARD-1" title-content="大卡片类(样式一)" title-icon="number-circle-one" border></ge-title>
-			<!-- 常规二 603839 -->
-			<view class="ui-card compact">
-				<view class="card-tag">
-					推荐
-				</view>
-				<view class="card-button">
-					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
-				</view>
-				<view class="card-image">
-					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food3.jpeg"
-						mode="aspectFill" />
-				</view>
-				<view class="cover-content">
-					<view class="background"></view>
-					<text class="title">What is react? Test test test 测试测试</text>
-					<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
-					<text class="spec-info ph ph-map-pin">Nanjing, China</text>
-				</view>
-			</view>
+			<ge-card compact tag="推荐" title="What is react? Test Test 测试测试哈哈哈哈哈啥事"
+							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food3.jpeg"
+							 show-button sub-title="Education museum"
+							 rich-info
+							 button-icon="ph-map-pin"
+			>
+				<template v-slot:richInfo>
+					<text class="ph ph-map-pin">Nanjing, China</text>
+				</template>
+			</ge-card>
 
-			<!-- 常规一 -->
-			<view class="ui-card" style="margin-top: 30.8rpx;">
-				<view class="card-tag">
-					标签
-				</view>
-				<view class="card-button">
-					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
-				</view>
-				<view class="card-image">
-					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food5.jpeg"
-						mode="aspectFill" />
-				</view>
+			<ge-card compact tag="TAG" title="What is react? Test Test 测试测试哈哈哈哈哈啥事"
+							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food3.jpeg"
+							 show-button
+							 button-icon="ph-dots-three"
+							 info="卖桃核的小男孩"
+			>
+			</ge-card>
 
-				<view class="content">
-					<text class="title">What is react? Test test test 测试测试</text>
-					<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
-					<text class="spec-info ph ph-map-pin">Nanjing, China</text>
-				</view>
-			</view>
-
-			<view class="ui-card compact">
-				<view class="card-tag">
-					推荐
-				</view>
-				<view class="card-button">
-					<button class="ui-icon-button gray shadow ph ph-dots-three round sm"></button>
-				</view>
-				<view class="card-image">
-					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food6.jpeg"
-						mode="aspectFill" />
-				</view>
-				<view class="cover-content">
-					<view class="background"></view>
-					<text class="title">What is react? Test test test 测试测试</text>
-					<text class="sub-title">Education museum delicated 测试测试哈哈哈哈哈哈</text>
-					<text class="spec-info ph ph-map-pin">Nanjing, China</text>
-				</view>
-			</view>
+			<ge-card tag="TAG" title="What is react? Test Test 测试测试"
+							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food6.jpeg"
+							 :show-button="false" sub-title="Education museum"
+							 button-icon="ph-dots-three"
+							 rich-info
+							 :compact="false"
+			>
+				<template v-slot:richInfo>
+					<view class="ui-avatar avatar-bg-blue round-avatar sm"><text>Z</text></view>卖桃核的小男孩
+				</template>
+			</ge-card>
 
 		</view>
 
 		<view class="ui-container" v-show="tabSelectedIndex === 1">
 			<ge-title category category-content="CARD-2" title-content="小卡片样式" title-icon="number-circle-two" border></ge-title>
-			<view class="ui-card-small">
-				<view class="body">
-					<view class="content">
-						<view class="tag" v-if="false">Hello</view>
-						<view class="title">Buna.Fits for you tunna. Buy One, get Second for FREE. Limited deal test test test</view>
-						<view class="spec">
-							<text class="ph ph-book-bookmark"></text>
-								Non-fiction 1hr.50 min
-						</view>
-						<view class="score">4<ge-rates disabled :value="4"></ge-rates></view>
-						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
-					</view>
-					<view class="content-image">
-						<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/book.jpeg"
-								 mode="aspectFill" />
-					</view>
-				</view>
-			</view>
-
-			<view class="ui-card-small">
-				<view class="body">
-					<view class="content">
-						<view class="tag">new Release</view>
-						<view class="title">Buna.Fits for you tunna. Buy One</view>
-						<view class="spec">
-							<text class="ph ph-book-bookmark"></text>
-							Non-fiction 1hr.50 min
-						</view>
-						<view class="score">4.6<ge-rates disabled :value="4"></ge-rates></view>
-						<view class="operate"><button class="ui-button primary">Add to cart</button></view>
-					</view>
-					<view class="content-image">
-						<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/book.jpeg"
-								 mode="aspectFill" />
-					</view>
-				</view>
-			</view>
-		</view>
-
-		<view class="ui-container" v-show="tabSelectedIndex === 2">
-			<ge-title category category-content="CARD-3" title-content="Grid样式卡片布局" title-icon="number-circle-three" border></ge-title>
-			<view class="ui-card-grid margin-top">
-				<view class="grid-card-item">
-					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food5.jpeg" mode="aspectFill" />
-					<view class="card-content">
-						<view class="card-title">
-							美食&烹饪
-						</view>
-						<view class="card-sub">
-							2700已关注
-						</view>
-					</view>
-				</view>
-				<view class="grid-card-item">
-					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/dog-avatar.jpeg" mode="aspectFill" />
-					<view class="card-content">
-						<view class="card-title">
-							萌宠
-						</view>
-						<view class="card-sub">
-							8000已关注
-						</view>
-					</view>
-				</view>
-				<view class="grid-card-item">
-					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/basketball.jpeg" mode="aspectFill" />
-					<view class="card-content">
-						<view class="card-title">
-							篮球&体育
-						</view>
-						<view class="card-sub">
-							7280已关注
-						</view>
-					</view>
-				</view>
-				<view class="grid-card-item">
-					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/design.jpeg" mode="aspectFill" />
-					<view class="card-content">
-						<view class="card-title">
-							工业设计&手办&手绘哈哈哈哈
-						</view>
-						<view class="card-sub">
-							3已关注
-						</view>
-					</view>
-				</view>
-			</view>
+			<ge-small-card tag="书籍" title="钱钟书、莫言、杨绛、大刘 ABC DDD" button-name="添加至购物车" :score="4" :rateNumber="125"
+										 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/book.jpeg"
+			>
+				<template v-slot:spec>
+					<text class="ph ph-book-bookmark"></text>
+					Non-fiction 1hr.50 min
+				</template>
+			</ge-small-card>
+			<ge-small-card title="Anything is possible" button-name="查看信息" button-type="blue" :score="0"
+										 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/book.jpeg"
+										 spec="底部小信息"
+		 ></ge-small-card>
 		</view>
 
 		<button class="ui-icon-button lg round ph ph-plus blue shadow float-button"></button>
@@ -176,8 +73,7 @@
 			return {
 				items: [
 						'样式一',
-						'样式二',
-						'样式三'
+						'样式二'
 				],
 				tabSelectedIndex: 0
 			}

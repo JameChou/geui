@@ -110,7 +110,6 @@
 
   .table-tr {
     display: table-row;
-    z-index: 1;
     &.border-bottom {
       .table-td, .table-th {
         border-bottom: var(--ui-table-border-regular);

@@ -1,5 +1,5 @@
 <template>
-	<view :style="[{height: customBar + 'px'}]" style="z-index: 2048">
+	<view :style="[{height: customBar + 'px'}]">
 		<view class="ui-nav">
 			<view class="background blur"
 				:style="[{opacity: opacity}]"></view>
@@ -19,7 +19,7 @@
 						<slot name="customLeft"></slot>
 					</view>
 				</block>
-				<view class="title" :style="[{top: system_capsule.top + 'px'}]"
+				<view class="title" @tap="tapTitle" :style="[{top: system_capsule.top + 'px'}]"
 					v-if="title !== '' && !customTitle">
 					{{title}}
 				</view>
@@ -97,6 +97,9 @@
 				uni.navigateBack({
 					delta: 1
 				});
+			},
+			tapTitle() {
+				this.$emit('tap-title', {});
 			}
 		},
 		computed: {
@@ -144,7 +147,7 @@
 		top: 0;
 		width: 100%;
 		height: inherit;
-		z-index: 2048;
+		z-index: 2;
 		transform: translateY(0);
 		transition: transform 0.3s ease;
 

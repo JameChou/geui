@@ -9,20 +9,27 @@
     min-height: 100vh;
     position: relative;
     color: var(--ui-text-regular);
-    z-index: 1024;
+    z-index: 1;
     background: transparent;
     -webkit-backdrop-filter: var(--ui-bg-glass-blur);
-
   }
 
   &-back {
     height: 100%;
     background-color: var(--ui-bg-glass);
     width: 100%;
-    z-index: 1023;
+    z-index: 0;
     position: absolute;
     top: 0;
     backdrop-filter: blur(20rpx);
+  }
+
+  &-modal {
+    height: 100%;
+    width: 100%;
+    z-index: 2;
+    position: absolute;
+    top: 0;
   }
 
 }

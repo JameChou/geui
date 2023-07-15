@@ -3,7 +3,8 @@
 				:class="[title !== '' ? 'show' : 'hide', { 'bg-mask-80': mask || mask === '80' }, { 'bg-mask-20': mask === '20' }, { 'bg-mask-40': mask === '40' }]"
 				:style="{ top: system_navbar_height + 'px' }"
 	>
-		<view class="ui-toast" style="z-index: 2"
+		<view class="toast-box-bg"></view>
+		<view class="ui-toast" style="z-index: 5"
 					:class="[
 							{'': toastStyle === 'info'},
 							{'toast-neutral-blue': toastStyle === 'blue-info'},
@@ -101,11 +102,20 @@ export default {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 1025;
+	z-index: 5;
 	padding-left: 30rpx;
 	padding-right: 30rpx;
-	background-color: var(--ui-bg-pure-primary);
 	max-height: 123rpx;
+
+	.toast-box-bg {
+		position: fixed;
+		left: 30rpx;
+		z-index: -1;
+		height: 100%;
+		background-color: var(--ui-bg-pure-primary);
+		width: calc(100% - 60rpx);
+		border-radius: 23rpx;
+	}
 
 	&.show {
 		transform: scale(1);

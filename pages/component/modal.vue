@@ -1,7 +1,7 @@
 <template>
 	<ge-page no-tabs>
 		<ge-nav title="弹出层"></ge-nav>
-		<view class="ui-container">
+		<view class="ui-container bg-mask-50">
 			<view class="ui-bottom-modal">
 				<view class="modal-title">
 				  <view class="title-bar" @tap="hideModal"><view></view></view>
@@ -13,6 +13,15 @@
 				</view>
 
 				<view class="modal-body">
+					<ge-select-list :datas="selectList" @choose-item="chooseItem" :value="1"></ge-select-list>
+				</view>
+
+				<view class="operate-bar">
+					<!--
+					<button class="ui-button cancel-btn lg gray">取消</button>
+					<button class="ui-button confirm-btn lg blue">确认</button>
+					-->
+					<button class="ui-button block blue">确认</button>
 				</view>
 			</view>
 		</view>
@@ -21,20 +30,44 @@
 <script>
 export default {
 	data() {
-		return {}
+		return {
+			selectList: [
+				{
+					title: "跟随系统变化"
+				},
+				{
+					title: "明亮模式",
+					subTitle: "系统以白色为主色调"
+				},
+				{
+					title: "黑暗模式",
+					subTitle: "系统以黑色为主色调"
+				}
+			]
+		}
 	},
 	methods: {
+		chooseItem(data) {
+			console.log(data);
+		},
+		cancel() {
+			console.log('cancel the modal');
+		}
 	}
 }
 </script>
 <style lang="scss">
 .ui-bottom-modal {
-	position: relative;
+	position: absolute;
 	width: 100%;
 	background: var(--ui-bg-primary);
 	box-shadow: var(--ui-nav-box-shadow);
 	backdrop-filter: blur(19rpx);
-	border-radius: 38rpx;
+	border-radius: 38rpx 38rpx 0 0;
+	padding-bottom: 70rpx;
+	z-index: 3;
+	bottom: 0;
+	left: 0;
 
 	.modal-title {
 		position: relative;
@@ -101,6 +134,22 @@ export default {
 		padding-right: 30.8rpx;
 		position: relative;
 		min-height: 150rpx;
+	}
+
+	.operate-bar {
+		height: 92rpx;
+		padding-left: 30.8rpx;
+		padding-right: 30.8rpx;
+
+		.cancel-btn {
+			position: absolute;
+			left: 30.8rpx;
+		}
+
+		.confirm-btn {
+			position: absolute;
+			right: 30.8rpx;
+		}
 	}
 }
 </style>

@@ -12,6 +12,7 @@
 @import "components/form";
 @import "components/card";
 @import "components/toast";
+@import "components/modal";
 @import "background";
 @import "shadow";
 @import "font";
@@ -23,23 +24,20 @@ view {
 
 .theme-dark {
   @include dark-theme;
-  background: #222222;
-  /*
-    H5状态下若有浅色情况下,会有闪屏的情况,故设置成黑色
-    并且在ge-page created的时候也将.theme-dark设置在<html>标签上
-    详情见 ge-page.vue created生命周期内处理
-   */
-  /* #ifdef H5 */
-  background: #000000;
-  /* #endif */
+  background-image: url("https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/back-dark.jpg");
+  background-repeat: no-repeat;
+  background-size: 100% 100%;
+  background-attachment: fixed;
+  transition: background 1.5s ease-out;
 }
 
 .theme-light {
   @include light-theme;
-  background-image: url("https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/bg-white.jpg");
+  background-image: url("https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/back-light.jpg");
   background-repeat: no-repeat;
-  background-size: cover;
+  background-size: 100% 100%;
   background-attachment: fixed;
+  transition: background 1.5s ease-out;
 }
 
 body {
@@ -52,7 +50,6 @@ body {
   margin-right: auto;
   padding-left: 30rpx;
   padding-right: 30rpx;
-  width: 100%;
   max-width: 1440px;
 
   &-fluid {

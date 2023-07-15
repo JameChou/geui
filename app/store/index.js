@@ -20,9 +20,8 @@ export default {
 				'type': 'icon'
 			},
 			{
-				'url': '/pages/',
 				'icon': 'chart-bar',
-				'click': 'switch',
+				'click': 'handle',
 				'type': 'button'
 			},
 			{

@@ -10,9 +10,9 @@
   font-weight: 600;
   font-size: 26.9rpx;
   background: var(--ui-button-primary);
-  padding-top: 5rpx;
-  padding-bottom: 5rpx;
-  text-align: center;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.primary {
     background: var(--ui-button-primary);
@@ -48,7 +48,6 @@
     font-weight: 600;
     font-size: 30.8rpx;
     border-radius: 19.2rpx;
-    padding-top: 23.1rpx;
   }
 
   &.sm {
@@ -58,7 +57,6 @@
     font-weight: 400;
     font-size: 23.1rpx;
     border-radius: 7.7rpx;
-    padding-top: 10rpx;
   }
 
   &.round {
@@ -75,7 +73,6 @@
 
   &.block {
     width: 100%;
-    display: block;
   }
 
   &[disabled] {
@@ -98,6 +95,9 @@
   width: 92.3rpx;
   height: 92.3rpx;
   font-size: 40rpx;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 
   &.primary {
     background: var(--ui-button-primary);
@@ -139,5 +139,10 @@
 
   &.round {
     border-radius: 999rpx;
+  }
+
+  &[disabled] {
+    opacity: 0.6;
+    background: #FFFFFF;
   }
 }

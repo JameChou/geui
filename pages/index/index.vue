@@ -1,5 +1,5 @@
 <template>
-	<ge-page :tabs="tabs">
+	<ge-page :tabs="tabs" :no-tabs="false">
 		<ge-nav :is-opacity="true" has-icon :icon="'magnifying-glass'" :title="'主页'" custom-title custom-left>
       <template v-slot:customLeft>
         <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')">
@@ -19,47 +19,56 @@
 		</view>
 
 		<view class="ui-section" style="margin-top: 50rpx;">
-			<view class="section-title text-body-12">基本功能</view>
+			<view class="section-title text-body-12">基础模块</view>
 			<view class="section-list">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/color">
+					<view class="ph ph-palette header-20 title"><text>配色、阴影</text></view>
+					<view class="content">Colors<text class="ph ph-caret-right"></text></view>
+				</view>
         <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/fonts">
-          <view class="ph ph-text-aa header-20 title"><text>文本</text></view>
+          <view class="ph ph-text-aa header-20 title"><text>文本、字体</text></view>
           <view class="content">Fonts<text class="ph ph-caret-right"></text></view>
         </view>
         <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/icon">
           <view class="ph ph-phosphor-logo header-20 title"><text>图标</text></view>
           <view class="content">Icons<text class="ph ph-caret-right"></text></view>
         </view>
-        <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/color">
-          <view class="ph ph-palette header-20 title"><text>配色、阴影</text></view>
-          <view class="content">Colors<text class="ph ph-caret-right"></text></view>
-        </view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/layout">
 					<view class="ph ph-layout header-20 title"><text>布局</text></view>
 					<view class="content">Layout<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/button">
-					<view class="ph ph-radio-button header-20 title"><text>按钮</text></view>
-					<view class="content">Buttons<text class="ph ph-caret-right"></text></view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/animation">
+					<view class="ph ph-moon-stars header-20 title"><text>动画</text></view>
+					<view class="content">Animation<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/theme">
+					<view class="ph ph-paint-roller header-20 title"><text>主题</text></view>
+					<view class="content">Theme<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/form">
+					<view class="ph ph-textbox header-20 title"><text>表单</text></view>
+					<view class="content">Forms<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/table">
 					<view class="ph ph-microsoft-excel-logo header-20 title"><text>表格</text></view>
 					<view class="content">Table<text class="ph ph-caret-right"></text></view>
 				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/avatar">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/button">
+					<view class="ph ph-radio-button header-20 title"><text>按钮</text></view>
+					<view class="content">Buttons<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/image">
+					<view class="ph ph-image header-20 title"><text>图片</text></view>
+					<view class="content">Image<text class="ph ph-caret-right"></text></view>
+				</view>
+
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/avatar">
 					<view class="ph ph-user-circle header-20 title"><text>头像</text></view>
 					<view class="content">Avatar<text class="ph ph-caret-right"></text></view>
 				</view>
-        <view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/form">
-          <view class="ph ph-textbox header-20 title"><text>表单</text></view>
-          <view class="content">Forms<text class="ph ph-caret-right"></text></view>
-        </view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/dashboard">
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/dashboard">
 					<view class="ph ph-gauge header-20 title"><text>控制面板</text></view>
 					<view class="content">Dashboard<text class="ph ph-caret-right"></text></view>
-				</view>
-				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/animation">
-					<view class="ph ph-moon-stars header-20 title"><text>动画</text></view>
-					<view class="content">Animation<text class="ph ph-caret-right"></text></view>
 				</view>
 			</view>
 		</view>
@@ -94,6 +103,10 @@
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/card">
 					<view class="ph ph-cards header-20 title"><text>卡片</text></view>
 					<view class="content">Card<text class="ph ph-caret-right"></text></view>
+				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/interests">
+					<view class="ph ph-heart header-20 title"><text>兴趣</text></view>
+					<view class="content">Interests<text class="ph ph-caret-right"></text></view>
 				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/product">
 					<view class="ph ph-shopping-bag header-20 title"><text>产品</text></view>
@@ -215,7 +228,6 @@
 	.index-header-content {
 		display: flex;
 		align-items: flex-end;
-		z-index: 1024;
 		height: 100%;
 
 		text[class*="ph-"] {

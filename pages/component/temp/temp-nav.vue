@@ -1,5 +1,5 @@
 <template>
-	<view :style="[{height: customBar + 'px'}]" style="z-index: 2048">
+	<view :style="[{height: customBar + 'px'}]" style="z-index: 2">
 		<view class="ui-nav" :style="[{height: customBar + 'px'}] ">
 			<view class="background" :class="opacity >= 1 ? 'blur' : ''"
 				:style="[{height: customBar + 'px', opacity: opacity}]"></view>
@@ -175,7 +175,7 @@
 	.ui-nav {
 		position: relative;
 		width: 100%;
-		z-index: 2048;
+		z-index: 2;
 		transform: translateY(0);
 		transition: transform 0.3s ease;
 

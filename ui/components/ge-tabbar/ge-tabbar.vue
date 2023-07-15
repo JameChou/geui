@@ -1,7 +1,7 @@
 <template>
 	<view class="ui-tab-bottom">
 		<view class="ui-tabbar">
-			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in data" :key="index">
+			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in items" :key="index">
 				<view :class="activeIndex === index ? 'active': ''" v-if="item.type === 'icon'">
 					<view class="ph tab-icon" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
             <view class="badge" v-if="item.notification"></view>
@@ -19,9 +19,9 @@
 <script>
 	export default {
 		props: {
-			data: {
+			items: {
 				type: Array,
-				default: []
+				default: () => { return []; }
 			}
 		},
 		data() {
@@ -43,7 +43,7 @@
 					})
 				}
 
-				this.$emit('tabbar-change', {item: item, index: index});
+				this.$emit('tap-tabbar', {item: item, index: index});
 			}
 		}
 	}
@@ -53,7 +53,7 @@
 		position: fixed;
 		width: 100%;
 		bottom: 0;
-		z-index: 2048;
+		z-index: 2;
 	}
 
 	.ui-tabbar {
@@ -63,7 +63,7 @@
 		background-color: var(--ui-tabbar-bg-primary);
 		backdrop-filter: blur(36.7rpx);
 		min-height: 140rpx;
-		z-index: 2048 !important;
+		z-index: 2 !important;
 		padding-top: 25rpx;
 
 		.item {
@@ -86,6 +86,7 @@
 
 			.active {
 				color: var(--ui-tabbar-active-color);
+				transition: color .5s ease-in-out;
 			}
 
       .tab-icon {
