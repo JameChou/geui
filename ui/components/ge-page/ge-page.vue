@@ -1,13 +1,15 @@
 <template>
 	<view class="ui-page" :class="'theme-' + system_theme" :style="[{'background-image': backgroundImage === '' ? '' : backgroundImage}]">
 		<view class="ui-page-back" v-if="!isLoading"></view>
-		<view class="ui-page-body" :style="[{'padding-bottom': paddingBottomHeight + 'px'}]">
+		<view class="ui-page-body" :class="target === '' ? '' : 'bg-mask-50'" :style="[{'padding-bottom': paddingBottomHeight + 'px'}]">
 			<slot></slot>
       <ge-tabbar :items="tabs" v-if="!noTabs"></ge-tabbar>
 			<view class="loading-body" v-if="isLoading">
 				<view class="ph ph-arrow-clockwise ui-icon-spin header-34"></view>
 				<view>加载中</view>
 			</view>
+
+			<slot name="modal"></slot>
 		</view>
 
 		<ge-toast name="system_dialog"
@@ -59,7 +61,8 @@
 		},
 		computed: {
 			...mapState ({
-				toast: state => state.modal.toast
+				toast: state => state.modal.toast,
+				target: state => state.modal.target
 			})
 		},
 		created() {

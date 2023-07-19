@@ -124,6 +124,10 @@
 					<view class="ph ph-info header-20 title"><text>提示</text></view>
 					<view class="content">Toast<text class="ph ph-caret-right"></text></view>
 				</view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/lottie">
+					<view class="ph ph-info header-20 title"><text>Lottie</text></view>
+					<view class="content">Toast<text class="ph ph-caret-right"></text></view>
+				</view>
 			</view>
 		</view>
     </view>
