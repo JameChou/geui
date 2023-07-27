@@ -13,6 +13,7 @@
 </template>
 <script>
 export default {
+	name: 'GeAvatar',
 	props: {
 		id: {
 			type: String, Number,

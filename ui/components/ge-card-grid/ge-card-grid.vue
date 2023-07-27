@@ -15,6 +15,7 @@
 </template>
 <script>
 export default {
+	name: 'GeCardGrid',
 	props: {
 		items: {
 			type: Array,

@@ -1,53 +1,68 @@
 <template>
-	<ge-page>
+	<ge-page no-tabs>
+		<ge-nav title="Lottie动画"></ge-nav>
 		<view class="ui-container">
-			<!--
-			<lottie
-					:assets-path="item.assetsPath"
-					:autoplay="item.autoplay"
-					:id="item.id"
-					:path="item.path"
-					:repeat-count="item.repeatCount"
-					:placeholder="item.placeholder"
-					class="item">
-			</lottie>
-			-->
-			<ge-lottie canvasId="testlottie" :src="src"></ge-lottie>
+			<view class="margin-top">
+				<ge-lottie
+						canvasId="animation-work"
+						:data="animationData"
+						width="100%"
+						height="600rpx"
+						@animation-created="handleAnimation"
+				></ge-lottie>
+			</view>
 
+			<view class="ui-flex align-center justify-between">
+				<button class="ui-button primary" @tap="play">播放</button>
+				<button class="ui-button primary" @tap="reversePlay">方向</button>
+				<button class="ui-button primary" @tap="pause">暂停</button>
+				<button class="ui-button primary" @tap="stopPlay">停止</button>
+			</view>
+
+			<view class="ui-flex align-center justify-between margin-top">
+				<button class="ui-button primary" @tap="speedPlay(1)">速度1x</button>
+				<button class="ui-button primary" @tap="speedPlay(2)">速度2x</button>
+			</view>
 		</view>
 	</ge-page>
 </template>
 <script>
+let animationPlayer = null;
 export default {
 	data() {
 		return {
-			src: 'https://mp-eeab6da6-80cd-4e80-844a-66b2a7203834.cdn.bspapp.com/cloudstorage/7b538fb7-d2d5-4524-bf21-6c20e3b5ce6f.json'
-			/*
-			item: {
-				id: 'lottie-1',
-				desc: 'Django自动播放,低端设备降级',
-				autoplay: true,
-				path:'https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/animation.json',
-				placeholder:'https://gw.alipayobjects.com/mdn/rms_e345fe/afts/img/A*nu3GTaHqJ9AAAAAAAAAAAAAAARQnAQ524560995883_icon_S.png',
-				optimize: 'true',
-				repeatCount: -1,
-				assetsPath : 'https://gw.alipayobjects.com/os/lottie-asset/bb/data.json/'
-			}
-			 */
+			animationData: null,
+			direction: true
 		}
 	},
-	onLoad() {
-		/*
-		var lottieContext = my.createLottieContext(this.item.id);
-		lottieContext.play();
-		 */
+	async onLoad() {
+		let animationData = await uni.request({
+			url: 'https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/christmas_animation.json'
+		});
+		this.animationData = animationData.data;
+	},
+	methods: {
+		handleAnimation(player) {
+			animationPlayer = player;
+		},
+		play() {
+			animationPlayer.play();
+		},
+		reversePlay() {
+			this.direction = !this.direction;
+			animationPlayer.setDirection(this.direction ? 1 : -1);
+		},
+		pause() {
+			animationPlayer.pause();
+		},
+		stopPlay() {
+			animationPlayer.stop();
+		},
+		speedPlay(speed) {
+			animationPlayer.setSpeed(speed);
+		}
 	}
 }
 </script>
 <style lang="scss">
-.item {
-	width: 700rpx;
-	height: 400rpx;
-	/* opacity: 0.5; */
-}
 </style>

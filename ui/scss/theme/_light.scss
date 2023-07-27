@@ -77,9 +77,10 @@
   /* dashboard */
   --ui-dashboard-boxshadow: 0px 3.8rpx 11.5rpx 0px rgba(0, 0, 0, 0.20);
 
-
   /* list background */
   --ui-activity-list-bg: #F5F5F5;
+  --ui-setting-list-bottom-border: 1px solid rgba(0, 0, 0, 0.1);
+  --ui-setting-list-divider: 2px rgba(0, 0, 0, 0.1);
 
   /* slider */
   --ui-slider-handle-color: rgba(0, 0, 0, 0.2);
@@ -90,4 +91,17 @@
   --ui-select-list-subtitle-color: rgba(0, 0, 0, 0.6);
   --ui-select-list-check-border: #4376FE;
   --ui-select-list-check-background: #FFFFFF;
+
+  /* modal */
+  --ui-bg-modal: #FFFFFF;
+
+  /* calendar */
+  --ui-calendar-header: rgba(67, 118, 254, 0.5);
+  --ui-calendar-select-bg: #000000;
+  --ui-calendar-select-text: #FFFFFF;
+  --ui-calendar-regular-text: #000000;
+  --ui-calendar-unmonth-text: rgba(0, 0, 0, 0.38);
+  --ui-calendar-op-border: 1px solid rgba(0, 0, 0, 0.10);
+  --ui-calendar-op-shadow: 0px 2px 6px 0px rgba(0, 0, 0, 0.20);
+
 }

@@ -1,7 +1,7 @@
 .ui-bottom-modal {
 	position: absolute;
 	width: 100%;
-	background: var(--ui-bg-primary);
+	background: var(--ui-bg-modal, #FFFFFF);
 	box-shadow: var(--ui-nav-box-shadow);
 	backdrop-filter: blur(19rpx);
 	border-radius: 38rpx 38rpx 0 0;

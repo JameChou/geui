@@ -31,6 +31,7 @@
 </template>
 <script>
 export default {
+	name: 'GeCard',
 	props: {
 		id: {
 			type: [String, Number],

@@ -74,6 +74,15 @@
 		},
 		{
 			"path": "pages/component/preview"
+		},
+		{
+			"path": "pages/component/lottie"
+		},
+		{
+			"path": "pages/component/calendar"
+		},
+		{
+			"path": "pages/component/divider"
 		}
 	],
 	"easycom": {

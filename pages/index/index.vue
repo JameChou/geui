@@ -15,10 +15,28 @@
 		<view class="index-title header-48">
 			<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/logo.jpg"
 				mode="aspectFill" />
-			<view class="header-20 sub">明快、现代设计的Ui框架</view>
 		</view>
 
-		<view class="ui-section" style="margin-top: 50rpx;">
+			<view class="ui-setting-section divider" v-for="(item, index) in appPages" :key="index">
+				<view class="section-title">{{item.name}}</view>
+				<view class="section-list">
+					<view class="section-item" :data-url="_item.url" @tap="tapListItem" v-for="(_item, _index) in item.items" :key="_item.name">
+						<view class="icon"><text class="ph" :class="'ph-' + _item.icon"></text></view>
+						<view class="item-body" :class="(item.items.length - 1) === _index ? 'no-bottom' : ''">
+							<view class="content">
+								<view class="title">{{_item.name}}</view>
+								<view class="sub-title">{{_item.en}}</view>
+							</view>
+							<view class="operate"><text class="ph ph-caret-right"></text></view>
+						</view>
+					</view>
+				</view>
+			</view>
+
+
+			<!--
+
+		<view class="ui-basic-list" style="margin-top: 50rpx;">
 			<view class="section-title text-body-12">基础模块</view>
 			<view class="section-list">
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/basic/color">
@@ -73,7 +91,7 @@
 			</view>
 		</view>
 
-		<view class="ui-section" style="margin-top: 50rpx;">
+		<view class="ui-basic-list" style="margin-top: 50rpx;">
 			<view class="section-title text-body-12">Ui组件</view>
 			<view class="section-list">
         <view class="section-list-item" @tap="tapListItem" data-url="/pages/component/navtabs">
@@ -84,6 +102,10 @@
           <view class="ph ph-faders-horizontal header-20 title"><text>操作条</text></view>
           <view class="content">Navbar<text class="ph ph-caret-right"></text></view>
         </view>
+				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/calendar">
+					<view class="ph ph-calendar header-20 title"><text>日历</text></view>
+					<view class="content">Calendar<text class="ph ph-caret-right"></text></view>
+				</view>
 				<view class="section-list-item" @tap="tapListItem" data-url="/pages/component/user-list">
 					<view class="ph ph-list-dashes header-20 title"><text>用户列表</text></view>
 					<view class="content">Userlists<text class="ph ph-caret-right"></text></view>
@@ -130,6 +152,7 @@
 				</view>
 			</view>
 		</view>
+		-->
     </view>
 
 
@@ -141,6 +164,9 @@
 		computed: {
 			tabs() {
 				return this.$store.getters.getAppTabs;
+			},
+			appPages() {
+				return this.$store.getters.getAppPages;
 			}
 		},
 		data() {
@@ -187,47 +213,6 @@
 
 	}
 
-	.ui-section {
-		.section-title {
-			display: flex;
-			align-items: center;
-			letter-spacing: 0.15em;
-			text-transform: uppercase;
-			color: var(--ui-text-regular-3);
-			border-bottom: var(--ui-bottom-border-regular);
-			padding-bottom: 34.6rpx;
-		}
-
-		.section-list {
-      position: relative;
-
-			&-item {
-				margin-top: 57.7rpx;
-				display: flex;
-
-				:first-child[class*="ph-"]>text {
-					padding-left: 38.5rpx;
-				}
-
-				.title {
-					width: 80%;
-				}
-
-				.content {
-					display: flex;
-					width: 30%;
-					align-items: center;
-					justify-content: left;
-					color: var(--ui-text-regular-2);
-
-					text {
-						position: absolute;
-						right: 20rpx;
-					}
-				}
-			}
-		}
-	}
 
 	.index-header-content {
 		display: flex;

@@ -1,0 +1,129 @@
+.ui-setting-section {
+  position: relative;
+  width: 100%;
+
+  &.divider {
+    border-bottom: var(--ui-setting-list-divider);
+    border-bottom-style: dashed;
+  }
+
+  .section-title {
+    height: 92rpx;
+    font-size: 38rpx;
+    font-style: normal;
+    font-weight: 600;
+    line-height: 138%;
+    letter-spacing: 0.15px;
+    position: relative;
+    display: flex;
+    align-items: center;
+  }
+
+  .section-list {
+    position: relative;
+
+    .section-item {
+      height: 119rpx;
+      display: flex;
+      align-items: center;
+      gap: 23rpx;
+
+      .icon {
+        width: 92rpx;
+        height: 92rpx;
+        font-size: 61rpx;
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        border-radius: 19.2rpx;
+        background-color: var(--ui-activity-list-bg);
+      }
+
+      .item-body {
+        position: relative;
+        border-bottom: var(--ui-setting-list-bottom-border);
+        display: flex;
+        flex: 1;
+        align-items: center;
+        padding-bottom: 11.5rpx;
+
+        &.no-bottom {
+          border-bottom: none;
+        }
+
+        .content {
+          display: flex;
+          flex-direction: column;
+          align-items: flex-start;
+          justify-content: center;
+          flex: 1;
+
+          .title {
+            font-size: 30rpx;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 150%; /* 24px */
+            letter-spacing: 0.269px;
+          }
+
+          .sub-title {
+            font-size: 27rpx;
+            font-style: normal;
+            font-weight: 400;
+            line-height: 142%; /* 19.88px */
+            letter-spacing: 0.235px;
+            color: var(--ui-text-regular-3);
+          }
+        }
+
+        .operate {
+          position: absolute;
+          right: 0;
+        }
+      }
+    }
+  }
+
+}
+
+.ui-basic-list {
+  .section-title {
+    display: flex;
+    align-items: center;
+    letter-spacing: 0.15em;
+    text-transform: uppercase;
+    color: var(--ui-text-regular-3);
+    border-bottom: var(--ui-bottom-border-regular);
+    padding-bottom: 34.6rpx;
+  }
+
+  .section-list {
+    position: relative;
+
+    &-item {
+      margin-top: 57.7rpx;
+      display: flex;
+
+      :first-child[class*="ph-"]>text {
+        padding-left: 38.5rpx;
+      }
+
+      .title {
+        width: 80%;
+      }
+
+      .content {
+        display: flex;
+        width: 30%;
+        align-items: center;
+        justify-content: left;
+        color: var(--ui-text-regular-2);
+
+        text {
+          position: absolute;
+          right: 20rpx;
+        }
+      }
+    }
+  }
+}

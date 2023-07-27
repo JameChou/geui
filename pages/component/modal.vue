@@ -4,6 +4,8 @@
 		<ge-nav title="弹出层"></ge-nav>
 		<view class="ui-container">
 			<button class="ui-button blue lg" @tap="showModal">modal</button>
+
+			<ge-divider content-icon="cards"></ge-divider>
 		</view>
 		<template v-slot:modal>
 			<ge-modal big-title="Filter Content" sub-title="Refine your home screen feed" ref="modal">

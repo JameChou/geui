@@ -1,6 +1,6 @@
 <template>
 	<ge-page noTabs>
-		<ge-title title-content="控制中心" title-icon="gear" action action-name="返回" action-icon="hand-swipe-left"></ge-title>
+		<ge-title title-content="控制中心" :style="{marginTop: system_navbar_height + 'px'}" title-icon="gear" action action-name="返回" action-icon="hand-swipe-left"></ge-title>
 		<view class="ui-container">
 			<view class="ui-dashboard">
 				<view class="ui-dashboard-big">
@@ -121,7 +121,13 @@
 	</ge-page>
 </template>
 <script>
-export default {}
+export default {
+	computed: {
+		system_navbar_height() {
+			return this.$store.getters.system_navbar_height;
+		}
+	}
+}
 </script>
 <style lang="scss">
 .ui-dashboard {
