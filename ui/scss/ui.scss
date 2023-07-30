@@ -30,7 +30,7 @@ view {
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
-  transition: background 1.5s ease-out;
+  transition: background, background-color 1.5s ease-out;
 }
 
 .theme-light {

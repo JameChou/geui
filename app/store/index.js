@@ -2,7 +2,7 @@ export default {
 	state: {
 		themeOn: false,
 		autoTheme: false,
-		theme: 'dark',
+		theme: 'light',
 		tabs: [{
 				'name': '组件',
 				'url': '/pages/index/index',
@@ -171,6 +171,18 @@ export default {
 						'url': '/pages/component/divider'
 					},
 					{
+						'name': '步骤条',
+						'en': 'Stepper',
+						'icon': 'dots-three-outline',
+						'url': '/pages/component/stepper'
+					},
+					{
+						'name': '评分',
+						'en': 'Rates',
+						'icon': 'star',
+						'url': '/pages/component/rates'
+					},
+					{
 						'name': 'Lottie',
 						'en': 'Lottie动画',
 						'icon': 'film-reel',
@@ -192,6 +204,12 @@ export default {
 						'en': 'User-list',
 						'icon': 'list-dashes',
 						'url': '/pages/component/user-list'
+					},
+					{
+						'name': '操作列表',
+						'en': 'Operate-List',
+						'icon': 'wrench',
+						'url': '/pages/component/oplist'
 					},
 					{
 						'name': '预览表单',

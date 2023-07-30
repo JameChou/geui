@@ -33,19 +33,18 @@
     - [日历/日期](/components/calendar.md)
     - [分割块](/components/divide.md)
     - [标题](/components/title.md)
+    - [评分](/components/rates.md)
     - [Lottie](/components/lottie.md)
 
 - 复杂组件/页面
 
     - [控制面板](/page/dashboard.md)
+    - [着陆页](/page/onboarding.md)
     - [用户列表](/page/userlist.md)
-    - [操作列表](/page/list.md)
+    - [操作列表](/page/oplist.md)
     - [预览表单](/page/preview.md)
     - [新闻列表](/page/news.md)
-    - [瀑布流](/page/waterfall.md)
     - [产品列表](/page/product.md)
     - [产品详情/推荐布局](/page/product-detail.md)
-    - [流媒体播放](/page/stream.md)
-    - [评分](/page/rates.md)
     - [登录页](/page/login.md)
     

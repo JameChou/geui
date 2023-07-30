@@ -23,7 +23,7 @@
 import { getClientRect } from "./common";
 
 export default {
-	name: 'ge-rate',
+	name: 'GeRate',
 	props: {
 		// 当前值
 		value: {

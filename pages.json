@@ -1,9 +1,6 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
-			"path": "pages/template/loading"
-		},
-		{
 			"path": "pages/index/index"
 		},
 		{
@@ -91,6 +88,15 @@
 			"path": "pages/component/title"
 		},
 		{
+			"path": "pages/component/rates"
+		},
+		{
+			"path": "pages/component/stepper"
+		},
+		{
+			"path": "pages/component/oplist"
+		},
+		{
 			"path": "pages/template/index"
 		},
 		{
@@ -101,6 +107,9 @@
 		},
 		{
 			"path": "pages/template/onboarding"
+		},
+		{
+			"path": "pages/template/loading"
 		}
 	],
 	"easycom": {
@@ -108,7 +117,7 @@
 	},
 	"globalStyle": {
 		"navigationBarTextStyle": "black",
-		"navigationBarTitleText": "uni-app",
+		"navigationBarTitleText": "GE-Ui",
 		"navigationBarBackgroundColor": "#F8F8F8",
 		"backgroundColor": "#F8F8F8",
 		"navigationStyle": "custom",
@@ -131,9 +140,6 @@
 		"borderStyle": "black",
 		"backgroundColor": "#ffffff",
 		"list": [{
-			"pagePath": "pages/template/loading",
-			"text": "加载"
-		},{
 			"pagePath": "pages/index/index",
 			"text": "组件"
 		}, {
