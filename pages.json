@@ -1,6 +1,9 @@
 {
 	"pages": [ //pages数组中第一项表示应用启动页，参考：https://uniapp.dcloud.io/collocation/pages
 		{
+			"path": "pages/template/loading"
+		},
+		{
 			"path": "pages/index/index"
 		},
 		{
@@ -83,6 +86,21 @@
 		},
 		{
 			"path": "pages/component/divider"
+		},
+		{
+			"path": "pages/component/title"
+		},
+		{
+			"path": "pages/template/index"
+		},
+		{
+			"path": "pages/about/index"
+		},
+		{
+			"path": "pages/setting/index"
+		},
+		{
+			"path": "pages/template/onboarding"
 		}
 	],
 	"easycom": {
@@ -106,6 +124,28 @@
 		"app-plus": {
 			"titleNView": false
 		}
+	},
+	"tabBar": {
+		"color": "#aaaaaa",
+		"selectedColor": "#007AFF",
+		"borderStyle": "black",
+		"backgroundColor": "#ffffff",
+		"list": [{
+			"pagePath": "pages/template/loading",
+			"text": "加载"
+		},{
+			"pagePath": "pages/index/index",
+			"text": "组件"
+		}, {
+			"pagePath": "pages/template/index",
+			"text": "模板"
+		}, {
+			"pagePath": "pages/about/index",
+			"text": "关于"
+		}, {
+			"pagePath": "pages/setting/index",
+			"text": "设置"
+		}]
 	},
 	"uniIdRouter": {}
 }

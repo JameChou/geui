@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Document</title>
+        <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
+        <meta name="description" content="Description">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
+        <style>
+            /* 模拟器 */
+            .simulator {
+                position: fixed;
+                top: 90px;
+                right: 90px;
+                z-index: 1;
+                box-sizing: border-box;
+                width: 375px;
+                min-width: 360px;
+                overflow: hidden;
+                background: #f7f7f7;
+                border-radius: 12px;
+                box-shadow: #ebedf0 0 4px 12px;
+            }
+
+            .simulator iframe {
+                display: block;
+                width: 100%;
+                border: none;
+                margin: 0;
+            }
+
+            @media (max-width: 1100px) {
+                .simulator {
+                    display: none;
+                }
+            }
+
+            @media (min-width: 1680px) {
+
+                .content {
+                    right: 410px;
+                }
+
+                .app-nav {
+                    position: fixed;
+                    top: 0;
+                    right: 0;
+                }
+
+                .markdown-section {
+                    max-width: 1070px;
+                }
+            }
+        </style>
+    </head>
+    <body>
+        <div id="app">加载中</div>
+        <script>
+            var simulatorIframe = null
+            window.$docsify = {
+                // 文档标题
+                name: '',
+                // 配置了地址以后指向地址
+                repo: 'https://github.com/xxx',
+                // 更换页面以后是否自动回到顶部
+                auto2top: true,
+                // 是否要封面页
+                coverpage: false,
+                // 执行文档里的 script 标签里的脚本
+                executeScript: true,
+                // 加载自定义侧边栏
+                loadSidebar: true,
+                // 加载自定义导航栏
+                loadNavbar: true,
+                // 小屏设备下合并导航栏到侧边栏
+                mergeNavbar: true,
+                // 最大层级
+                maxLevel: 4,
+                // 侧栏最大层级
+                subMaxLevel: 2,
+                // 主题颜色
+                // themeColor: '#0475fd',
+                // 全局顶部配置
+                plugins: [
+                    function(hook, vm) {
+                        // 路由钩子前进行操作
+                        hook.beforeEach(function(content) {
+                            var url = 'https://github.com/xxxxx/docs/' + vm.route.file
+                            var editHtml = '> 🧐发现错误，想一起完善？[在 Github 编辑此页](' + url + ')！\n'
+
+                            var footer = [
+                                '----',
+                                '> 上次修改时间 {docsify-updated} ',
+                                '> [By 卖桃核的小男孩](https://github.com/JameChou)',
+                            ].join('\n')
+
+                            return editHtml + '\n----\n' + content + '\n\n' + footer
+                        })
+                    }
+                ]
+
+            }
+        </script>
+        <!-- Docsify v4 -->
+        <script src="//cdn.jsdelivr.net/npm/docsify@4"></script>
+        <script src="//cdn.jsdelivr.net/npm/prismjs@1/components/prism-json.min.js"></script>
+    </body>
+</html>

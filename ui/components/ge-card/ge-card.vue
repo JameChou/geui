@@ -33,7 +33,7 @@
 export default {
 	name: 'GeCard',
 	props: {
-		id: {
+		uuid: {
 			type: [String, Number],
 			default: ""
 		},
@@ -80,19 +80,19 @@ export default {
 	},
 	methods: {
 		tapContent() {
-			this.$emit('tap-content', { id: this.id, title: this.title, subTitle: this.subTitle });
+			this.$emit('tap-content', { uuid: this.uuid, title: this.title, subTitle: this.subTitle });
 		},
 		tapTag() {
-			this.$emit('tap-tag', { id: this.id, tag: this.tag });
+			this.$emit('tap-tag', { uuid: this.uuid, tag: this.tag });
 		},
 		tapButton() {
-			this.$emit('tap-button', { id: this.id });
+			this.$emit('tap-button', { uuid: this.uuid });
 		},
 		tapInfo() {
-			this.$emit('tap-info', { id: this.id, info: this.info });
+			this.$emit('tap-info', { uuid: this.uuid, info: this.info });
 		},
 		tapImage() {
-			this.$emit('tap-image', { id: this.id, image: this.image });
+			this.$emit('tap-image', { uuid: this.uuid, image: this.image });
 		}
 	}
 }

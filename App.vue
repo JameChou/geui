@@ -2,6 +2,7 @@
 	import Vue from 'vue';
 	export default {
 		onLaunch: function() {
+			uni.hideTabBar();
 			console.log('App Launch')
 		},
 		onShow: function() {

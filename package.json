@@ -1,0 +1,19 @@
+{
+  "name": "ge-ui",
+  "version": "1.0.0",
+  "description": "1. <ge-page>下的配置更改成为可以动态配置的文件。放入vars中。",
+  "main": "main.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "https://gitee.com/jameschou/ge-ui.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "dependencies": {
+    "lottie-miniprogram": "^1.0.12",
+    "lottie-web": "^5.12.2"
+  }
+}

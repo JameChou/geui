@@ -64,12 +64,30 @@ export default {
 			type: String
 		}
 	},
+	data() {
+		return {
+		}
+	},
+	computed: {
+		animationData() {
+			if (this.data) {
+				return this.data;
+			}
+			return "";
+		}
+	},
+	/*
 	mounted() {
 		this.render();
 	},
+	 */
 	watch: {
-		data() {
-			this.render();
+		animationData: {
+			handler: function (val) {
+				if (val) {
+					this.render();
+				}
+			}
 		}
 	},
 	methods: {
@@ -105,6 +123,9 @@ export default {
 		// #endif
 		async render() {
 			// #ifdef MP-WEIXIN
+			if (player) {
+				player.destroy();
+			}
 			let {
 				canvas,
 				width,
@@ -122,7 +143,7 @@ export default {
 			player = lottie.loadAnimation({
 				loop: this.loop,
 				autoplay: this.autoPlay,
-				animationData: this.data,
+				animationData: this.animationData,
 				renderer: 'canvas',
 				rendererSettings: {
 					context,
@@ -133,12 +154,15 @@ export default {
 			// #endif
 
 			// #ifdef H5
+			if(this.player) {
+				this.player.destroy();
+			}
 			this.player = lottie.loadAnimation({
 				container: this.$refs.lottieContainer,
 				renderer: this.renderer,
 				loop: this.loop,
 				autoplay: this.autoPlay,
-				animationData: this.data,
+				animationData: this.animationData,
 				rendererSettings: {
 					scaleMode: 'noScale'
 				}

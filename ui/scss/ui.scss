@@ -25,7 +25,8 @@ view {
 
 .theme-dark {
   @include dark-theme;
-  background-image: url("https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/back-dark.jpg");
+  // background-image: url("https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/back3.png");
+  background-color: #383a3f;
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;
@@ -34,7 +35,7 @@ view {
 
 .theme-light {
   @include light-theme;
-  background-image: url("https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/back-light.jpg");
+  background-image: url("https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/bg-white-2.jpg");
   background-repeat: no-repeat;
   background-size: 100% 100%;
   background-attachment: fixed;

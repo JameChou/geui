@@ -3,7 +3,7 @@
 		<view class="ui-page-back" v-if="!isLoading"></view>
 		<view class="ui-page-body" :class="target === '' ? '' : 'bg-mask-50'" :style="[{'padding-bottom': paddingBottomHeight + 'px'}]">
 			<slot></slot>
-      <ge-tabbar :items="tabs" v-if="!noTabs"></ge-tabbar>
+      <ge-tabbar :active="tabActive" :items="tabs" v-if="!noTabs"></ge-tabbar>
 			<view class="loading-body" v-if="isLoading">
 				<view class="ph ph-arrow-clockwise ui-icon-spin header-34"></view>
 				<view>加载中</view>
@@ -44,6 +44,10 @@
 				type: Boolean,
 				default: true
 			},
+			tabActive: {
+				type: Number,
+				default: 0
+			},
 			loading: {
 				type: [String, Boolean],
 				default: 'auto'
@@ -56,7 +60,7 @@
 		data() {
 			return {
 				paddingBottomHeight: 62,
-				isLoading: true
+				isLoading: false
 			};
 		},
 		computed: {
@@ -72,6 +76,7 @@
 			} else {
 				this.paddingBottomHeight = this.paddingBottomHeight - 20;
 			}
+			this.isLoading = this.loading !== false;
 		},
 		mounted() {
 			setTimeout(() => {
@@ -83,7 +88,7 @@
 		methods: {}
 	}
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 .loading-body {
 	width: 100%;
 	height: 100%;

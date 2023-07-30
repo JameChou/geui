@@ -22,7 +22,14 @@
 			items: {
 				type: Array,
 				default: () => { return []; }
+			},
+			active: {
+				type: Number,
+				default: 0
 			}
+		},
+		mounted() {
+			this.activeIndex = this.active;
 		},
 		data() {
 			return {
@@ -31,7 +38,7 @@
 		},
 		methods: {
 			tapItem(item, index) {
-				this.activeIndex = index;
+				// this.activeIndex = index;
 				if (item.click === 'switch') {
 					uni.switchTab({
 						url: item.url

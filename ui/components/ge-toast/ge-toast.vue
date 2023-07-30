@@ -102,7 +102,6 @@ export default {
 	right: 0;
 	bottom: 0;
 	left: 0;
-	z-index: 5;
 	padding-left: 30rpx;
 	padding-right: 30rpx;
 	max-height: 123rpx;
@@ -111,21 +110,24 @@ export default {
 		position: fixed;
 		left: 30rpx;
 		z-index: -1;
-		height: 100%;
+		height: 123rpx;
 		background-color: var(--ui-bg-pure-primary);
 		width: calc(100% - 60rpx);
 		border-radius: 23rpx;
 	}
 
 	&.show {
-		transform: scale(1);
-		transition: 0.3s;
 		overflow-x: hidden;
 		overflow-y: auto;
+		transition: 0.5s ease-out;
+		opacity: 1;
+		z-index: 5;
 	}
 
 	&.hide {
-		display: none;
+		opacity: 0;
+		transition: 0.5s ease-out;
+		z-index: -2;
 	}
 }
 
