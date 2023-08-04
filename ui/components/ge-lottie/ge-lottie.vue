@@ -15,6 +15,7 @@
 			:autoplay="autoPlay"
 			:path="src"
 			:repeat-count="repeatCount"
+			:style="{width, height}"
 	></lottie>
 	<!-- #endif -->
 </template>

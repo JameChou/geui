@@ -43,7 +43,7 @@
 					uni.switchTab({
 						url: item.url
 					});
-				} else {
+				} else if (item.click === 'new') {
 					// 转到新的页面
 					uni.navigateTo({
 						url: item.url

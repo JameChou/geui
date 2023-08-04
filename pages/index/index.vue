@@ -2,8 +2,7 @@
 	<ge-page :tabs="tabs" :no-tabs="false" :loading="false">
 		<ge-nav :is-opacity="true" has-icon :icon="'magnifying-glass'" :title="'主页'" custom-title custom-left>
       <template v-slot:customLeft>
-        <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')">
-        </view>
+				<ge-avatar round size="sm" avatar="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg"></ge-avatar>
       </template>
 			<template v-slot:replaceTitle>
 				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController" @tap-handler="themeTapHandler"
@@ -32,9 +31,7 @@
 					</view>
 				</view>
 			</view>
-
     </view>
-
 
 	</ge-page>
 </template>

@@ -12,7 +12,7 @@
 			</template>
 			<template v-slot:fixContent>
 				<view style="width: 100%;">
-					<ge-navlist :items="items" type="button"></ge-navlist>
+					<ge-navlist transparent :items="items" type="button"></ge-navlist>
 				</view>
 			</template>
 		</ge-nav>

@@ -10,6 +10,7 @@
 										 :data="animationData1"
 										 width="100%"
 										 height="100%"
+										 :src="urls[0]"
 					>
 					</ge-lottie>
 				</view>
@@ -22,6 +23,7 @@
 										 :data="animationData2"
 										 width="100%"
 										 height="100%"
+										 :src="urls[1]"
 					>
 					</ge-lottie>
 				</view>
@@ -34,6 +36,7 @@
 										 :data="animationData3"
 										 width="100%"
 										 height="100%"
+										 :src="urls[2]"
 					>
 					</ge-lottie>
 				</view>

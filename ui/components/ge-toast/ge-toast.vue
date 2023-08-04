@@ -131,4 +131,83 @@ export default {
 	}
 }
 
+.ui-toast {
+	height: 123rpx;
+	width: 100%;
+	display: flex;
+	background-color: var(--ui-toast-netural-bg);
+	align-items: center;
+	position: relative;
+	border-radius: 23rpx;
+
+	&.toast-neutral-blue {
+		.toast-icon {
+			color: #4376FE;
+		}
+		background-color: var(--ui-toast-blue-bg);
+	}
+
+	&.toast-success {
+		.toast-icon {
+			color: #00B670;
+		}
+		background-color: var(--ui-toast-success-bg);
+	}
+
+	&.toast-warning {
+		.toast-icon {
+			color: #FE8E0B
+		}
+		background-color: var(--ui-toast-warning-bg);
+	}
+
+	&.toast-error {
+		.toast-icon {
+			color: #E55539;
+		}
+		background-color: var(--ui-toast-error-bg);
+	}
+
+	.toast-icon {
+		width: 77rpx;
+		height: 77rpx;
+		background-color: var(--ui-toast-icon-bg);
+		border-radius: 19rpx;
+		display: flex;
+		align-items: center;
+		justify-content: center;
+		color: var(--ui-text-regular-3);
+		font-size: 45rpx;
+		position: relative;
+		margin-left: 23rpx;
+	}
+
+	.toast-op {
+		font-size: 40rpx;
+		color: var(--ui-text-regular-2);
+		position: absolute;
+		right: 48rpx;
+	}
+
+	.toast-content {
+		position: relative;
+		padding-left: 23rpx;
+
+		.toast-title {
+			font-style: normal;
+			font-weight: 600;
+			font-size: 30.8rpx;
+			line-height: 150%;
+		}
+
+		.toast-subtitle {
+			ont-style: normal;
+			font-weight: 400;
+			font-size: 27rpx;
+			line-height: 142%;
+			color: var(--ui-text-regular-2);
+		}
+	}
+}
+
 </style>

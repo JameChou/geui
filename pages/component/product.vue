@@ -35,3 +35,86 @@
 		</view>
 	</ge-page>
 </template>
+<script>
+</script>
+<style lang="scss" scoped>
+.ui-card-shopping {
+	display: grid;
+	position: relative;
+	grid-template-columns: auto auto;
+	column-gap: 15rpx;
+	row-gap: 15rpx;
+
+	.shopping-card-item {
+		width: 337rpx;
+
+		img, image {
+			width: 337rpx;
+			height: 337rpx;
+			border-radius: 11rpx;
+		}
+
+		.card-content {
+			position: relative;
+
+			.card-title {
+				font-style: normal;
+				font-weight: 600;
+				font-size: 30rpx;
+				line-height: 150%;
+				color: var(--ui-text-regular);
+				display: -webkit-box;
+				overflow: hidden;
+				-webkit-line-clamp: 2;
+				-webkit-box-orient: vertical;
+			}
+
+			.card-sub {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 27rpx;
+				line-height: 142%;
+				display: -webkit-box;
+				overflow: hidden;
+				-webkit-line-clamp: 3;
+				-webkit-box-orient: vertical;
+			}
+
+			.card-price {
+				font-style: normal;
+				font-weight: 600;
+				font-size: 38rpx;
+				line-height: 138%;
+
+				.original-price {
+					text-decoration: line-through;
+
+					&::before {
+						content: '¥';
+					}
+
+					+ .promote-price {
+						color: var(--ui-card-text-price);
+					}
+				}
+
+				.promote-price {
+					color: var(--ui-text-regular);
+					&::before {
+						content: '¥';
+					}
+				}
+			}
+
+			.card-score {
+				font-style: normal;
+				font-weight: 400;
+				font-size: 23rpx;
+				line-height: 130%;
+				color: var(--ui-text-regular-3);
+				display: flex;
+			}
+		}
+	}
+}
+</style>

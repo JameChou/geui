@@ -6,7 +6,7 @@
       <ge-title category category-content="AVATAR" title-content="用户列表" title-icon="user-circle" border></ge-title>
 			<view>
 				<view class="ui-list-user" v-for="(item, index) in userList" :key="index">
-					<view class="ui-avatar round-avatar" :style="[{'background-image': 'url(' + item.avatar + ')'}]"></view>
+					<ge-avatar round :avatar="item.avatar"></ge-avatar>
 					<view class="user-info">
 						<view class="text-cut">{{item.name}}</view>
 						<view class="text-cut">{{item.description}}</view>

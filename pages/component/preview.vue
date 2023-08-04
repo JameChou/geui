@@ -5,8 +5,7 @@
 		<view class="ui-container">
 			<view class="ui-preview-form margin-top">
 				<view class="preview-title text-green">
-					1920
-					<text class="ph ph-currency-cny"></text>
+					1920元
 				</view>
 
 				<view class="preview-detail solid-bottom">

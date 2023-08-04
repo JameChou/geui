@@ -29,8 +29,13 @@
         <ge-navlist :items="items3" type="regular"></ge-navlist>
       </view>
 
+			<view class="margin-top" style="width: 688rpx;">
+				<view class="ph ph-number-circle-two text-orange" style="font-size: 45rpx;"></view>
+				<ge-navlist indicator :items="items3" type="regular" :active="2"></ge-navlist>
+			</view>
+
       <view class="margin-top" style="width: 688rpx;">
-        <view class="ph ph-number-circle-two text-orange" style="font-size: 45rpx;"></view>
+        <view class="ph ph-number-circle-three text-orange" style="font-size: 45rpx;"></view>
         <ge-navlist :items="items3" type="button"></ge-navlist>
       </view>
     </view>

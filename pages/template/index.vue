@@ -19,27 +19,8 @@
 							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/shopping-intro.png"
 							 sub-title="一个鞋类销售app样式页面"
 							 info="Ge-Ui提供"
-			></ge-card>
-
-			<ge-card compact title="产品详情模板"
-							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/shopping-intro.png"
-							 sub-title="一个鞋类销售app样式页面"
-							 info="Ge-Ui提供"
-			></ge-card>
-			<ge-card compact title="产品详情模板"
-							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/shopping-intro.png"
-							 sub-title="一个鞋类销售app样式页面"
-							 info="Ge-Ui提供"
-			></ge-card>
-			<ge-card compact title="产品详情模板"
-							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/shopping-intro.png"
-							 sub-title="一个鞋类销售app样式页面"
-							 info="Ge-Ui提供"
-			></ge-card>
-			<ge-card compact title="产品详情模板"
-							 image="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/shopping-intro.png"
-							 sub-title="一个鞋类销售app样式页面"
-							 info="Ge-Ui提供"
+							 uuid="product"
+							 @tap-image="tapCard"
 			></ge-card>
 
 		</view>
@@ -58,7 +39,11 @@ export default {
 			if (e.uuid === 'landing') {
 				uni.navigateTo({
 					url: '/pages/template/onboarding'
-				})
+				});
+			} else if (e.uuid === 'product') {
+				uni.navigateTo({
+					url: '/pages/template/sneaker'
+				});
 			}
 		}
 	}

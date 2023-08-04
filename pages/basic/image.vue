@@ -27,20 +27,5 @@
 export default {}
 </script>
 <style lang="scss">
-.ui-image {
-	&.shadow {
-		-webkit-filter: drop-shadow(16rpx 16rpx 19rpx black);
-		filter: drop-shadow(16rpx 16rpx 19rpx black);
-	}
 
-	&.filter-blur {
-		-webkit-filter: blur(8rpx);
-		filter: blur(8rpx);
-	}
-
-	&.filter-gray {
-		-webkit-filter: grayscale(100%);
-		filter: grayscale(100%);
-	}
-}
 </style>

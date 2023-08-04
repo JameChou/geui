@@ -12,7 +12,7 @@ export default {
 				'type': 'icon'
 			},
 			{
-				'name': '模板',
+				'name': '页面样例',
 				'url': '/pages/template/index',
 				'icon': 'ph-planet',
 				'click': 'switch',
@@ -26,7 +26,7 @@ export default {
 			},
 			{
 				'name': '关于',
-				'url': '/pages/dash/index',
+				'url': '/pages/about/index',
 				'icon': 'ph-coffee',
 				'click': 'switch',
 				'notification': false,
@@ -36,7 +36,7 @@ export default {
 				'name': '设置',
 				'url': '/pages/setting/index',
 				'icon': 'ph-gear',
-				'click': 'new',
+				'click': 'switch',
 				'notification': false,
 				'type': 'icon'
 			}

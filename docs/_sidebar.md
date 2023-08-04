@@ -1,9 +1,8 @@
 - [介绍](/README.md)
 
 - 快速开始
-
-    - [安装](/quickstart/installation.md)
     - [目录结构](/quickstart/documents.md)
+    - [如何使用](/quickstart/installation.md)
 
 - 基础模块
 

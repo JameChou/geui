@@ -9,6 +9,7 @@
 						width="100%"
 						height="600rpx"
 						@animation-created="handleAnimation"
+						src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/animation_free_jump.json"
 				></ge-lottie>
 			</view>
 
