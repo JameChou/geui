@@ -9,7 +9,7 @@
 				<view class="about-logo">
 					<image src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/logo-circle-500.png">
 					</image>
-					<view class="edit-btn"><text class="ph ph-pencil"></text></view>
+					<view class="edit-btn"><text class="text-black ph ph-pencil"></text></view>
 				</view>
 			</view>
 

@@ -1,9 +1,9 @@
 <template>
 	<view class="ui-divider" :class="[size]">
-		<view class="line-left" :style="lineLeftStyle"></view>
-		<view class="content" :style="contentStyle" v-if="content !== ''">{{content}}</view>
-		<view class="content" :style="contentStyle" v-if="contentIcon !== '' && content === ''"><text class="ph" :class="'ph-' + contentIcon"></text></view>
-		<view class="line-right" :style="lineRightStyle" v-if="content !== '' || contentIcon !== ''"></view>
+		<view class="line-left" :style="[lineLeftStyle]"></view>
+		<view class="content" :style="[contentStyle]" v-if="content !== ''">{{content}}</view>
+		<view class="content" :style="[contentStyle]" v-if="contentIcon !== '' && content === ''"><text class="ph" :class="'ph-' + contentIcon"></text></view>
+		<view class="line-right" :style="[lineRightStyle]" v-if="content !== '' || contentIcon !== ''"></view>
 	</view>
 </template>
 <script>
@@ -37,25 +37,25 @@ export default {
 	},
 	data() {
 		return {
-			lineLeftStyle: [],
-			lineRightStyle: [],
-			contentStyle: []
+			lineLeftStyle: {},
+			lineRightStyle: {},
+			contentStyle: {}
 		}
 	},
-	mounted() {
+	created() {
 		if (this.contentAlign === 'left') {
-			this.lineRightStyle.push({flex: 3});
+			this.lineRightStyle["flex"] = 3;
 		} else if (this.contentAlign === 'right') {
-			this.lineLeftStyle.push({flex: 3});
+			this.lineLeftStyle["flex"] = 3;
 		}
 
-		this.lineRightStyle.push({borderBottomStyle: this.lineStyle});
-		this.lineLeftStyle.push({borderBottomStyle: this.lineStyle});
+		this.lineRightStyle["borderBottomStyle"] = this.lineStyle;
+		this.lineLeftStyle["borderBottomStyle"] = this.lineStyle;
 
 		if (this.color !== '') {
-			this.lineRightStyle.push({borderBottom: `2px ${this.lineStyle} ${this.color}`});
-			this.lineLeftStyle.push({borderBottom: `2px ${this.lineStyle} ${this.color}`});
-			this.contentStyle.push({color: this.color});
+			this.lineRightStyle["borderBottom"] = `2px ${this.lineStyle} ${this.color}`;
+			this.lineLeftStyle["borderBottom"] = `2px ${this.lineStyle} ${this.color}`;
+			this.contentStyle["color"] = this.color;
 		}
 	},
 	methods: {

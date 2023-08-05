@@ -45,6 +45,13 @@
         </view>
       </view>
 
+			<view class="ui-form-group top-title margin-top">
+				<view class="form-title">textarea</view>
+				<view class="form-main">
+					<textarea placeholder="abc"></textarea>
+				</view>
+			</view>
+
       <ge-title category category-content="SWITCH" title-content="开关" title-icon="radio-button" border></ge-title>
 			<view class="ui-form-group top-title">
 				<view class="form-title">What's your sex?</view>
@@ -53,11 +60,15 @@
 				</view>
 			</view>
 
-			<ge-title category category-content="CHECK" title-content="单选" title-icon="radio-button" border></ge-title>
+			<ge-title category category-content="CHECK" title-content="选择" title-icon="radio-button" border></ge-title>
 			<radio-group class="margin-top">
-				<view>
-					<radio></radio>
+				<view class="ui-flex align-center">
+					<radio checked></radio>
 					<view class="title">No Design System</view>
+				</view>
+				<view class="ui-flex align-center margin-top">
+					<radio></radio>
+					<view class="title">Hello world</view>
 				</view>
 			</radio-group>
 

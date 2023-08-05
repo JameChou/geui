@@ -79,14 +79,20 @@
 
     input {
       height: 92rpx;
-      border: 2rpx solid rgba(0, 0, 0, 0.2);
-      box-shadow: inset 0px 4rpx 11rpx rgba(0, 0, 0, 0.1);
+      border: var(--ui-input-border);
+      box-shadow: var(--ui-input-box-shadow);
       backdrop-filter: blur(19.8rpx);
       border-radius: 17rpx;
       padding-left: 23rpx;
       position: relative;
       flex: 1;
       font-size: 32rpx;
+    }
+
+    textarea {
+      border: var(--ui-input-border);
+      box-shadow: var(--ui-input-box-shadow);
+      width: 100%;
     }
 
     text[class*="ph-"] {
@@ -157,4 +163,15 @@ uni-slider .uni-slider-thumb,
 uni-slider .wx-slider-thumb
 {
   background-color: var(--ui-slider-thumb-color) !important;
+}
+
+uni-radio .uni-radio-input-checked,
+uni-raido .wx-radio-input-checked {
+  background-color: rgba(0, 182, 112, 0.6) !important;
+  border-color: #00B670 !important;
+
+  &:before {
+    font-family: Phosphor !important;
+    content: "\ea30" !important;
+  }
 }

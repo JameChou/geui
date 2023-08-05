@@ -8,7 +8,6 @@
   --ui-bg-pure-primary: #FFFFFF;
   --ui-bg-dashboard: #FFFFFF;
 
-
   /* 文字 */
   --ui-text-highlight: #4376FE;
   --ui-text-regular:   #000000;
@@ -17,6 +16,13 @@
   --ui-text-regular-2: rgba(0, 0, 0, 0.62);
   --ui-text-regular-3: rgba(0, 0, 0, 0.5);
   --ui-text-regular-4: #FFFFFF;
+
+  /* image */
+  --ui-image-shadow: drop-shadow(16rpx 16rpx 19rpx black);
+
+  /* form input */
+  --ui-input-border: 2rpx solid rgba(0, 0, 0, 0.2);
+  --ui-input-box-shadow: inset 0px 4rpx 11rpx rgba(0, 0, 0, 0.1);
 
   /* border */
   --ui-border-regular: solid 1.92rpx rgba(0, 0, 0, 0.1);

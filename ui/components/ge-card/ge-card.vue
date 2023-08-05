@@ -255,12 +255,7 @@ export default {
 	}
 }
 
-.float-button {
-	position: fixed;
-	right: 30rpx;
-	bottom: 180rpx;
-	z-index: 1;
-}
+
 
 
 

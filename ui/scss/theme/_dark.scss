@@ -17,6 +17,13 @@
   --ui-text-regular-3: rgba(255, 255, 255, 0.62);
   --ui-text-regular-4: #000000;
 
+  /* image */
+  --ui-image-shadow: drop-shadow(16rpx 16rpx 19rpx white);
+
+  /* form input */
+  --ui-input-border: 2rpx solid rgba(255, 255, 255, 0.2);
+  --ui-input-box-shadow: inset 0px 4rpx 11rpx rgba(255, 255, 255, 0.1);
+
   /* 导航栏 bg*/
   --ui-nav-shadow-bg: rgba(255, 255, 255, 0.1);
   --ui-nav-box-shadow: 0rpx 3.8rpx 11.5rpx rgba(0, 0, 0, 0.2);;

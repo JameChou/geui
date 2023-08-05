@@ -1,7 +1,7 @@
 .ui-image {
   &.shadow {
-    -webkit-filter: drop-shadow(16rpx 16rpx 19rpx black);
-    filter: drop-shadow(16rpx 16rpx 19rpx black);
+    -webkit-filter: var(--ui-image-shadow);
+    filter: var(--ui-image-shadow);
   }
 
   &.filter-blur {

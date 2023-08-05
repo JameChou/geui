@@ -12,7 +12,7 @@ export default {
 				'type': 'icon'
 			},
 			{
-				'name': '页面样例',
+				'name': '样例',
 				'url': '/pages/template/index',
 				'icon': 'ph-planet',
 				'click': 'switch',

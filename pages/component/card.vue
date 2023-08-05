@@ -58,7 +58,7 @@
 		 ></ge-small-card>
 		</view>
 
-		<button class="ui-icon-button lg round ph ph-plus blue shadow float-button"></button>
+		<button class="ui-icon-button lg round ph ph-plus blue shadow float-button" @tap="tapFloatButton"></button>
 
 	</ge-page>
 </template>
@@ -81,10 +81,22 @@
 		methods: {
 			navTabsChange(item) {
 				this.tabSelectedIndex = item.index;
+			},
+			tapFloatButton() {
+				uni.showToast({
+					title: '点击了float button',
+					duration: 1000,
+					icon: "none"
+				});
 			}
 		}
 	}
 </script>
-<style lang="scss">
-
+<style lang="scss" scoped>
+.float-button {
+	position: fixed;
+	right: 30rpx;
+	bottom: 180rpx;
+	z-index: 1;
+}
 </style>
