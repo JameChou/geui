@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="产品列表"></ge-nav>
+		<ge-navbar opacity title="产品列表"></ge-navbar>
 		<ge-title category category-content="PRODUCT" title-content="产品列表" title-icon="shopping-bag" border></ge-title>
 		<view class="ui-container margin-top">
 			<view class="ui-card-shopping margin-top">

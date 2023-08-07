@@ -1,6 +1,6 @@
 <template>
 	<ge-page noTabs>
-		<ge-nav title="文本"></ge-nav>
+		<ge-navbar title="文本" opacity></ge-navbar>
 		<view class="ui-container">
 			<ge-title category category-content="标题" title-content="标题共有8个size" title-icon="text-aa" border></ge-title>
 

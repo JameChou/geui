@@ -1,60 +1,48 @@
 <template>
   <ge-page no-tabs>
-    <ge-nav title="操作条"></ge-nav>
+    <ge-navbar title="操作条" opacity></ge-navbar>
 
-    <!--
-      这里是为了演示用，实际请使用ui文件夹内的组件
-      temp-nav(./temp/temp-nav.vue)
-      与ui内的顶部操作条是相同的传参方式
-    -->
     <view class="ui-container">
-      <ge-title category category-content="导航栏Bar" title-content="顶部操作条、最小配置,标题透明" title-icon="number-circle-one" border></ge-title>
+
+      <ge-title category category-content="导航栏Bar" title-content="初始不透明background" title-icon="number-circle-one" border></ge-title>
       <view class="margin-top bg-green">
-        <temp-nav title="标题"></temp-nav>
+				<ge-navbar title="Title" :opacity="false" :z-index="2" :height="height" :safe-inset-top="false"></ge-navbar>
       </view>
 
-      <ge-title category category-content="导航栏Bar" title-content="初始不透明background" title-icon="number-circle-two" border></ge-title>
-      <view class="margin-top bg-green">
-        <temp-nav title="Title" :is-opacity="false"></temp-nav>
-      </view>
-
-      <ge-title category category-content="CUSTOM" title-content="自定义顶部操作条" title-icon="number-circle-three" border></ge-title>
-      <view class="margin-top bg-blue" >
-        <temp-nav :is-opacity="false" custom-title back-icon="caret-left" back-text="返回">
-          <template v-slot:replaceTitle>
-            <image style="height: 100%; width: 96px;" mode="aspectFill" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/title.png" />
-          </template>
-        </temp-nav>
+      <ge-title category category-content="CUSTOM" title-content="自定义顶部操作条" title-icon="number-circle-two" border></ge-title>
+      <view class="margin-top bg-blue-40" >
+				<ge-navbar custom-title back-icon="ph ph-caret-left" :z-index="2" back-text="返回" :height="height" :safe-inset-top="false">
+					<template v-slot:customTitle>
+						<image style="height: 100%; width: 96px;" mode="aspectFill" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/title.png" />
+					</template>
+				</ge-navbar>
       </view>
       <view class="margin-top bg-blue-40">
-        <temp-nav :is-opacity="false" title="自定义左侧操作" custom-left>
+				<ge-navbar :opactiy="false" title="自定义左侧操作" custom-left :height="height" :safe-inset-top="false">
+					<template v-slot:customLeft>
+						<ge-avatar size="sm" round avatar="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg"></ge-avatar>
+					</template>
+				</ge-navbar>
+      </view>
+
+      <view class="margin-top bg-blue-40">
+        <ge-navbar :is-opacity="false" title="标题" custom-left :height="height" :safe-inset-top="false">
           <template v-slot:customLeft>
-            <view class="ui-avatar round-avatar sm" style="background-image: url('https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg')">
-            </view>
+						<text class="ph ph-arrow-left text-blue"></text>
+						<text class="ph ph-stack text-orange"></text>
           </template>
-        </temp-nav>
+        </ge-navbar>
       </view>
 
       <view class="margin-top bg-blue-40">
-        <temp-nav :is-opacity="false" title="标题" custom-left>
-          <template v-slot:customLeft>
-            <text class="ph ph-list text-body-16 text-blue" @tap="showMenu"></text>
-            <text class="ph ph-bell text-body-16 text-blue" @tap="showNotice"></text>
-          </template>
-        </temp-nav>
-      </view>
-
-      <view class="margin-top bg-blue-40">
-        <temp-nav :is-opacity="false" title="自定义固定内容" fix-content :nav-height="40">
+        <ge-navbar :opacity="false" title="自定义固定内容" fix-content :height="50" :safe-inset-top="false">
           <template v-slot:fixContent>
-            <view style="width: 95%;">
-              <ge-navtabs :items="items" :active="3"></ge-navtabs>
-            </view>
+						<ge-navtabs :items="items" :active="3"></ge-navtabs>
           </template>
-        </temp-nav>
+        </ge-navbar>
       </view>
 
-      <ge-title category category-content="CUSTOM" title-content="底部操作条" title-icon="number-circle-four" border></ge-title>
+      <ge-title category category-content="CUSTOM" title-content="底部操作条" title-icon="number-circle-three" border></ge-title>
       <view class="margin-top bg-blue-40">
         <ge-tabbar :data="tabs"></ge-tabbar>
       </view>
@@ -62,11 +50,10 @@
   </ge-page>
 </template>
 <script>
-import TempNav from "./temp/temp-nav";
 export default {
-  components: {TempNav},
   data() {
     return {
+			height: 0,
       items: [
         '7分',
         '15分',
@@ -118,6 +105,9 @@ export default {
       ]
     }
   },
+	onLoad() {
+		this.height = this.rpx2px(100);
+	},
   methods: {
     showMenu() {
       console.log('opbar.vue show menu method invoked.');

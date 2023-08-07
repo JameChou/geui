@@ -1,6 +1,6 @@
 <template>
 	<ge-page>
-		<ge-nav title="评分"></ge-nav>
+		<ge-navbar opacity title="评分"></ge-navbar>
 
 		<view class="ui-container">
 			<ge-title title-content="普通可选的评分" border title-icon="number-circle-one" category category-content="RATES"></ge-title>

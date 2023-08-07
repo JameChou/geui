@@ -97,6 +97,9 @@
 			"path": "pages/component/oplist"
 		},
 		{
+			"path": "pages/component/sticky"
+		},
+		{
 			"path": "pages/template/index"
 		},
 		{

@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="提示" />
+		<ge-navbar opacity title="提示" />
 
 		<view class="ui-container">
 			<ge-title category category-content="TOAST" title-content="提示信息" title-icon="number-circle-one" border></ge-title>

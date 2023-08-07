@@ -1,6 +1,6 @@
 <template>
 	<ge-page noTabs>
-		<ge-nav title="头像"></ge-nav>
+		<ge-navbar opacity title="头像"></ge-navbar>
 
     <view class="ui-container">
       <ge-title category category-content="AVATAR" title-content="头像基础形状" title-icon="user-circle" border></ge-title>

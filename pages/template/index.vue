@@ -1,10 +1,10 @@
 <template>
 	<ge-page :tabs="tabs" :tab-active="1" :no-tabs="false">
-		<ge-nav custom-title :show-back="false">
-			<template v-slot:replaceTitle>
+		<ge-navbar custom-title hide-back>
+			<template v-slot:customTitle>
 				<image style="height: 100%; width: 96px;" mode="aspectFill" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/template-title.png" />
 			</template>
-		</ge-nav>
+		</ge-navbar>
 
 		<view class="ui-container">
 			<ge-card compact title="着陆页面(landing page)"

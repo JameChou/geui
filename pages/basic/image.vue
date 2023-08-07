@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="图片"></ge-nav>
+		<ge-nav title="图片" opacity></ge-nav>
 		<view class="ui-container">
 			<ge-title category category-content="阴影" title-content="底部投影阴影" title-icon="drop-half" border></ge-title>
 			<image class="ui-image shadow" mode="aspectFit" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/irving.jpeg"></image>

@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="标题"></ge-nav>
+		<ge-navbar opacity title="标题"></ge-navbar>
 
 		<view class="ui-container">
 			<ge-title title-content="普通标题" title-icon=""></ge-title>

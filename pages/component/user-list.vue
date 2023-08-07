@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav is-opacity title="用户列表"></ge-nav>
+		<ge-navbar opacity title="用户列表"></ge-navbar>
 
 		<view class="ui-container">
       <ge-title category category-content="AVATAR" title-content="用户列表" title-icon="user-circle" border></ge-title>

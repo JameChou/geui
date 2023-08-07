@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav :show-back="false"></ge-nav>
+		<ge-navbar hide-back></ge-navbar>
 		<view class="setting-sheet">
 			<view class="setting-bar">
 				<view class="cancel ph ph-x"></view>

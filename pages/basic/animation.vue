@@ -1,12 +1,12 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="动画" fix-content :nav-height="navHeight" :is-opacity="false">
+		<ge-navbar title="动画" fix-content opacity>
 			<template v-slot:fixContent>
 				<view class="ani-image">
 					<image :class="animationName === '' ? '' : animationName" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/pie.jpeg" mode="aspectFill" />
 				</view>
 			</template>
-		</ge-nav>
+		</ge-navbar>
 		<view class="ui-container">
 			<view class="ui-activity-list margin-top">
 				<view class="ui-activity-list-section">
@@ -151,8 +151,7 @@ export default {
 	data() {
 		return {
 			showBox: false,
-			animationName: '',
-			navHeight: uni.upx2px(620)
+			animationName: ''
 		}
 	},
 	created() {
@@ -173,6 +172,9 @@ export default {
 <style lang="scss">
 .ani-image {
 	position: relative;
+	display: flex;
+	align-items: center;
+	justify-content: center;
 
 	img, image {
 		position: relative;

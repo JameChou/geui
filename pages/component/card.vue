@@ -1,12 +1,13 @@
 <template>
 	<ge-page :tabs="tabs">
-		<ge-nav title="卡片" fix-content :nav-height="60">
+		<ge-navbar title="卡片" fix-content>
 			<template v-slot:fixContent>
-				<view style="width: 95%;">
+				<view>
 					<ge-navtabs :items="items" :active="tabSelectedIndex" @tab-select="navTabsChange"></ge-navtabs>
 				</view>
 			</template>
-		</ge-nav>
+		</ge-navbar>
+
 		<view class="ui-container" v-show="tabSelectedIndex === 0">
 			<ge-title category category-content="CARD-1" title-content="大卡片类(样式一)" title-icon="number-circle-one" border></ge-title>
 			<ge-card compact tag="推荐" title="What is react? Test Test 测试测试哈哈哈哈哈啥事"

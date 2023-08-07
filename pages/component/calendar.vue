@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="日历"></ge-nav>
+		<ge-navbar opacity title="日历"></ge-navbar>
 
 		<view class="ui-container">
 			<view class="ui-setting-section">

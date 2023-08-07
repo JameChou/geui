@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="Lottie动画"></ge-nav>
+		<ge-navbar opacity title="Lottie动画"></ge-navbar>
 		<view class="ui-container">
 			<view class="margin-top">
 				<ge-lottie

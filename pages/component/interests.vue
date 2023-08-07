@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="兴趣"></ge-nav>
+		<ge-navbar opactiy title="兴趣"></ge-navbar>
 		<view class="ui-container">
 			<ge-card-grid @click="clickItem" :items="items"></ge-card-grid>
 		</view>

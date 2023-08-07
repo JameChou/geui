@@ -1,6 +1,6 @@
 <template>
 	<ge-page noTabs>
-		<ge-nav title="预览表单"></ge-nav>
+		<ge-navbar opacity title="预览表单"></ge-navbar>
 
 		<view class="ui-container">
 			<view class="ui-preview-form margin-top">

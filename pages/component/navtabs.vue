@@ -1,6 +1,6 @@
 <template>
   <ge-page no-tabs>
-    <ge-nav title="导航栏"></ge-nav>
+    <ge-navbar opacity title="导航栏"></ge-navbar>
     <view class="ui-container">
       <ge-title category category-content="TIME" title-content="时间类型的tabs" title-icon="calendar" border></ge-title>
       <view class="margin-top">

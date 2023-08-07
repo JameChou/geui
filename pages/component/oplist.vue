@@ -1,6 +1,6 @@
 <template>
 	<ge-page>
-		<ge-nav title="列表"></ge-nav>
+		<ge-navbar title="列表" opacity></ge-navbar>
 
 		<view class="ui-container">
 			<view class="ui-basic-list" style="margin-top: 50rpx;">

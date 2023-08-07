@@ -1,6 +1,6 @@
 <template>
 	<ge-page noTabs>
-		<ge-nav title="表格"></ge-nav>
+		<ge-navbar opacity title="表格"></ge-navbar>
 
     <view class="ui-container">
       <ge-title category category-content="TABLE" title-content="表格数据(data grid)" title-icon="table"></ge-title>

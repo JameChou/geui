@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="分隔线"></ge-nav>
+		<ge-navbar opacity title="分隔线"></ge-navbar>
 		<view class="ui-container">
 			<ge-title title-content="无文字分隔线" title-icon="number-circle-one" category
 								category-content="NO-TEXT"></ge-title>

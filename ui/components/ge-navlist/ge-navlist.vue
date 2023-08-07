@@ -72,18 +72,23 @@
 					return;
 				}
 				// #ifdef H5
-				let item = this.$refs[`item${index}`][0];
-				this.offsetWidth = item.$el.offsetWidth;
-				this.offsetLeft = item.$el.offsetLeft;
+				let refItems = this.$refs[`item${index}`];
+				if (refItems) {
+					let item = this.$refs[`item${index}`][0];
+					this.offsetWidth = item.$el.offsetWidth;
+					this.offsetLeft = item.$el.offsetLeft;
+				}
 				// #endif
 
 				// #ifdef MP
 				let mpItem = uni.createSelectorQuery().in(this).select(`#item${index}`);
 				mpItem.boundingClientRect().exec((res) => {
 					let local = res[0];
-					this.offsetWidth = local.width;
-					this.offsetLeft = local.left - uni.upx2px(31);
-					this.indicatorBottom = local.height / 2.2;
+					if (local) {
+						this.offsetWidth = local.width;
+						this.offsetLeft = local.left - this.rpx2px(31);
+						this.indicatorBottom = local.height / 2.2;
+					}
 				});
 				// #endif
 			}

@@ -1,6 +1,6 @@
 <template>
 	<ge-page noTabs>
-		<ge-nav title="产品详情"></ge-nav>
+		<ge-navbar opacity title="产品详情"></ge-navbar>
 		<view class="ui-container">
 			<view class="product-image">
 				<image style="width: 100%;" mode="aspectFill" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/food3.jpeg"></image>

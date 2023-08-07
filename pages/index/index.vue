@@ -1,14 +1,14 @@
 <template>
 	<ge-page :tabs="tabs" :no-tabs="false" :loading="false">
-		<ge-nav :is-opacity="true" has-icon :icon="'magnifying-glass'" :title="'主页'" custom-title custom-left>
-      <template v-slot:customLeft>
+		<ge-navbar opacity custom-left custom-title>
+			<template v-slot:customLeft>
 				<ge-avatar round size="sm" avatar="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/user-1.jpeg"></ge-avatar>
-      </template>
-			<template v-slot:replaceTitle>
-				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController" @tap-handler="themeTapHandler"
-					:initActive="system_theme === 'light' ? 0 : 1"></ge-switchseg>
 			</template>
-		</ge-nav>
+			<template v-slot:customTitle>
+				<ge-switchseg style="width: 330rpx;" :datas="themeSegmentedController" @tap-handler="themeTapHandler"
+											:initActive="system_theme === 'light' ? 0 : 1"></ge-switchseg>
+			</template>
+		</ge-navbar>
 
     <view class="ui-container">
 			<view class="index-title header-48">

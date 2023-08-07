@@ -1,7 +1,7 @@
 <template>
 	<ge-page noTabs>
 
-		<ge-nav :title="'图标'" is-opacity></ge-nav>
+		<ge-nav title="图标" opacity></ge-nav>
 
     <view class="ui-container">
       <ge-title category category-content="SPEC" title-content="Phosphoricons" title-icon="phosphor-logo" border></ge-title>

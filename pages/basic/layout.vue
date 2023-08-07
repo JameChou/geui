@@ -1,12 +1,12 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="布局" :is-opacity="false" fix-content :nav-height="navHeight">
+		<ge-navbar title="布局" fix-content>
 			<template v-slot:fixContent>
 				<view style="width: 95%;">
 					<ge-navtabs :items="navItems" @tab-select="switchTab"></ge-navtabs>
 				</view>
 			</template>
-		</ge-nav>
+		</ge-navbar>
 
 		<view class="ui-container" v-if="index === 0">
 			<ge-title category category-content="尺寸" title-content="弹性布局,不同的尺寸" title-icon="layout" border></ge-title>
@@ -164,7 +164,7 @@
 					'Flex',
 					'Grid'
 				],
-				navHeight: uni.upx2px(100),
+				navHeight: this.rpx2px(100),
 				index: 0
 			}
 		},

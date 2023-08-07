@@ -16,7 +16,8 @@ const mixin = {
 
 	computed: {
 		...mapState({
-			system_theme: state => state.system_theme
+			system_theme: state => state.system_theme,
+			system_info: state => state.system_info
 		}),
 		system_capsule() {
 			return this.$store.getters.system_capsule;
@@ -73,6 +74,24 @@ const mixin = {
 		$onHide() {},
 
 		$onReachBottom() {},
+
+		rpx2px(rpx) {
+			if (rpx === 0) {
+				return 0;
+			}
+			let deviceWidth = this.system_info.windowWidth;
+			let px = (deviceWidth / 750) * Number(rpx);
+			return Math.floor(px);
+		},
+
+		px2rpx(px) {
+			if (px === 0) {
+				return 0;
+			}
+			let deviceWidth = this.system_info.windowWidth;
+			let rpx = (750 / deviceWidth) * Number(px);
+			return Math.floor(rpx);
+		},
 
 		naviBack() {
 			if (getCurrentPages().length < 2 && 'undefined' !== typeof __wxConfig) {

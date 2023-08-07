@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="按钮"></ge-nav>
+		<ge-navbar title="按钮" opacity></ge-navbar>
 
 		<view class="ui-container">
 

@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav has-icon title="配色"></ge-nav>
+		<ge-navbar title="配色" opacity></ge-navbar>
 
 		<view class="ui-container">
 			<ge-title category category-content="基础" title-content="文字、边框、阴影" title-icon="palette" border></ge-title>

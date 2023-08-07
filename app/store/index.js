@@ -123,6 +123,12 @@ export default {
 						'url': '/pages/component/navtabs'
 					},
 					{
+						'name': '固定',
+						'en': 'Sticky',
+						'icon': 'stack-simple',
+						'url': '/pages/component/sticky'
+					},
+					{
 						'name': '操作条',
 						'en': 'Navbar',
 						'icon': 'faders-horizontal',

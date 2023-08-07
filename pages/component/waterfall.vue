@@ -1,6 +1,6 @@
 <template>
 	<ge-page no-tabs>
-		<ge-nav title="瀑布流"></ge-nav>
+		<ge-navbar opacity title="瀑布流"></ge-navbar>
 
 		<view class="ui-container">
 			<ge-waterfall></ge-waterfall>

@@ -118,7 +118,7 @@
 			}
 
 			if (this.navHeight > 0) {
-				this.customBar = this.system_navbar_height + uni.upx2px(this.navHeight) + 8;
+				this.customBar = this.system_navbar_height + this.rpx2px(this.navHeight) + 8;
 			} else {
 				this.customBar = this.system_navbar_height;
 			}

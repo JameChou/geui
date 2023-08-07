@@ -1,6 +1,6 @@
 <template>
   <ge-page no-tabs>
-    <ge-nav title="表单"></ge-nav>
+    <ge-navbar opacity title="表单"></ge-navbar>
     <view class="ui-container">
       <ge-title category category-content="INPUT" title-content="Input输入框" title-icon="textbox" border></ge-title>
 

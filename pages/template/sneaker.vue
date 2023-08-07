@@ -1,6 +1,6 @@
 <template>
 	<ge-page>
-		<ge-nav title="Vaporfly3"></ge-nav>
+		<ge-navbar opacity title="Vaporfly3"></ge-navbar>
 		<view class="ui-container" :class="system_theme === 'dark' ? 'sneaker-dark' : 'sneaker-light'">
 			<view class="product-swiper">
 				<view class="product-logo">

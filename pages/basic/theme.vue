@@ -1,7 +1,7 @@
 <template>
 	<ge-page no-tabs :background-image="backImage">
-		<ge-nav title="主题">
-		</ge-nav>
+		<ge-navbar opacity title="主题">
+		</ge-navbar>
 		<view class="ui-container">
 			<ge-select-list :datas="selectList" @choose-item="chooseItem" :value="initValue"></ge-select-list>
 

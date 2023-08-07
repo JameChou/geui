@@ -1,6 +1,6 @@
 <template>
 	<ge-page>
-		<ge-nav title="步骤条"></ge-nav>
+		<ge-navbar opacity title="步骤条"></ge-navbar>
 		<view class="ui-container">
 			<ge-stepbar :items="items" :steps="steps"></ge-stepbar>
 

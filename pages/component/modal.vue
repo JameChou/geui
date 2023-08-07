@@ -1,7 +1,7 @@
 <template>
 	<ge-page no-tabs>
 
-		<ge-nav title="弹出层"></ge-nav>
+		<ge-navbar opacity title="弹出层"></ge-navbar>
 		<view class="ui-container">
 			<button class="ui-button blue lg" @tap="showModal">modal</button>
 
