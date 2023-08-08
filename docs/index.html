@@ -6,6 +6,7 @@
         <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1" />
         <meta name="description" content="Description">
         <meta name="viewport" content="width=device-width, initial-scale=1.0, minimum-scale=1.0">
+        <link href="images/favicon.ico">
         <link rel="stylesheet" href="//cdn.jsdelivr.net/npm/docsify@4/lib/themes/vue.css">
         <style>
             /* 模拟器 */
@@ -62,7 +63,7 @@
                 // 文档标题
                 name: '',
                 // 配置了地址以后指向地址
-                repo: 'https://github.com/xxx',
+                repo: 'https://github.com/JameChou/geui',
                 // 更换页面以后是否自动回到顶部
                 auto2top: true,
                 // 是否要封面页
@@ -86,13 +87,13 @@
                     function(hook, vm) {
                         // 路由钩子前进行操作
                         hook.beforeEach(function(content) {
-                            var url = 'https://github.com/xxxxx/docs/' + vm.route.file
+                            var url = 'https://github.com/JameChou/geui/docs/' + vm.route.file
                             var editHtml = '> 🧐发现错误，想一起完善？[在 Github 编辑此页](' + url + ')！\n'
 
                             var footer = [
                                 '----',
                                 '> 上次修改时间 {docsify-updated} ',
-                                '> [By 卖桃核的小男孩](https://github.com/JameChou)',
+                                '> [By Shinn](https://github.com/JameChou)',
                             ].join('\n')
 
                             return editHtml + '\n----\n' + content + '\n\n' + footer
