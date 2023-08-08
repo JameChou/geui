@@ -1,23 +1,21 @@
-## 需要完成的工作
-
-- [x] 表单内的单选多选组件完成与修复
-- [x] 表单内增加textbox相关
-- [x] 图片的阴影对于不同的主题要适配
-- [x] 导航栏(navtabs)下划线的动画位置有问题，需要对微信适配
-- [x] 增加一个fixed组件
-- [x] 操作条现在是直接fixed的， 应该在外在包一层ge-fixed
-- [x] opbar.vue在上面完成之后需要更改、重构
-- [x] card的演示画面的float button样式不正常 
-- [x] 步骤条
-- [x] 日历周末是否红标在传参上面、不能动态的去改变
-- [x] 分隔线在支付宝以及小程序上面显示有问题
-- [x] 控制面板演示页面在小程序上面有问题
-- [x] 预览表单页面toast有问题
-- [x] 增加modal，原来的modal改为popover sheet
-- [x] 设置页面重新修改看看
-- [ ] 完成文档
-- [ ] 测试
-- [ ] 部署上线
+# GE-Ui 
+[![AUR](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/jamechou/geui/blob/main/LICENSE)
+[![](https://img.shields.io/badge/version-1.0.0-brightgreen.svg)](https://github.com/jamechou/geui)
+[![GitHub stars](https://img.shields.io/github/stars/jamechou/geui.svg?style=social&label=Stars)](https://github.com/jamechou/geui)
+[![GitHub forks](https://img.shields.io/github/forks/jamechou/geui.svg?style=social&label=Fork)](https://github.com/jamechou/geui)
 
 
-## Bugs
+## 项目介绍
+GE-Ui是一个基于uni-app的ui项目。目前只针对H5、微信、支付宝有测试，其他平台慎用。
+
+[在线文档(https://geui.xyz)](https://geui.xyz)
+
+[GitHub(https://github.com/JameChou/geui)](https://github.com/JameChou/geui)
+
+## 各平台
+[![微信QR](./docs/images/mp-wx-qr.jpg)]()
+[![H5 QR](./docs/images/h5-qr.png)]()
+[![ALI](./docs/images/mp-ali-qr.png)]()
+
+## 示例效果
+![product-sample](./docs/images/product-sample.png)

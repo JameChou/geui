@@ -1,0 +1,28 @@
+/* Error: Undefined mixin.
+ *    ,
+ * 3  | /   @include keyframes(fadeInBottom) {
+ * 4  | |     0% {
+ * 5  | |       transform: translateY(100%);
+ * 6  | |       opacity: 0;
+ * 7  | |     }
+ * 8  | | 
+ * 9  | |     70% {
+ * 10 | |       transform: translateY(0%);
+ * 11 | |       opacity: 1;
+ * 12 | |     }
+ * 13 | | 
+ * 14 | \   }
+ *    '
+ *   fade/fade.scss 3:3  @import
+ *   modules.scss 1:9    root stylesheet */
+
+body::before {
+	font-family: "Source Code Pro", "SF Mono", Monaco, Inconsolata, "Fira Mono",
+		"Droid Sans Mono", monospace, monospace;
+	white-space: pre;
+	display: block;
+	padding: 1em;
+	margin-bottom: 1em;
+	border-bottom: 2px solid black;
+	content: "Error: Undefined mixin.\a    \2577 \a 3  \2502  \250c    @include keyframes(fadeInBottom) {\a 4  \2502  \2502      0% {\a 5  \2502  \2502        transform: translateY(100%);\a 6  \2502  \2502        opacity: 0;\a 7  \2502  \2502      }\a 8  \2502  \2502  \a 9  \2502  \2502      70% {\a 10 \2502  \2502        transform: translateY(0%);\a 11 \2502  \2502        opacity: 1;\a 12 \2502  \2502      }\a 13 \2502  \2502  \a 14 \2502  \2514    }\a    \2575 \a   fade/fade.scss 3:3  @import\a   modules.scss 1:9    root stylesheet";
+}
