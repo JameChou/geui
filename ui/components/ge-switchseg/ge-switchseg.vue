@@ -12,7 +12,9 @@
 		props: {
 			datas: {
 				type: Array,
-				default: () => { return []; }
+				default: () => {
+					return [];
+				}
 			},
 			initActive: {
 				type: Number,
@@ -27,7 +29,10 @@
 		methods: {
 			chooseTab(item, index) {
 				this.activeIndex = index;
-				this.$emit('tap-handler', {item: item, index: index});
+				this.$emit('tap-handler', {
+					item: item,
+					index: index
+				});
 			}
 		}
 

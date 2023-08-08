@@ -3,14 +3,9 @@
 		<ge-navbar opacity title="Lottie动画"></ge-navbar>
 		<view class="ui-container">
 			<view class="margin-top">
-				<ge-lottie
-						canvasId="animation-work"
-						:data="animationData"
-						width="100%"
-						height="600rpx"
-						@animation-created="handleAnimation"
-						src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/animation_free_jump.json"
-				></ge-lottie>
+				<ge-lottie canvasId="animation-work" :data="animationData" width="100%" height="600rpx"
+					@animation-created="handleAnimation"
+					src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/animation_free_jump.json"></ge-lottie>
 			</view>
 
 			<view class="ui-flex align-center justify-between">
@@ -28,43 +23,43 @@
 	</ge-page>
 </template>
 <script>
-let animationPlayer = null;
-export default {
-	data() {
-		return {
-			animationData: null,
-			direction: true
-		}
-	},
-	async onLoad() {
-		let animationData = await uni.request({
-			//url: 'https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/christmas_animation.json'
-			url: 'https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/animation_free_jump.json'
-		});
-		this.animationData = animationData.data;
-	},
-	methods: {
-		handleAnimation(player) {
-			animationPlayer = player;
+	let animationPlayer = null;
+	export default {
+		data() {
+			return {
+				animationData: null,
+				direction: true
+			}
 		},
-		play() {
-			animationPlayer.play();
+		async onLoad() {
+			let animationData = await uni.request({
+				//url: 'https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/christmas_animation.json'
+				url: 'https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/animation/animation_free_jump.json'
+			});
+			this.animationData = animationData.data;
 		},
-		reversePlay() {
-			this.direction = !this.direction;
-			animationPlayer.setDirection(this.direction ? 1 : -1);
-		},
-		pause() {
-			animationPlayer.pause();
-		},
-		stopPlay() {
-			animationPlayer.stop();
-		},
-		speedPlay(speed) {
-			animationPlayer.setSpeed(speed);
+		methods: {
+			handleAnimation(player) {
+				animationPlayer = player;
+			},
+			play() {
+				animationPlayer.play();
+			},
+			reversePlay() {
+				this.direction = !this.direction;
+				animationPlayer.setDirection(this.direction ? 1 : -1);
+			},
+			pause() {
+				animationPlayer.pause();
+			},
+			stopPlay() {
+				animationPlayer.stop();
+			},
+			speedPlay(speed) {
+				animationPlayer.setSpeed(speed);
+			}
 		}
 	}
-}
 </script>
 <style lang="scss">
 </style>

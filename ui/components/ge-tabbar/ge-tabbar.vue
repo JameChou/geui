@@ -4,7 +4,7 @@
 			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in items" :key="index">
 				<view :class="activeIndex === index ? 'active': ''" v-if="item.type === 'icon'">
 					<view class="ph tab-icon" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
-            <view class="badge" v-if="item.notification"></view>
+						<view class="badge" v-if="item.notification"></view>
 					</view>
 					<view class="action-text">{{item.name}}</view>
 				</view>
@@ -21,7 +21,9 @@
 		props: {
 			items: {
 				type: Array,
-				default: () => { return []; }
+				default: () => {
+					return [];
+				}
 			},
 			active: {
 				type: Number,
@@ -50,7 +52,10 @@
 					})
 				}
 
-				this.$emit('tap-tabbar', {item: item, index: index});
+				this.$emit('tap-tabbar', {
+					item: item,
+					index: index
+				});
 			}
 		}
 	}
@@ -88,7 +93,7 @@
 				bottom: 9rpx;
 				font-size: 23rpx;
 				font-weight: 400;
-        margin-top: 10rpx;
+				margin-top: 10rpx;
 			}
 
 			.active {
@@ -96,16 +101,16 @@
 				transition: color .5s ease-in-out;
 			}
 
-      .tab-icon {
-        position: relative;
-      }
+			.tab-icon {
+				position: relative;
+			}
 
 			.badge {
 				width: 15rpx;
 				height: 15rpx;
 				position: relative;
-        top: 0rpx;
-        right: 0rpx;
+				top: 0rpx;
+				right: 0rpx;
 				background: #E55539;
 				border: 4rpx solid #FFFFFF;
 				box-shadow: 0px 4rpx 11.5rpx rgba(0, 0, 0, 0.2);
@@ -114,9 +119,9 @@
 			}
 
 			.tab-button {
-        display: flex;
-        align-items: center;
-        justify-content: center;
+				display: flex;
+				align-items: center;
+				justify-content: center;
 				width: 119rpx;
 			}
 		}

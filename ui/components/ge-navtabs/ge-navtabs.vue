@@ -1,10 +1,10 @@
 <template>
-  <view style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative">
-    <view class="ui-navtabs">
-      <view class="item" @tap="tapItem" v-for="(item, index) in items" :key="index" :data-id="index" :data-name="item"
-        :class="activeIndex === index ? 'active' : ''"><text>{{item}}</text></view>
-    </view>
-  </view>
+	<view style="width: 100%; display: flex; align-items: center; justify-content: center; position: relative">
+		<view class="ui-navtabs">
+			<view class="item" @tap="tapItem" v-for="(item, index) in items" :key="index" :data-id="index"
+				:data-name="item" :class="activeIndex === index ? 'active' : ''"><text>{{item}}</text></view>
+		</view>
+	</view>
 </template>
 <script>
 	export default {
@@ -29,7 +29,10 @@
 		methods: {
 			tapItem(e) {
 				this.activeIndex = e.currentTarget.dataset.id;
-				this.$emit('tab-select', {index: e.currentTarget.dataset.id, name: e.currentTarget.dataset.name});
+				this.$emit('tab-select', {
+					index: e.currentTarget.dataset.id,
+					name: e.currentTarget.dataset.name
+				});
 			}
 		}
 	}
@@ -38,7 +41,7 @@
 	.ui-navtabs {
 
 		height: 61.2rpx;
-    width: 100%;
+		width: 100%;
 		background: var(--ui-bg-op-regular);
 		display: flex;
 		align-items: center;

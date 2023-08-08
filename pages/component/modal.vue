@@ -7,44 +7,43 @@
 
 			<ge-divider content-icon="cards"></ge-divider>
 		</view>
-		<template v-slot:modal>
-			<ge-modal big-title="Filter Content" sub-title="Refine your home screen feed" ref="modal">
+		<template v-slot:sheet>
+			<ge-sheet big-title="Filter Content" sub-title="Refine your home screen feed" ref="modal">
 				<ge-select-list :datas="selectList" @choose-item="chooseItem" :value="1"></ge-select-list>
-			</ge-modal>
+			</ge-sheet>
 		</template>
 	</ge-page>
 </template>
 <script>
-export default {
-	data() {
-		return {
-			selectList: [
-				{
-					title: "跟随系统变化"
-				},
-				{
-					title: "明亮模式",
-					subTitle: "系统以白色为主色调"
-				},
-				{
-					title: "黑暗模式",
-					subTitle: "系统以黑色为主色调"
-				}
-			]
-		}
-	},
-	methods: {
-		showModal() {
-			this.$refs.modal.show();
+	export default {
+		data() {
+			return {
+				selectList: [{
+						title: "跟随系统变化"
+					},
+					{
+						title: "明亮模式",
+						subTitle: "系统以白色为主色调"
+					},
+					{
+						title: "黑暗模式",
+						subTitle: "系统以黑色为主色调"
+					}
+				]
+			}
 		},
-		chooseItem(data) {
-			console.log(data);
-		},
-		cancel() {
-			console.log('cancel the modal');
+		methods: {
+			showModal() {
+				this.$refs.modal.show();
+			},
+			chooseItem(data) {
+				console.log(data);
+			},
+			cancel() {
+				console.log('cancel the modal');
+			}
 		}
 	}
-}
 </script>
 <style lang="scss">
 

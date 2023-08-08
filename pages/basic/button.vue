@@ -39,24 +39,23 @@
 
 			<ge-title title-content="图标可动的按钮" title-icon="number-circle-five" category
 				category-content="ANIMATION ICON"></ge-title>
-      <view class="ui-flex align-center ui-flex-wrap">
-        <button class="ui-button blue"><text class="icon ph ph-spinner ui-icon-spin"></text>加载</button>
-        <button class="ui-button gray">消息<text class="icon ph ph-atom ui-icon-spin"></text></button>
-        <button class="ui-button primary"><text class="icon ph ph-arrow-clockwise ui-icon-spin"></text>按钮</button>
-      </view>
+			<view class="ui-flex align-center ui-flex-wrap">
+				<button class="ui-button blue"><text class="icon ph ph-spinner ui-icon-spin"></text>加载</button>
+				<button class="ui-button gray">消息<text class="icon ph ph-atom ui-icon-spin"></text></button>
+				<button class="ui-button primary"><text
+						class="icon ph ph-arrow-clockwise ui-icon-spin"></text>按钮</button>
+			</view>
 
-      <ge-title title-content="块状按钮" title-icon="number-circle-six" category
-                category-content="BLOCK"></ge-title>
-      <view class="ui-flex align-center ui-flex-wrap">
-        <button class="ui-button blue block">提交 commit</button>
-        <button class="ui-button blue block margin-top" disabled>提交 commit</button>
-      </view>
+			<ge-title title-content="块状按钮" title-icon="number-circle-six" category category-content="BLOCK"></ge-title>
+			<view class="ui-flex align-center ui-flex-wrap">
+				<button class="ui-button blue block">提交 commit</button>
+				<button class="ui-button blue block margin-top" disabled>提交 commit</button>
+			</view>
 		</view>
 	</ge-page>
 </template>
 <script>
-	export default {
-  }
+	export default {}
 </script>
 
 <style lang="scss">

@@ -2,7 +2,7 @@
 	<ge-page no-tabs>
 		<ge-navbar title="布局" fix-content>
 			<template v-slot:fixContent>
-				<view style="width: 95%;">
+				<view>
 					<ge-navtabs :items="navItems" @tab-select="switchTab"></ge-navtabs>
 				</view>
 			</template>
@@ -88,7 +88,8 @@
 			</view>
 
 			<ge-title category category-content="SELF" title-content="单项对齐" title-icon="align-top" border></ge-title>
-			<view class="ui-flex justify-start align-center layout-flex-section justify margin-top" style="height: 134rpx;">
+			<view class="ui-flex justify-start align-center layout-flex-section justify margin-top"
+				style="height: 134rpx;">
 				<view class="bg-blue text-white">center</view>
 				<view class="bg-blue text-white">center</view>
 				<view class="bg-blue text-white self-end">end</view>
@@ -156,7 +157,6 @@
 	</ge-page>
 </template>
 <script>
-	let _this = null;
 	export default {
 		data() {
 			return {
@@ -164,16 +164,16 @@
 					'Flex',
 					'Grid'
 				],
-				navHeight: this.rpx2px(100),
+				navHeight: 0,
 				index: 0
 			}
 		},
 		created() {
-			_this = this;
+			this.navHeight = this.rpx2px(100);
 		},
 		methods: {
 			switchTab(data) {
-				_this.index = data.index;
+				this.index = data.index;
 			}
 		}
 	}

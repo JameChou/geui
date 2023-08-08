@@ -9,19 +9,22 @@
 	</ge-page>
 </template>
 <script>
-export default {
-	data() {
-		return {
-			items: ['第一步', '第二步'],
-			steps: 0
-		}
-	},
-	methods: {
-		stepNext() {
-			this.steps++;
+	export default {
+		data() {
+			return {
+				items: ['第一步', '第二步', '第三步'],
+				steps: 3
+			}
+		},
+		methods: {
+			stepNext() {
+				if (this.steps === this.items.length) {
+					return;
+				}
+				this.steps++;
+			}
 		}
 	}
-}
 </script>
 <style lang="scss" scoped>
 </style>

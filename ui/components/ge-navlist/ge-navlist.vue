@@ -3,12 +3,15 @@
 		:scroll-left="scrollLeft">
 		<block v-if="type === 'button' || type === 'regular'">
 			<view v-for="(item, index) in items" @tap="tabSelect(index)" :id="`item${index}`" :ref="'item' + index"
-				:class="[activeIndex === index ? 'active' : '', type === 'button' ? ' btn-item' : ' regular-item']">{{item}}
+				:class="[activeIndex === index ? 'active' : '', type === 'button' ? ' btn-item' : ' regular-item']">
+				{{item}}
 			</view>
-			<view class="indicator" v-show="indicator && type === 'regular'" :style="{width: offsetWidth + 'px', left: offsetLeft + 'px', bottom: indicatorBottom + 'px'}"></view>
+			<view class="indicator" v-show="indicator && type === 'regular'"
+				:style="{width: offsetWidth + 'px', left: offsetLeft + 'px', bottom: indicatorBottom + 'px'}"></view>
 		</block>
 		<block v-else>
-			<view v-for="(item, index) in items" @tap="tabSelect(index)" class="circle-item" :class="[activeIndex === index ? 'active' : '']">{{item}}</view>
+			<view v-for="(item, index) in items" @tap="tabSelect(index)" class="circle-item"
+				:class="[activeIndex === index ? 'active' : '']">{{item}}</view>
 		</block>
 
 	</scroll-view>

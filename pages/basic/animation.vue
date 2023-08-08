@@ -3,7 +3,9 @@
 		<ge-navbar title="动画" fix-content opacity>
 			<template v-slot:fixContent>
 				<view class="ani-image">
-					<image :class="animationName === '' ? '' : animationName" src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/pie.jpeg" mode="aspectFill" />
+					<image :class="animationName === '' ? '' : animationName"
+						src="https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/pics/pie.jpeg"
+						mode="aspectFill" />
 				</view>
 			</template>
 		</ge-navbar>
@@ -146,119 +148,120 @@
 	</ge-page>
 </template>
 <script>
-let _this = null;
-export default {
-	data() {
-		return {
-			showBox: false,
-			animationName: ''
-		}
-	},
-	created() {
-		_this = this;
-	},
-	methods: {
-		showAnimation: function(self) {
-			this.animationName = self.currentTarget.dataset.animation;
-			this.showBox = true;
-			setTimeout(() => {
-				_this.showBox = false;
-				_this.animationName = '';
-			}, 1000);
+	let _this = null;
+	export default {
+		data() {
+			return {
+				showBox: false,
+				animationName: ''
+			}
+		},
+		created() {
+			_this = this;
+		},
+		methods: {
+			showAnimation: function(self) {
+				this.animationName = self.currentTarget.dataset.animation;
+				this.showBox = true;
+				setTimeout(() => {
+					_this.showBox = false;
+					_this.animationName = '';
+				}, 1000);
+			}
 		}
 	}
-}
 </script>
 <style lang="scss">
-.ani-image {
-	position: relative;
-	display: flex;
-	align-items: center;
-	justify-content: center;
-
-	img, image {
+	.ani-image {
 		position: relative;
-		border-radius: 30rpx;
-		width: 300rpx;
-		height: 300rpx;
-	}
-}
+		display: flex;
+		align-items: center;
+		justify-content: center;
 
-.ui-activity-list {
-	width: 100%;
-	height: 100%;
-	position: relative;
-
-	&-section {
-		.section-title {
-			height: 61rpx;
-			padding-top: 31rpx;
-			padding-left: 23rpx;
-			color: var(--ui-text-regular-2);
-			font-size: 19rpx;
-			font-style: normal;
-			font-weight: 600;
-			line-height: 158%;
-			letter-spacing: 2.8rpx;
-		}
-
-		.section-body {
+		img,
+		image {
 			position: relative;
-			width: 100%;
-			border-radius: 19rpx;
-			display: flex;
-			flex-direction: column;
-			background-color: var(--ui-activity-list-bg);
+			border-radius: 30rpx;
+			width: 300rpx;
+			height: 300rpx;
+		}
+	}
 
+	.ui-activity-list {
+		width: 100%;
+		height: 100%;
+		position: relative;
 
-			.section-item {
-				display: flex;
+		&-section {
+			.section-title {
+				height: 61rpx;
+				padding-top: 31rpx;
 				padding-left: 23rpx;
-				min-height: 123rpx;
-				align-items: center;
-				border-bottom: var(--ui-bottom-border-regular);
+				color: var(--ui-text-regular-2);
+				font-size: 19rpx;
+				font-style: normal;
+				font-weight: 600;
+				line-height: 158%;
+				letter-spacing: 2.8rpx;
+			}
 
-				.item-title {
+			.section-body {
+				position: relative;
+				width: 100%;
+				border-radius: 19rpx;
+				display: flex;
+				flex-direction: column;
+				background-color: var(--ui-activity-list-bg);
+
+
+				.section-item {
 					display: flex;
-					flex-direction: column;
-					font-size: 31rpx;
-					font-style: normal;
-					font-weight: 400;
-					line-height: 150%;
-					letter-spacing: 0.269px;
+					padding-left: 23rpx;
+					min-height: 123rpx;
+					align-items: center;
+					border-bottom: var(--ui-bottom-border-regular);
 
-					.item-sub-title {
-						font-size: 27rpx;
+					.item-title {
+						display: flex;
+						flex-direction: column;
+						font-size: 31rpx;
 						font-style: normal;
 						font-weight: 400;
-						line-height: 142%;
-						letter-spacing: 0.235px;
-						color: var(--ui-text-regular-3);
+						line-height: 150%;
+						letter-spacing: 0.269px;
+
+						.item-sub-title {
+							font-size: 27rpx;
+							font-style: normal;
+							font-weight: 400;
+							line-height: 142%;
+							letter-spacing: 0.235px;
+							color: var(--ui-text-regular-3);
+						}
 					}
-				}
 
-				.item-value {
-					position: absolute;
-					right: 18rpx;
-					font-size: 31rpx;
-					font-style: normal;
-					font-weight: 600;
-					line-height: 150%;
-					letter-spacing: 0.08px;
-
-					&::after {
-						font-family: 'Phosphor';
-						content: "\ea00";
+					.item-value {
+						position: absolute;
+						right: 18rpx;
 						font-size: 31rpx;
-						color: var(--ui-text-regular-3);
+						font-style: normal;
+						font-weight: 600;
+						line-height: 150%;
+						letter-spacing: 0.08px;
+
+						&::after {
+							font-family: 'Phosphor';
+							content: "\ea00";
+							font-size: 31rpx;
+							color: var(--ui-text-regular-3);
+						}
 					}
 				}
-			}
 
-			:last-child {
-				border-bottom: none;
+				:last-child {
+					border-bottom: none;
+				}
 			}
 		}
 	}
-}
 </style>

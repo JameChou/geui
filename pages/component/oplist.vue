@@ -45,45 +45,45 @@
 
 </script>
 <style lang="scss" scoped>
-.ui-basic-list {
-	.section-title {
-		display: flex;
-		align-items: center;
-		letter-spacing: 0.15em;
-		text-transform: uppercase;
-		color: var(--ui-text-regular-3);
-		border-bottom: var(--ui-bottom-border-regular);
-		padding-bottom: 34.6rpx;
-	}
-
-	.section-list {
-		position: relative;
-
-		&-item {
-			margin-top: 57.7rpx;
+	.ui-basic-list {
+		.section-title {
 			display: flex;
+			align-items: center;
+			letter-spacing: 0.15em;
+			text-transform: uppercase;
+			color: var(--ui-text-regular-3);
+			border-bottom: var(--ui-bottom-border-regular);
+			padding-bottom: 34.6rpx;
+		}
 
-			:first-child[class*="ph-"]>text {
-				padding-left: 38.5rpx;
-			}
+		.section-list {
+			position: relative;
 
-			.title {
-				width: 80%;
-			}
-
-			.content {
+			&-item {
+				margin-top: 57.7rpx;
 				display: flex;
-				width: 30%;
-				align-items: center;
-				justify-content: left;
-				color: var(--ui-text-regular-2);
 
-				text {
-					position: absolute;
-					right: 20rpx;
+				:first-child[class*="ph-"]>text {
+					padding-left: 38.5rpx;
+				}
+
+				.title {
+					width: 80%;
+				}
+
+				.content {
+					display: flex;
+					width: 30%;
+					align-items: center;
+					justify-content: left;
+					color: var(--ui-text-regular-2);
+
+					text {
+						position: absolute;
+						right: 20rpx;
+					}
 				}
 			}
 		}
 	}
-}
 </style>

@@ -4,10 +4,8 @@
 		onLaunch: function() {
 			uni.hideTabBar();
 		},
-		onShow: function() {
-		},
-		onHide: function() {
-		}
+		onShow: function() {},
+		onHide: function() {}
 	}
 </script>
 

@@ -17,42 +17,48 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">White #000000</text>
 				<view class="ui-flex color-section" style="background: #000000;">
-					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-white' : 'bg-white-' + item"></view>
+					<view v-for="(item, index) in colorFill" class="pad"
+						:class="item === 100 ? 'bg-white' : 'bg-white-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Black #FFFFFF</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-black' : 'bg-black-' + item"></view>
+					<view v-for="(item, index) in colorFill" class="pad"
+						:class="item === 100 ? 'bg-black' : 'bg-black-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Blue #437colorFillFE</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-blue' : 'bg-blue-' + item"></view>
+					<view v-for="(item, index) in colorFill" class="pad"
+						:class="item === 100 ? 'bg-blue' : 'bg-blue-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Green #00BcolorFill70</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-green' : 'bg-green-' + item"></view>
+					<view v-for="(item, index) in colorFill" class="pad"
+						:class="item === 100 ? 'bg-green' : 'bg-green-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Orange #FE8E0B</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-orange' : 'bg-orange-' + item"></view>
+					<view v-for="(item, index) in colorFill" class="pad"
+						:class="item === 100 ? 'bg-orange' : 'bg-orange-' + item"></view>
 				</view>
 			</view>
 
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Red #FE8E0B</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad" :class="item === 100 ? 'bg-red' : 'bg-red-' + item"></view>
+					<view v-for="(item, index) in colorFill" class="pad"
+						:class="item === 100 ? 'bg-red' : 'bg-red-' + item"></view>
 				</view>
 			</view>
 
@@ -110,17 +116,16 @@
 		data() {
 			return {
 				colorFill: [
-						100, 60, 50, 40, 20, 10
+					100, 60, 50, 40, 20, 10
 				],
 				themeBgArr: [
-						'gray', 'yellow', 'blue', 'green', 'pink', 'orange'
+					'gray', 'yellow', 'blue', 'green', 'pink', 'orange'
 				]
 			}
 		}
 	}
 </script>
 <style lang="scss">
-
 	@import "../../ui/scss/vars/colorvars";
 
 	[class*='bg-'] {
@@ -177,5 +182,4 @@
 			border-radius: 40rpx;
 		}
 	}
-
 </style>

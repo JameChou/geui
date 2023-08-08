@@ -10,96 +10,90 @@
 	</view>
 	<!-- #endif -->
 	<!-- #ifdef MP-ALIPAY -->
-	<lottie
-			:id="canvasId"
-			:autoplay="autoPlay"
-			:path="src"
-			:repeat-count="repeatCount"
-			:style="{width, height}"
-	></lottie>
+	<lottie :id="canvasId" :autoplay="autoPlay" :path="src" :repeat-count="repeatCount" :style="{width, height}">
+	</lottie>
 	<!-- #endif -->
 </template>
 <script>
-// #ifdef MP-WEIXIN
-import lottie from 'lottie-miniprogram';
-let player, geCanvas, context;
-// #endif
-// #ifdef H5
-import lottie from 'lottie-web';
-// #endif
+	// #ifdef MP-WEIXIN
+	import lottie from 'lottie-miniprogram';
+	let player, geCanvas, context;
+	// #endif
+	// #ifdef H5
+	import lottie from 'lottie-web';
+	// #endif
 
-export default {
-	name: 'GeLottie',
-	props: {
-		canvasId: {
-			type: String,
-			required: true,
-			default: ''
-		},
-		loop: {
-			type: Boolean,
-			default: true
-		},
-		autoPlay: {
-			type: Boolean,
-			default: true
-		},
-		data: {
-			type: [String, Object]
-		},
-		src: {
-			type: String
-		},
-		renderer: {
-			type: String,
-			default: 'svg' // 对于h5来说 可以是svg或 canvas
-		},
-		repeatCount: {
-			type: Number,
-			default: -1
-		},
-		width: {
-			type: String
-		},
-		height: {
-			type: String
-		}
-	},
-	data() {
-		return {
-		}
-	},
-	computed: {
-		animationData() {
-			if (this.data) {
-				return this.data;
+	export default {
+		name: 'GeLottie',
+		props: {
+			canvasId: {
+				type: String,
+				required: true,
+				default: ''
+			},
+			loop: {
+				type: Boolean,
+				default: true
+			},
+			autoPlay: {
+				type: Boolean,
+				default: true
+			},
+			data: {
+				type: [String, Object]
+			},
+			src: {
+				type: String
+			},
+			renderer: {
+				type: String,
+				default: 'svg' // 对于h5来说 可以是svg或 canvas
+			},
+			repeatCount: {
+				type: Number,
+				default: -1
+			},
+			width: {
+				type: String
+			},
+			height: {
+				type: String
 			}
-			return "";
-		}
-	},
-	/*
-	mounted() {
-		this.render();
-	},
-	 */
-	watch: {
-		animationData: {
-			handler: function (val) {
-				if (val) {
-					this.render();
+		},
+		data() {
+			return {}
+		},
+		computed: {
+			animationData() {
+				if (this.data) {
+					return this.data;
+				}
+				return "";
+			}
+		},
+		/*
+		mounted() {
+			this.render();
+		},
+		 */
+		watch: {
+			animationData: {
+				handler: function(val) {
+					if (val) {
+						this.render();
+					}
 				}
 			}
-		}
-	},
-	methods: {
-		// #ifdef MP-WEIXIN
-		getContext() {
-			return new Promise(resolve => {
-				const {
-					pixelRatio
-				} = uni.getSystemInfoSync();
+		},
+		methods: {
+			// #ifdef MP-WEIXIN
+			getContext() {
+				return new Promise(resolve => {
+					const {
+						pixelRatio
+					} = uni.getSystemInfoSync();
 
-				uni.createSelectorQuery()
+					uni.createSelectorQuery()
 						.in(this)
 						.select(`#${this.canvasId}`)
 						.fields({
@@ -119,84 +113,84 @@ export default {
 								pixelRatio
 							});
 						});
-			});
-		},
-		// #endif
-		async render() {
-			// #ifdef MP-WEIXIN
-			if (player) {
-				player.destroy();
-			}
-			let {
-				canvas,
-				width,
-				height,
-				pixelRatio
-			} = await this.getContext();
-			geCanvas = canvas;
-			context = canvas.getContext('2d');
-
-			context.scale(pixelRatio, pixelRatio);
-			canvas.width = width * pixelRatio;
-			canvas.height = height * pixelRatio;
-			lottie.setup(geCanvas);
-
-			player = lottie.loadAnimation({
-				loop: this.loop,
-				autoplay: this.autoPlay,
-				animationData: this.animationData,
-				renderer: 'canvas',
-				rendererSettings: {
-					context,
+				});
+			},
+			// #endif
+			async render() {
+				// #ifdef MP-WEIXIN
+				if (player) {
+					player.destroy();
 				}
-			});
+				let {
+					canvas,
+					width,
+					height,
+					pixelRatio
+				} = await this.getContext();
+				geCanvas = canvas;
+				context = canvas.getContext('2d');
 
-			this.$emit('animation-created', player);
-			// #endif
+				context.scale(pixelRatio, pixelRatio);
+				canvas.width = width * pixelRatio;
+				canvas.height = height * pixelRatio;
+				lottie.setup(geCanvas);
 
-			// #ifdef H5
-			if(this.player) {
-				this.player.destroy();
-			}
-			this.player = lottie.loadAnimation({
-				container: this.$refs.lottieContainer,
-				renderer: this.renderer,
-				loop: this.loop,
-				autoplay: this.autoPlay,
-				animationData: this.animationData,
-				rendererSettings: {
-					scaleMode: 'noScale'
+				player = lottie.loadAnimation({
+					loop: this.loop,
+					autoplay: this.autoPlay,
+					animationData: this.animationData,
+					renderer: 'canvas',
+					rendererSettings: {
+						context,
+					}
+				});
+
+				this.$emit('animation-created', player);
+				// #endif
+
+				// #ifdef H5
+				if (this.player) {
+					this.player.destroy();
 				}
-			});
-			this.$emit('animation-created', this.player);
-			// #endif
+				this.player = lottie.loadAnimation({
+					container: this.$refs.lottieContainer,
+					renderer: this.renderer,
+					loop: this.loop,
+					autoplay: this.autoPlay,
+					animationData: this.animationData,
+					rendererSettings: {
+						scaleMode: 'noScale'
+					}
+				});
+				this.$emit('animation-created', this.player);
+				// #endif
 
-			// #ifdef MP-ALIPAY
-			this.player = my.createLottieContext(this.canvasId);
-			this.player.play();
-			this.$emit('animation-created', this.player);
-			// #endif
+				// #ifdef MP-ALIPAY
+				this.player = my.createLottieContext(this.canvasId);
+				this.player.play();
+				this.$emit('animation-created', this.player);
+				// #endif
 
-		},
-		clickHandle() {
-			this.$emit('click');
+			},
+			clickHandle() {
+				this.$emit('click');
+			}
 		}
 	}
-}
 </script>
 <style lang="scss">
-.ui-lottie {
-	height: inherit;
-	width: inherit;
+	.ui-lottie {
+		height: inherit;
+		width: inherit;
 
-	div {
-		width: 100%;
-		height: 100%;
-	}
+		div {
+			width: 100%;
+			height: 100%;
+		}
 
-	.canvas {
-		width: 100%;
-		height: 100%;
+		.canvas {
+			width: 100%;
+			height: 100%;
+		}
 	}
-}
 </style>

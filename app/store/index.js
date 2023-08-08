@@ -33,19 +33,17 @@ export default {
 				'type': 'icon'
 			},
 			{
-				'name': '设置',
-				'url': '/pages/setting/index',
+				'name': '注册',
+				'url': '/pages/register/index',
 				'icon': 'ph-gear',
 				'click': 'switch',
 				'notification': false,
 				'type': 'icon'
 			}
 		],
-		pageList: [
-			{
+		pageList: [{
 				'name': '基础样式、模块',
-				'items': [
-					{
+				'items': [{
 						'name': '配色、阴影',
 						'en': 'Colors',
 						'icon': 'palette',
@@ -109,8 +107,7 @@ export default {
 			},
 			{
 				name: '基础组件',
-				items: [
-					{
+				items: [{
 						'name': '头像',
 						'en': 'Avatar',
 						'icon': 'user-circle',
@@ -198,8 +195,7 @@ export default {
 			},
 			{
 				'name': '复杂组件/页面',
-				'items': [
-					{
+				'items': [{
 						'name': '控制面板',
 						'en': 'Dashboard',
 						'icon': 'gauge',

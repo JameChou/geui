@@ -58,13 +58,7 @@
 			"path": "pages/component/news-list"
 		},
 		{
-			"path": "pages/component/waterfall"
-		},
-		{
 			"path": "pages/component/product"
-		},
-		{
-			"path": "pages/component/product-detail"
 		},
 		{
 			"path": "pages/component/modal"
@@ -106,7 +100,7 @@
 			"path": "pages/about/index"
 		},
 		{
-			"path": "pages/setting/index"
+			"path": "pages/register/index"
 		},
 		{
 			"path": "pages/template/onboarding"
@@ -155,8 +149,8 @@
 			"pagePath": "pages/about/index",
 			"text": "关于"
 		}, {
-			"pagePath": "pages/setting/index",
-			"text": "设置"
+			"pagePath": "pages/register/index",
+			"text": "注册"
 		}]
 	},
 	"uniIdRouter": {}
