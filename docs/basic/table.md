@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="http://localhost:8080/#/pages/basic/table" height="670px"></iframe>
+    <iframe src="https://jamechou.github.io/geui-h5/#/pages/basic/table" height="670px"></iframe>
 </div>
 
 ## 样例 

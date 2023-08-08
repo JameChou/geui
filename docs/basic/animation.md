@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="http://localhost:8080/#/pages/basic/animation" height="670px"></iframe>
+    <iframe src="https://jamechou.github.io/geui-h5/#/pages/basic/animation" height="670px"></iframe>
 </div>
 
 GE-UI所有关于动画的文件都在`/ui/scss/animation`目录下。

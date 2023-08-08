@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="http://localhost:8080/#/pages/component/calendar" height="670px"></iframe>
+    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/calendar" height="670px"></iframe>
 </div>
 
 Ge-Ui使用了[lunc-calendar组件 https://gitee.com/lunc9932/calendar](https://gitee.com/lunc9932/calendar)。在这个组件的基础上，更改了样式以及增加了一些方法。
