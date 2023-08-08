@@ -3,9 +3,7 @@
 
 		<ge-navbar opacity title="弹出层"></ge-navbar>
 		<view class="ui-container">
-			<button class="ui-button blue lg" @tap="showModal">modal</button>
-
-			<ge-divider content-icon="cards"></ge-divider>
+			<button class="ui-button blue lg" @tap="showModal">点击展示</button>
 		</view>
 		<template v-slot:sheet>
 			<ge-sheet big-title="Filter Content" sub-title="Refine your home screen feed" ref="modal">
@@ -37,7 +35,7 @@
 				this.$refs.modal.show();
 			},
 			chooseItem(data) {
-				console.log(data);
+				console.log(`choosed item ${data}`);
 			},
 			cancel() {
 				console.log('cancel the modal');

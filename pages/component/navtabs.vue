@@ -71,7 +71,7 @@
 		},
 		methods: {
 			tapHandler(item) {
-				console.log(item);
+				console.log(`navtabs ${item}`);
 			}
 		}
 

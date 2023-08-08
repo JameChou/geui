@@ -36,7 +36,7 @@
 		},
 		methods: {
 			clickItem(data) {
-				console.log(data);
+				console.log(`点击了interest->${data}`);
 			}
 		}
 	}

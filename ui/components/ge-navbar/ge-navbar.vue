@@ -28,7 +28,7 @@
 					</view>
 				</block>
 				<block v-else>
-					<view class="title">{{title}}</view>
+					<view class="title" @tap="tapTitle">{{title}}</view>
 				</block>
 			</view>
 
@@ -174,6 +174,10 @@
 				}
 				// #endif
 			}
+		},
+
+		tapTitle() {
+			this.$emit('tap-title', {});
 		},
 
 		destroyed() {

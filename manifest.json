@@ -50,14 +50,15 @@
     "quickapp" : {},
     /* 小程序特有相关 */
     "mp-weixin" : {
-        "appid" : "wx2c7e5720d03c735a",
+        "appid" : "wx33fb0a6d712f03b6",
         "setting" : {
             "urlCheck" : false
         },
         "usingComponents" : true
     },
     "mp-alipay" : {
-        "usingComponents" : true
+        "usingComponents" : true,
+        "appid" : "2021004107608567"
     },
     "mp-baidu" : {
         "usingComponents" : true
@@ -71,6 +72,9 @@
     "vueVersion" : "2",
     "h5" : {
         "title" : "GE-Ui",
-        "template" : ""
+        "template" : "",
+        "router" : {
+            "base" : "/geui-h5"
+        }
     }
 }

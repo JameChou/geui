@@ -2,31 +2,35 @@
     <iframe src="http://localhost:8080/#/pages/component/opbar" height="670px"></iframe>
 </div>
 
-## 顶部操作条(ge-nav)
+## 顶部操作条(ge-navbar)
 ```html
 <ge-nav title="操作条"></ge-nav>
 ```
 
 |属性名|类型|默认值|说明|
 |:----|:----|:----|:----|
-|title      |String     |               |操作条标题|
-|showBack   |Boolean    |true           |是否显示返回按钮|
-|customLeft |Boolean    |false          |是否显示自定义左侧内容|
-|backIcon   |String     |arrow-left     |返回图标|
-|backText   |String     |               |左侧返回的文字|
-|isOpacity  |Boolean    |true           |是否为沉浸式导航，当向上滑动时才会固定显示|
-|navHeight  |Number     |0              |若有固定的内容，需要增加的高度|
-|customTitle|Boolean    |false          |自定义标题导航|
-|fixContent |Boolean    |false          |是否有固定的内容|
-|@tap-title |HandleEvent|               |点击头部文字标题、无传递参数|
+|id             |String     |                   |默认为不空不传时会生成一个8位的uuid|
+|title          |String     |                   |操作条标题|
+|hideBack       |Boolean    |false              |是否隐藏返回按钮|
+|customLeft     |Boolean    |false              |是否显示自定义左侧内容|
+|backIcon       |String     |ph ph-arrow-left   |返回图标|
+|backText       |String     |                   |左侧返回的文字|
+|opacity        |Boolean    |false              |是否为沉浸式导航，当向上滑动时才会固定显示|
+|customTitle    |Boolean    |false              |自定义标题导航|
+|fixContent     |Boolean    |false              |是否有固定的内容|
+|sticky         |Boolean    |true               |是否固定在顶部|
+|height         |Number     |                   |是否强制性约定高度|
+|safeInsetTop   |Boolean    |true               |安全性的设定顶度高度表示会根据不同的机型顶部高度自动设定|
+|@tap-title     |HandleEvent|                   |点击头部文字标题、无传递参数|
+|@nav-height    |HandleEvent|                   |在元素渲染完成之后返回这个navbar的高度|
 
 |slot|说明|
 |:----|:----|
 |customLeft     |自定义左侧插槽|
-|replactTitle   |自定义中间标题|
+|customTitle    |自定义中间标题|
 |fixContent     |自定义固定内容|
 
-#### showBack
+#### hide-back 
 是否显示返回相关的左侧内容，需要特别注意的一点是**MP-ALI**平台下，这个参数是无效的。因为支付宝小程序是默认就有一个返回图标并且无法隐藏。
 
 ![支付宝小程序返回](https://mp-093771b9-58d4-4c63-982d-8d3dc351dede.cdn.bspapp.com/docs/ali-navback.jpg)
@@ -37,26 +41,26 @@
 slot名称为 **customLeft**。
 
 ```html
-<ge-nav title="自定义左侧操作" custom-left>
+<ge-navbar title="自定义左侧操作" custom-left>
     <template v-slot:customLeft>
         <!-- 自定义左侧为头像 -->
         <ge-avatar :url="url"></ge-avatar>
     </template>
-</ge-nav>
+</ge-navbar>
 ```
 
 #### customTitle
 自定义头部中间的标题，例如可以替换成一个图标而非文字。
 
-slot 名称为 **replaceTitle**。
+slot 名称为 **customTitle**。
 
 ```html
-<ge-nav custom-title>
-    <template v-slot:replaceTitle>
+<ge-navbar custom-title>
+    <template v-slot:customTitle>
         <!-- 自定义标题是一个图片 -->
         <image style="height: 100%; width: 96px;" mode="aspectFill" src="url" />
     </template>
-</ge-nav>
+</ge-navbar>
 ```
 
 #### fixContent
@@ -65,13 +69,13 @@ slot 名称为 **replaceTitle**。
 slot 名称为**fixContent**。
 
 ```html
-<ge-nav :is-opacity="false" title="自定义固定内容" fix-content :nav-height="40">
+<ge-navbar :opacity="false" title="自定义固定内容" fix-content>
     <template v-slot:fixContent>
-        <view style="width: 95%">
+        <view>
             <ge-navtabs :items="items" :active="3"></ge-navtabs>
         </view>
     </template>
-</ge-nav>
+</ge-navbar>
 ```
 
 ## 底部操作条(ge-tabbar)

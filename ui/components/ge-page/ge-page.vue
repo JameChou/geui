@@ -3,9 +3,9 @@
 		:style="[{'background-image': backgroundImage === '' ? '' : backgroundImage}]">
 		<view class="ui-page-back" v-if="!isLoading"></view>
 		<view class="ui-page-body" :class="target === '' ? '' : 'bg-mask-50'"
-			:style="[{paddingBottom: noTabs ? '0px' : paddingBottomHeight + 'px'}]">
+			:style="[{paddingBottom: noTabs ? '10rpx' : paddingBottomHeight + 'px'}]">
 			<slot></slot>
-			<ge-tabbar :active="tabActive" :items="tabs" v-if="!noTabs"></ge-tabbar>
+			<ge-tabbar :active="tabActive" :items="tabs" v-if="!noTabs" @tap-tabbar="tapTabbar"></ge-tabbar>
 			<view class="loading-body" v-if="isLoading">
 				<view class="ph ph-arrow-clockwise ui-icon-spin header-34"></view>
 				<view>加载中</view>
@@ -82,7 +82,11 @@
 				}
 			}, 800);
 		},
-		methods: {}
+		methods: {
+			tapTabbar(data) {
+				this.$emit('tap-tabbar', data);
+			}
+		}
 	}
 </script>
 <style lang="scss" scoped>

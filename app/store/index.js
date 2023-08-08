@@ -144,12 +144,6 @@ export default {
 						'url': '/pages/component/interests'
 					},
 					{
-						'name': '标签',
-						'en': 'Tags',
-						'icon': 'tag',
-						'url': '/pages/component/tag'
-					},
-					{
 						'name': '提示',
 						'en': 'Toast',
 						'icon': 'info',

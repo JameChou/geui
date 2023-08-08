@@ -2,12 +2,11 @@
 	<scroll-view scroll-x scroll-with-animation class="ui-nav-list" :class="transparent ? '' : 'theme-bg'"
 		:scroll-left="scrollLeft">
 		<block v-if="type === 'button' || type === 'regular'">
-			<view v-for="(item, index) in items" @tap="tabSelect(index)" :id="`item${index}`" :ref="'item' + index"
-				:class="[activeIndex === index ? 'active' : '', type === 'button' ? ' btn-item' : ' regular-item']">
+			<view v-for="(item, index) in items" @tap="tabSelect(index)" :class="[activeIndex === index ? 'active' : '', type === 'button' ? 'btn-item' : 'regular-item',
+					type === 'regular' && indicator ? 'indicator' : ''
+			]">
 				{{item}}
 			</view>
-			<view class="indicator" v-show="indicator && type === 'regular'"
-				:style="{width: offsetWidth + 'px', left: offsetLeft + 'px', bottom: indicatorBottom + 'px'}"></view>
 		</block>
 		<block v-else>
 			<view v-for="(item, index) in items" @tap="tabSelect(index)" class="circle-item"
@@ -17,7 +16,6 @@
 	</scroll-view>
 </template>
 <script>
-	let _this = null;
 	export default {
 		props: {
 			active: {
@@ -53,47 +51,14 @@
 			}
 		},
 		mounted() {
-			_this = this;
 			this.activeIndex = this.active;
 			this.scrollLeft = this.activeIndex * 60;
-			this.$nextTick(() => {
-				this.localizeIndicator(this.activeIndex);
-			});
 		},
 		methods: {
 			tabSelect(index) {
 				this.activeIndex = index;
 				this.scrollLeft = (index - 1) * 60;
 				this.$emit('tab-select', this.activeIndex);
-				if (this.indicator && this.type === 'regular') {
-					this.localizeIndicator(index);
-				}
-			},
-
-			localizeIndicator(index) {
-				if (this.items === null || this.items.length == 0) {
-					return;
-				}
-				// #ifdef H5
-				let refItems = this.$refs[`item${index}`];
-				if (refItems) {
-					let item = this.$refs[`item${index}`][0];
-					this.offsetWidth = item.$el.offsetWidth;
-					this.offsetLeft = item.$el.offsetLeft;
-				}
-				// #endif
-
-				// #ifdef MP
-				let mpItem = uni.createSelectorQuery().in(this).select(`#item${index}`);
-				mpItem.boundingClientRect().exec((res) => {
-					let local = res[0];
-					if (local) {
-						this.offsetWidth = local.width;
-						this.offsetLeft = local.left - this.rpx2px(31);
-						this.indicatorBottom = local.height / 2.2;
-					}
-				});
-				// #endif
 			}
 		}
 	}
@@ -153,6 +118,11 @@
 
 			&.active {
 				color: var(--ui-text-regular);
+
+				&:after {
+					transition: .4s;
+					width: 100%;
+				}
 			}
 		}
 
@@ -179,14 +149,18 @@
 		}
 
 		.indicator {
-			position: absolute;
-			left: 0;
-			bottom: 0;
-			height: 8rpx;
-			width: 10rpx;
-			transition: .4s;
-			border-radius: 6rpx;
-			background-color: var(--ui-navlist-indicator);
+			&:after {
+				content: '';
+				height: inherit;
+				width: inherit;
+				height: 8rpx;
+				border-radius: 6rpx;
+				width: 0;
+				background-color: var(--ui-navlist-indicator);
+				position: absolute;
+				bottom: 0;
+				left: 0;
+			}
 		}
 
 	}

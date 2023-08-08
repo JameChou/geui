@@ -77,6 +77,7 @@ items: [ '7分', '15分', '1小时', '1天', '1月', '1年' ]
 |:----|:----|:----|:----|
 |items      |Array      |[]       |需要显示的item数组|
 |active     |Number     |0        |默认选中数组下标|
+|transparent|Boolean    |false    |是否为透明背景|
 |type       |String     |'regular'|tabs的样式、**regular**或**button**|
 |indicator  |Boolean    |false    |是否显示下方的选中指示条，只针对type为**regular**时有效|
 |@tab-select|HandleEvent|         |选中tab的事件|

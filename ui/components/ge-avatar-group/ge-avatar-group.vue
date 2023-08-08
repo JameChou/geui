@@ -5,10 +5,13 @@
 </template>
 <script>
 	export default {
-		name: "GeAvatarGroup"
+		name: "GeAvatarGroup",
+		options: {
+			styleIsolation: "shared"
+		}
 	}
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
 	.ui-avatar-group {
 		direction: rtl;
 		unicode-bidi: bidi-override;

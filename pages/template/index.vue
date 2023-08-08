@@ -1,5 +1,5 @@
 <template>
-	<ge-page :tabs="tabs" :tab-active="1" :no-tabs="false">
+	<ge-page :tabs="tabs" :tab-active="1" :no-tabs="false" @tap-tabbar="tapTabbar">
 		<ge-navbar custom-title hide-back opacity>
 			<template v-slot:customTitle>
 				<image style="height: 100%; width: 96px;" mode="aspectFill"
@@ -28,7 +28,6 @@
 		},
 		methods: {
 			tapCard(e) {
-				console.log(e);
 				if (e.uuid === 'landing') {
 					uni.navigateTo({
 						url: '/pages/template/onboarding'
@@ -38,6 +37,10 @@
 						url: '/pages/template/sneaker'
 					});
 				}
+			},
+
+			tapTabbar() {
+				this.$uiModal.info('提示', '您点击了图表按钮');
 			}
 		}
 	}

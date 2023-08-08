@@ -1,5 +1,5 @@
 <template>
-	<ge-page :tabs="tabs" :tab-active="3" :no-tabs="false">
+	<ge-page :tabs="tabs" :tab-active="3" :no-tabs="false" @tap-tabbar="tapTabbar">
 
 		<view class="about-bg" :class="system_theme === 'light' ? 'about-theme-light' : 'about-theme-dark'">
 		</view>
@@ -75,6 +75,11 @@
 		computed: {
 			tabs() {
 				return this.$store.getters.getAppTabs;
+			}
+		},
+		methods: {
+			tapTabbar() {
+				this.$uiModal.info('提示', '您点击了图表按钮');
 			}
 		}
 	}

@@ -1,5 +1,5 @@
 <template>
-	<ge-page :tabs="tabs" :no-tabs="false" :loading="false">
+	<ge-page :tabs="tabs" :no-tabs="false" :loading="false" @tap-tabbar="tapTabbar">
 		<ge-navbar opacity custom-left custom-title>
 			<template v-slot:customLeft>
 				<ge-avatar round size="sm"
@@ -69,6 +69,10 @@
 				uni.navigateTo({
 					url: url
 				});
+			},
+
+			tapTabbar(data) {
+				this.$uiModal.info('提示', '您点击了图表按钮');
 			}
 		}
 	}

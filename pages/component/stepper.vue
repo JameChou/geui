@@ -4,6 +4,8 @@
 		<view class="ui-container">
 			<ge-stepbar :items="items" :steps="steps"></ge-stepbar>
 
+			<ge-stepbar :items="itemsShopping" :steps="steps"></ge-stepbar>
+
 			<button @tap="stepNext" class="ui-button primary blue">Next</button>
 		</view>
 	</ge-page>
@@ -13,14 +15,12 @@
 		data() {
 			return {
 				items: ['第一步', '第二步', '第三步'],
-				steps: 3
+				itemsShopping: ['下单', '运输中', '待收货', '已收货'],
+				steps: 2
 			}
 		},
 		methods: {
 			stepNext() {
-				if (this.steps === this.items.length) {
-					return;
-				}
 				this.steps++;
 			}
 		}

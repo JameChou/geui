@@ -50,12 +50,12 @@
 					uni.navigateTo({
 						url: item.url
 					})
+				} else {
+					this.$emit('tap-tabbar', {
+						item: item,
+						index: index
+					});
 				}
-
-				this.$emit('tap-tabbar', {
-					item: item,
-					index: index
-				});
 			}
 		}
 	}

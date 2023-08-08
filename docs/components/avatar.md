@@ -26,8 +26,8 @@
 class值为**ui-avatar-group**。示例如下:
 
 ```html
-<view class="ui-avatar-group">
+<ge-avatar-group>
     <ge-avatar color="yellow" name="T"></ge-avatar>
     <ge-avatar color="blue" name="S"></ge-avatar>
-</view>
+</ge-avatar-group>
 ```

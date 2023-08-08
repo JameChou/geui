@@ -94,6 +94,9 @@
 			"path": "pages/component/sticky"
 		},
 		{
+			"path": "pages/component/loading"
+		},
+		{
 			"path": "pages/template/index"
 		},
 		{

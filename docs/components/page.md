@@ -1,7 +1,3 @@
-<div class="simulator">
-    <iframe src="http://localhost:8080/#/pages/basic/image" height="670px"></iframe>
-</div>
-
 GE-UI中最重要的一个组件就是`ge-page`，先来看一下在GE-UI中一个页面的构成是什么样的。
 ```html
 <template>
@@ -16,7 +12,7 @@ GE-UI中最重要的一个组件就是`ge-page`，先来看一下在GE-UI中一�
 </style>
 ```
 
-在`ge-page`组件内，那么就可以使用主题、toast、modal、加载等功能。
+在`ge-page`组件内，那么就可以使用主题、toast、sheet、加载等功能。
 
 ## Props
 |属性名|类型|默认值|说明|
@@ -33,7 +29,7 @@ GE-UI中最重要的一个组件就是`ge-page`，先来看一下在GE-UI中一�
 * 两个主题有着自己不同的底图，当然也可以为纯色，也可以使用自己的背景图。
 * 遮罩以及底图上方的透明度、blur值有需要可以自己进行调节，在`/ui/scss/vars/_system.scss`中。
 
-## Theme/Toast/Modal 
+## Theme/Toast/Sheet 
 `ge-page`中也引入了`ge-toast`和`ge-modal`两个组件。[ge-toast](/components/toast)，[ge-modal](/componets/modal)。
 
 在`/ui/js/modal.js`中定义了modal对象。

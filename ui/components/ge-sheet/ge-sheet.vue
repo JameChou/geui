@@ -7,7 +7,7 @@
 			<view class="title-content" :class="topButton ? 'center' : ''">
 				<view class="big-title">{{bigTitle}}</view>
 				<view class="sub-title" v-if="subTitle !== ''">{{subTitle}}</view>
-				<view class="title-close" @tap="cancel" v-if="topButton"><text class="ph ph-x"></text></view>
+				<view class="title-close" @tap="cancel" v-if="topButton"><text :class="[cancelIcon]"></text></view>
 			</view>
 		</view>
 
@@ -41,9 +41,9 @@
 				type: String,
 				default: "确认"
 			},
-			block: {
-				type: Boolean,
-				default: false
+			cancelIcon: {
+				type: String,
+				default: "ph ph-x"
 			}
 		},
 		data() {
