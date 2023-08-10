@@ -1,4 +1,7 @@
 <template>
+	<!-- #ifdef MP-ALIPAY -->
+	<view>
+	<!-- #endif -->
 	<view class="ui-sticky-box" :id="`fixed-${_uid}`" :class="disabled ? '' : 'sticky'" :style="[
 						{
 							top: !fixBottom ? `${top}px` : 'auto',
@@ -7,10 +10,14 @@
 						}
 				]">
 
-		<view class="ui-sticky-content" :style="[{zIndex: zIndex}]">
+		<view class="ui-sticky-content" :id="`content-${_uid}`" :style="[{zIndex: zIndex}]">
 			<slot></slot>
 		</view>
 	</view>
+	<!-- #ifdef MP-ALIPAY -->
+	<view v-if="!disabled" :style="[{height: `${contentHeight}px`}]" style="width: 100%; display: block;"></view>
+	</view>
+	<!-- #endif -->
 </template>
 <script>
 	export default {
@@ -49,7 +56,8 @@
 		data() {
 			return {
 				top: 0,
-				bottom: 0
+				bottom: 0,
+				contentHeight: 0
 			}
 		},
 		computed: {
@@ -67,7 +75,21 @@
 				this.bottom = this.rpx2px(this.offsetBottom);
 			}
 
+		},
+
+		// #ifdef MP-ALIPAY
+		mounted() {
+			let _this = this;
+			this.$nextTick(() => {
+				let item = uni.createSelectorQuery().in(_this).select(`#content-${_this._uid}`);
+				item.boundingClientRect().exec((res) => {
+					if (res) {
+						_this.contentHeight = res[0].height;
+					}
+				});
+			});
 		}
+		// #endif
 	}
 </script>
 <style lang="scss" scoped>
@@ -79,6 +101,9 @@
 			/* #ifndef MP-ALIPAY */
 			position: sticky;
 			position: -webkit-sticky;
+			/* #endif */
+			/* #ifdef MP-ALIPAY */
+			position: fixed;
 			/* #endif */
 		}
 

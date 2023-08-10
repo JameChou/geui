@@ -1,7 +1,7 @@
 <template>
 	<view class="ui-switch-segment">
 		<view class="item" v-for="(item, index) in datas" :class="activeIndex === index ? 'active' : ''"
-			@tap="chooseTab(item, index);">
+			@tap="chooseTab(item, index);" :key="index">
 			{{item.name}}
 		</view>
 	</view>

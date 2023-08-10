@@ -5495,8 +5495,10 @@ switch .uni-switch-input-checked {
   background-color: #00B670 !important;
 }
 
+/*
 uni-slider .uni-slider-handle-wrapper,
-uni-slider .wx-slider-handle-wrapper {
+uni-slider .wx-slider-handle-wrapper
+{
   background-color: var(--ui-slider-handle-color) !important;
 }
 
@@ -5506,10 +5508,11 @@ uni-slider .wx-slider-track {
 }
 
 uni-slider .uni-slider-thumb,
-uni-slider .wx-slider-thumb {
+uni-slider .wx-slider-thumb
+{
   background-color: var(--ui-slider-thumb-color) !important;
 }
-
+*/
 uni-radio .uni-radio-input-checked,
 uni-raido .wx-radio-input-checked {
   background-color: rgba(0, 182, 112, 0.6) !important;

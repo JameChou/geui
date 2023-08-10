@@ -1,8 +1,9 @@
 <template>
 	<ge-page noTabs>
-		<ge-title title-content="控制中心" <!-- #ifdef MP -->
-			style="margin-top: 100rpx;"
-			<!-- #endif -->
+		<!-- #ifdef MP -->
+		<view style="margin-top: 150rpx;"></view>
+		<!-- #endif -->
+		<ge-title title-content="控制中心"
 			title-icon="gear" action action-name="返回" action-icon="hand-swipe-left"
 			@action-click="actionClick"></ge-title>
 		<view class="ui-container">

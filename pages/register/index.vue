@@ -25,7 +25,9 @@
 			<view class="having-account">
 				已经有账户?
 			</view>
-			<button class="ui-button sm primary" style="margin-top: 40rpx;">登录</button>
+			<view class="ui-flex align-center justify-center">
+				<button class="ui-button sm primary" style="margin-top: 40rpx;">登录</button>
+			</view>
 		</view>
 	</ge-page>
 </template>

@@ -37,9 +37,6 @@
 			"path": "pages/component/avatar"
 		},
 		{
-			"path": "pages/component/dashboard"
-		},
-		{
 			"path": "pages/component/navtabs"
 		},
 		{
@@ -52,22 +49,10 @@
 			"path": "pages/component/interests"
 		},
 		{
-			"path": "pages/component/user-list"
-		},
-		{
-			"path": "pages/component/news-list"
-		},
-		{
-			"path": "pages/component/product"
-		},
-		{
 			"path": "pages/component/modal"
 		},
 		{
 			"path": "pages/component/toast"
-		},
-		{
-			"path": "pages/component/preview"
 		},
 		{
 			"path": "pages/component/lottie"
@@ -88,9 +73,6 @@
 			"path": "pages/component/stepper"
 		},
 		{
-			"path": "pages/component/oplist"
-		},
-		{
 			"path": "pages/component/sticky"
 		},
 		{
@@ -100,10 +82,22 @@
 			"path": "pages/template/index"
 		},
 		{
-			"path": "pages/about/index"
+			"path": "pages/template/preview"
 		},
 		{
-			"path": "pages/register/index"
+			"path": "pages/template/oplist"
+		},
+		{
+			"path": "pages/template/user-list"
+		},
+		{
+			"path": "pages/template/news-list"
+		},
+		{
+			"path": "pages/template/product"
+		},
+		{
+			"path": "pages/template/dashboard"
 		},
 		{
 			"path": "pages/template/onboarding"
@@ -113,6 +107,12 @@
 		},
 		{
 			"path": "pages/template/sneaker"
+		},
+		{
+			"path": "pages/about/index"
+		},
+		{
+			"path": "pages/register/index"
 		}
 	],
 	"easycom": {

@@ -1,16 +1,16 @@
 <template>
 	<view class="ui-tab-bottom">
-		<view class="ui-tabbar">
+		<view class="ui-tabbar" :class="transparent ? 'bg-transparent' : ''">
 			<view class="item" @tap="tapItem(item, index)" v-for="(item, index) in items" :key="index">
 				<view :class="activeIndex === index ? 'active': ''" v-if="item.type === 'icon'">
-					<view class="ph tab-icon" :class="item.icon === null || item.icon === '' ? 'ph-house' : item.icon">
+					<view class="tab-icon" :class="item.icon">
 						<view class="badge" v-if="item.notification"></view>
 					</view>
 					<view class="action-text">{{item.name}}</view>
 				</view>
 
 				<view v-if="item.type === 'button'">
-					<button :class="'ph-' + item.icon" class="ph tab-button ui-button blue round"></button>
+					<button :class="item.icon" class="tab-button ui-button blue round"></button>
 				</view>
 			</view>
 		</view>
@@ -28,6 +28,10 @@
 			active: {
 				type: Number,
 				default: 0
+			},
+			transparent: {
+				type: Boolean,
+				default: false
 			}
 		},
 		mounted() {
@@ -77,6 +81,10 @@
 		min-height: 140rpx;
 		z-index: 2 !important;
 		padding-top: 25rpx;
+
+		&.bg-transparent {
+			background-color: transparent;
+		}
 
 		.item {
 			color: var(--ui-tabbar-text-color);

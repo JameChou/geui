@@ -32,7 +32,7 @@
 				<ge-avatar color="blue" name="周"></ge-avatar>
 				<ge-avatar color="yellow" name="S"></ge-avatar>
 				<ge-avatar color="green" name="T"></ge-avatar>
-				<ge-avatar name="ph-upload" round icon></ge-avatar>
+				<ge-avatar name="ph ph-upload" round icon></ge-avatar>
 			</view>
 
 			<ge-title category category-content="GROUP" title-content="头像组" title-icon="users" border></ge-title>

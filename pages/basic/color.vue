@@ -17,7 +17,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">White #000000</text>
 				<view class="ui-flex color-section" style="background: #000000;">
-					<view v-for="(item, index) in colorFill" class="pad"
+					<view v-for="(item, index) in colorFill" class="pad" :key="index"
 						:class="item === 100 ? 'bg-white' : 'bg-white-' + item"></view>
 				</view>
 			</view>
@@ -25,7 +25,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Black #FFFFFF</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad"
+					<view v-for="(item, index) in colorFill" class="pad" :key="index"
 						:class="item === 100 ? 'bg-black' : 'bg-black-' + item"></view>
 				</view>
 			</view>
@@ -33,7 +33,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Blue #437colorFillFE</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad"
+					<view v-for="(item, index) in colorFill" class="pad" :key="index"
 						:class="item === 100 ? 'bg-blue' : 'bg-blue-' + item"></view>
 				</view>
 			</view>
@@ -41,7 +41,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Green #00BcolorFill70</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad"
+					<view v-for="(item, index) in colorFill" class="pad" :key="index"
 						:class="item === 100 ? 'bg-green' : 'bg-green-' + item"></view>
 				</view>
 			</view>
@@ -49,7 +49,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Orange #FE8E0B</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad"
+					<view v-for="(item, index) in colorFill" class="pad" :key="index"
 						:class="item === 100 ? 'bg-orange' : 'bg-orange-' + item"></view>
 				</view>
 			</view>
@@ -57,7 +57,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Red #FE8E0B</text>
 				<view class="ui-flex color-section">
-					<view v-for="(item, index) in colorFill" class="pad"
+					<view v-for="(item, index) in colorFill" class="pad" :key="index"
 						:class="item === 100 ? 'bg-red' : 'bg-red-' + item"></view>
 				</view>
 			</view>
@@ -68,7 +68,7 @@
 			<view class="margin-top">
 				<text class="text-body-14 color-section-title">Light Background</text>
 				<view class="ui-flex color-light-section justify-between align-center">
-					<view v-for="(item, index) in themeBgArr" class="pad" :class="'light-bg-' + item"></view>
+					<view v-for="(item, index) in themeBgArr" class="pad" :class="'light-bg-' + item" :key="index"></view>
 				</view>
 			</view>
 
@@ -76,7 +76,7 @@
 				<text class="text-body-14 color-section-title">Dark Background</text>
 				<view class="ui-flex color-light-section justify-between align-center"
 					style="background-color: #000000;">
-					<view v-for="(item, index) in themeBgArr" class="pad" :class="'dark-bg-' + item"></view>
+					<view v-for="(item, index) in themeBgArr" class="pad" :class="'dark-bg-' + item" :key="index"></view>
 				</view>
 			</view>
 

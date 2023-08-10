@@ -35,7 +35,7 @@
 				border></ge-title>
 
 			<view class="ui-grid column-4 gap-df margin-top">
-				<view class="icon-body" v-for="(item, index) in iconData">
+				<view class="icon-body" v-for="(item, index) in iconData" :key="index">
 					<view class="ph" :class="'ph-' + item"></view>
 					<view>{{item}}</view>
 				</view>

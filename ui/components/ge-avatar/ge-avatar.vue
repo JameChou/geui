@@ -1,9 +1,9 @@
 <template>
 	<view @tap="tapAvatar" class="ui-avatar"
 		:style="[{ 'background-image': avatar === '' ? '' : 'url(' + avatar + ')' }]"
-		:class="[size === '' ? '' : size, color !== '' && avatar === '' ? 'avatar-bg-' + color : '', round ? 'round-avatar' : '']">
+		:class="[size === '' ? '' : size, color !== '' && avatar === '' ? 'avatar-bg-' + color : '', round ? 'round-avatar' : '', noBorder ? 'none-border': '']">
 		<block v-if="avatar === '' && icon">
-			<text class="ph" :class="name"></text>
+			<text :class="name"></text>
 		</block>
 		<block v-if="avatar === '' && !icon">
 			<text>{{name}}</text>
@@ -47,6 +47,10 @@
 			icon: {
 				type: Boolean,
 				default: false
+			},
+			noBorder: {
+				type: Boolean,
+				default: false
 			}
 		},
 		methods: {
@@ -75,6 +79,10 @@
 		align-items: center;
 		white-space: nowrap;
 		background-color: rgb(225, 225, 225);
+
+		&.none-border {
+			border: none;
+		}
 
 		.avatar-badge {
 			width: 20rpx;

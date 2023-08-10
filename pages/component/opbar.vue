@@ -51,7 +51,7 @@
 			<ge-title category category-content="CUSTOM" title-content="底部操作条" title-icon="number-circle-three"
 				border></ge-title>
 			<view class="margin-top bg-blue-40">
-				<ge-tabbar :data="tabs"></ge-tabbar>
+				<ge-tabbar :items="tabs"></ge-tabbar>
 			</view>
 		</view>
 	</ge-page>
@@ -70,41 +70,41 @@
 					'1年'
 				],
 				tabs: [{
-						'name': 'Home',
+						'name': '首页',
 						'url': '',
 						'click': 'switch',
-						'icon': 'ph-house',
+						'icon': 'ph ph-house',
 						'notification': false,
 						'type': 'icon'
 					},
 					{
-						'name': 'Activity',
+						'name': '消息',
 						'url': '',
 						'click': 'switch',
-						'icon': 'ph-bell-ringing',
+						'icon': 'ph ph-bell-ringing',
 						'notification': true,
 						'type': 'icon'
 					},
 					{
-						'name': 'Search',
+						'name': '搜索',
 						'url': '',
-						'icon': 'ph-magnifying-glass',
+						'icon': 'ph ph-magnifying-glass',
 						'click': 'switch',
 						'notification': false,
 						'type': 'icon'
 					},
 					{
-						'name': 'Saved',
+						'name': '收藏',
 						'url': '',
-						'icon': 'ph-heart',
+						'icon': 'ph ph-heart',
 						'click': 'switch',
 						'notification': false,
 						'type': 'icon'
 					},
 					{
-						'name': 'Setting',
+						'name': '设置',
 						'url': '',
-						'icon': 'ph-gear',
+						'icon': 'ph ph-gear',
 						'click': 'new',
 						'notification': false,
 						'type': 'icon'

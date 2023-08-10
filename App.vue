@@ -4,7 +4,9 @@
 		onLaunch: function() {
 			uni.hideTabBar();
 		},
-		onShow: function() {},
+		onShow: function() {
+			uni.hideTabBar();
+		},
 		onHide: function() {}
 	}
 </script>

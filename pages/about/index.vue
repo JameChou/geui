@@ -110,7 +110,7 @@
 
 	.about-logo {
 		position: relative;
-		margin-top: 100rpx;
+		margin-top: 240rpx;
 		display: flex;
 		align-items: center;
 		justify-content: center;

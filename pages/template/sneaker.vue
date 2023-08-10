@@ -241,6 +241,19 @@
 				height: 16rpx !important;
 				background: var(--ui-navlist-circle-color);
 			}
+
+			/deep/ .a-swiper-dot {
+				width: 16rpx !important;
+				height: 16rpx !important;
+				border-radius: 16rpx;
+			}
+
+			/deep/ .a-swiper-dot-active {
+				border-radius: 24rpx;
+				width: 50rpx !important;
+				height: 16rpx !important;
+				background: var(--ui-navlist-circle-color);
+			}
 		}
 
 		img,

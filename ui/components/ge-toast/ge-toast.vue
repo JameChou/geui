@@ -33,11 +33,11 @@
 		props: {
 			title: {
 				type: String,
-				default: ''
+				default: "" 
 			},
 			subTitle: {
 				type: String,
-				default: ''
+				default: "" 
 			},
 			toastStyle: {
 				type: String,
@@ -45,7 +45,7 @@
 			},
 			icon: {
 				type: String,
-				default: ''
+				default: "" 
 			},
 			duration: {
 				type: Number,

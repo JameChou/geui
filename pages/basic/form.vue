@@ -74,7 +74,11 @@
 
 			<ge-title category category-content="SLIDER" title-content="滑块" title-icon="sliders-horizontal"
 				border></ge-title>
-			<slider class="margin-top" :value="30"></slider>
+			<slider class="margin-top" :value="30" :block-size="15"
+				:block-color="system_theme === 'dark' ? '#00B670' : '#000'"
+				:active-color="system_theme === 'dark' ? '#00B670' : '#4376FE'"
+				:background-color="system_theme === 'dark' ? 'rgba(255, 255, 255, 0.2)' : 'rgba(0, 0, 0, 0.2)'"
+			></slider>		
 		</view>
 	</ge-page>
 </template>
@@ -83,6 +87,16 @@
 
 	}
 </script>
-<style lang="scss">
+<style lang="scss" scoped>
+	/deep/ slider {
+		margin: 6rpx 0;
 
+		.wx-slider-thumb {
+			border: 1px solid #FFF;
+		}
+	}
+
+	/deep/ uni-slider .uni-slider-thumb {
+		border: 1px solid #FFF;
+	}
 </style>

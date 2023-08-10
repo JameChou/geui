@@ -5,7 +5,7 @@
 		<view class="ui-page-body" :class="target === '' ? '' : 'bg-mask-50'"
 			:style="[{paddingBottom: noTabs ? '10rpx' : paddingBottomHeight + 'px'}]">
 			<slot></slot>
-			<ge-tabbar :active="tabActive" :items="tabs" v-if="!noTabs" @tap-tabbar="tapTabbar"></ge-tabbar>
+			<ge-tabbar :transparent="tabTransparent" :active="tabActive" :items="tabs" v-if="!noTabs" @tap-tabbar="tapTabbar"></ge-tabbar>
 			<view class="loading-body" v-if="isLoading">
 				<view class="ph ph-arrow-clockwise ui-icon-spin header-34"></view>
 				<view>加载中</view>
@@ -14,9 +14,11 @@
 			<slot name="sheet"></slot>
 		</view>
 
-		<ge-toast name="system_dialog" :title="toast.title" :sub-title="toast.subTitle" :toast-style="toast.toastStyle"
-			:icon="toast.icon" :duration="toast.duration" :mask="toast.mask" :is-loading="toast.isLoading"
-			@success="$event => toast.success($event)">
+		<ge-toast name="system_dialog" :title="toast.title == null ? '' : toast.title"
+			:sub-title="toast.subTitle == null ? '' : toast.subTitle"
+			:toast-style="toast.toastStyle == null ? 'info' : toast.toastStyle"
+			:icon="toast.icon == null ? '' : toast.icon" :duration="toast.duration == null ? 0 : toast.duration"
+			:mask="toast.mask" :is-loading="toast.isLoading" @success="$event => toast.success($event)">
 
 		</ge-toast>
 	</view>
@@ -52,6 +54,10 @@
 			backgroundImage: {
 				type: String,
 				default: ''
+			},
+			tabTransparent: {
+				type: Boolean,
+				default: false
 			}
 		},
 		data() {

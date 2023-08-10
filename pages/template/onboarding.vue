@@ -1,29 +1,35 @@
 <template>
 	<view class="boarding-swiper">
-		<swiper indicator-dots indicator-color="#6D6868" @change="swiperChange" :current="nowPage">
-			<swiper-item class="landing-page">
-				<view class="animation-box">
-					<ge-lottie canvasId="animation1" :data="animationData1" width="100%" height="100%" :src="urls[0]">
-					</ge-lottie>
+		<swiper indicator-dots indicator-color="#6D6868" @change="swiperChange" :current="nowPage" adjust-height="none" @onChange="swiperChange">
+			<swiper-item>
+				<view class="landing-page">
+					<view class="animation-box">
+						<ge-lottie canvasId="animation1" :data="animationData1" width="100%" height="100%" :src="urls[0]">
+						</ge-lottie>
+					</view>
+					<view class="title">About GOGE</view>
+					<view class="content">GOGE是一个基于uni-app而写的前端ui框架。</view>
 				</view>
-				<view class="title">About GOGE</view>
-				<view class="content">GOGE是一个基于uni-app而写的前端ui框架。</view>
 			</swiper-item>
-			<swiper-item class="landing-page" style="background: #B7ABFD">
-				<view class="animation-box">
-					<ge-lottie canvasId="animation2" :data="animationData2" width="100%" height="100%" :src="urls[1]">
-					</ge-lottie>
+			<swiper-item>
+				<view class="landing-page" style="background: #B7ABFD">
+					<view class="animation-box">
+						<ge-lottie canvasId="animation2" :data="animationData2" width="100%" height="100%" :src="urls[1]">
+						</ge-lottie>
+					</view>
+					<view class="title">第二页标题</view>
+					<view class="content">不知写什么，示例，背景为#B7ABFD</view>
 				</view>
-				<view class="title">第二页标题</view>
-				<view class="content">不知写什么，示例，背景为#B7ABFD</view>
 			</swiper-item>
-			<swiper-item class="landing-page" style="background: #95B6FF">
-				<view class="animation-box">
-					<ge-lottie canvasId="animation2" :data="animationData3" width="100%" height="100%" :src="urls[2]">
-					</ge-lottie>
+			<swiper-item>
+				<view class="landing-page" style="background: #95B6FF">
+					<view class="animation-box">
+						<ge-lottie canvasId="animation2" :data="animationData3" width="100%" height="100%" :src="urls[2]">
+						</ge-lottie>
+					</view>
+					<view class="title">第三页标题</view>
+					<view class="content">登录页，演示。当下次再打开此应用，不会再显示。</view>
 				</view>
-				<view class="title">第三页标题</view>
-				<view class="content">登录页，演示。当下次再打开此应用，不会再显示。</view>
 			</swiper-item>
 		</swiper>
 
@@ -92,7 +98,7 @@
 			/deep/ .uni-swiper-dots {
 				// 指示点整个区域
 				position: absolute;
-				bottom: 110rpx;
+				bottom: 100rpx;
 			}
 
 			/deep/ .uni-swiper-dot {
@@ -125,11 +131,31 @@
 				width: 32rpx !important;
 				height: 12rpx !important;
 			}
+
+			/deep/ .a-swiper-indicator {
+				position: absolute !important;
+				bottom: 100rpx !important;
+			}
+
+			/deep/ .a-swiper-dot {
+				width: 12rpx !important;
+				height: 12rpx !important;	
+				border-radius: 12rpx;
+			}
+
+			/deep/ .a-swiper-dot-active {
+				border-radius: 24rpx;
+				background: #000;
+				width: 32rpx !important;
+				height: 12rpx !important;
+			}
+
 		}
 
 		.landing-page {
-			position: relative;
+			position: absolute;
 			width: 100%;
+			height: 100%;
 
 			.animation-box {
 				width: 100%;

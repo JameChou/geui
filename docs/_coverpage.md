@@ -9,4 +9,3 @@
 - 现代简约的样式风格
 
 [GitHub](https://github.com/jamechou/geui/)
-[查看文档](#/readme)
