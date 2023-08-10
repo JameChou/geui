@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/basic/color" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/basic/color" height="740px"></iframe>
 </div>
 
 ## 全局配色变量 

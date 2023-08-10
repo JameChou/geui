@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/basic/fonts" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/basic/fonts" height="740px"></iframe>
 </div>
 
 系统的字体定义在`ui/scss/_font.scss`文件内。演示在右侧simluator中。

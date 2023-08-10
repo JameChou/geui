@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/product" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/template/product" height="740px"></iframe>
 </div>
 
-页面文件在`/pages/compoent/product.vue`。
+页面文件在`/pages/template/product.vue`。

@@ -17,11 +17,14 @@ GE-UI中最重要的一个组件就是`ge-page`，先来看一下在GE-UI中一�
 ## Props
 |属性名|类型|默认值|说明|
 |:----|:----|:----|:----|
-|tabs           |Array         |[]    |底部导航栏，[格式、操作栏文档](abc)|
+|tabs           |Array         |[]    |底部导航栏，[格式、操作栏文档](/components/tabs)|
 |noTabs         |Boolean       |true  |是显示操作条，默认不显示|
+|tabActive      |Number        |0     |页面底部的自定义tab哪个为激活状态|
 |loading        |String/Boolean|'auto'|是否有加载遮罩|
 |theme          |String        |'light'|主题，默认为明亮，[主题文档](/basic/theme)|
 |backgroundImage|String        |       |页面背景图|
+|tabTransparent |Boolean       |false  |页面底部的tabbar是否为透明状态|
+|@tapTabbar     |HandleEvent   |       |点击底部tabbar时返回的对象，具体参考[tabbar文档](/components/tabs)|
 
 
 #### 说明

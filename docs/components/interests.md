@@ -1,6 +1,6 @@
 
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/interests" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/component/interests" height="740px"></iframe>
 </div>
 
 ## 属性 

@@ -1,6 +1,6 @@
 ![logo](./images/logo-circle-500.png)
 
-# GE-Ui <small>1.0.4</small>
+# GE-Ui <small>1.0.5</small>
 
 > 一个基于uni-app而开发的ui框架
 

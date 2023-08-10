@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/navtabs" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/component/navtabs" height="740px"></iframe>
 </div>
 
 GE-UI中有时间类型的tab、普通、分类等。

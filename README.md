@@ -1,4 +1,5 @@
-# GE-Ui
+
+# GE-Ui 
 [![AUR](https://img.shields.io/badge/license-Apache%20License%202.0-blue.svg)](https://github.com/jamechou/geui/blob/main/LICENSE)
 [![](https://img.shields.io/badge/version-1.0.5-brightgreen.svg)](https://github.com/jamechou/geui)
 [![GitHub stars](https://img.shields.io/github/stars/jamechou/geui.svg?style=social&label=Stars)](https://github.com/jamechou/geui)
@@ -14,11 +15,16 @@ GE-Ui是一个基于uni-app的ui项目。目前只针对H5、微信测试，其�
 
 [GitHub(https://github.com/JameChou/geui)](https://github.com/JameChou/geui)
 
-联系作者: zhouxy.vortex@gmail.com / QQ: 252410130
+[uniapp地址 https://ext.dcloud.net.cn/plugin?id=14013](https://ext.dcloud.net.cn/plugin?id=14013)
 
-## 微信小程序、H5
-[![微信QR](./images/mp-wx-qr.jpg)]()
-[![H5 QR](./images/h5-qr.png)]()
+## 微信小程序、H5 
+[![微信QR](./docs/images/mp-wx-qr.jpg)]()
+[![H5 QR](./docs/images/h5-qr.png)]()
 
 ## 示例效果
-![product-sample](./images/product-sample.png)
+![product-sample](./docs/images/product-sample.png)
+
+## 反馈
+联系作者: zhouxy.vortex@gmail.com / QQ: 252410130
+
+或者在本项目上提issue

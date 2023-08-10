@@ -1,6 +1,6 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/preview" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/template/preview" height="740px"></iframe>
 </div>
 
 ## 说明
-文件在`/pages/component/preview.vue`。
+文件在`/pages/template/preview.vue`。

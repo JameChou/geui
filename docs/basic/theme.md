@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/basic/theme" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/basic/theme" height="740px"></iframe>
 </div>
 
 GE-UI提供了两种主题，一种为“明亮”、一种为“黑暗”模式。

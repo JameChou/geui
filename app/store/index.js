@@ -226,12 +226,6 @@ export default {
 						"url": "/pages/template/preview"
 					},
 					{
-						"name": "新闻列表",
-						"en": "News-list",
-						"icon": "newspaper-clipping",
-						"url": "/pages/template/news-list"
-					},
-					{
 						"name": "产品列表",
 						"en": "Product-list",
 						"icon": "shopping-bag",

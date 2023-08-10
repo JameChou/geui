@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/basic/button" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/basic/button" height="740px"></iframe>
 </div>
 
 GE-UI共大类上总共有6类型的按钮。每种类型的按钮都有3种不同大小、3种颜色可供选择。并且相针不同的模式进行了适配。

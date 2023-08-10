@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/stepper" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/component/stepper" height="740px"></iframe>
 </div>
 
 `<ge-stepbar>`

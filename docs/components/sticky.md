@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/sticky" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/component/sticky" height="740px"></iframe>
 </div>
 
 ## 属性
@@ -17,4 +17,4 @@
 ## 说明
 这个组件使用了`position: sticky`布局，并没有使用`onPageScroll`然后配合`fixed`去做固定。
 
-!> 这个布局在微信小程序以及支付宝小程序上面部分机型可能会出现问题。 支付宝小程序开发工具显示有问题，真机无问题。
+!> 这个布局在微信小程序上面部分机型可能会出现问题。支付宝小程序做了部分适配，按官方的说法需要2023年底才会全面支持这一属性，模拟器、真机调试不会有问题，但是真正发布的时候体验版是有问题的。

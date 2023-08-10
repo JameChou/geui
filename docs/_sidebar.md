@@ -40,11 +40,10 @@
 
     - [控制面板](/page/dashboard.md)
     - [着陆页](/page/onboarding.md)
+    - [产品详情/sneaker](/page/sneaker.md)
     - [用户列表](/page/userlist.md)
     - [操作列表](/page/oplist.md)
     - [预览表单](/page/preview.md)
-    - [新闻列表](/page/news.md)
     - [产品列表](/page/product.md)
-    - [产品详情/推荐布局](/page/product-detail.md)
     - [登录页](/page/login.md)
     

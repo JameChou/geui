@@ -1,5 +1,5 @@
 <div class="simulator">
-    <iframe src="https://jamechou.github.io/geui-h5/#/pages/component/lottie" height="670px"></iframe>
+    <iframe src="https://h5.geui.xyz/#/pages/component/lottie" height="740px"></iframe>
 </div>
 
 Lottie是一个由**airbnb**开源的动画解决方案，它有着优点也有缺点。小程序平台对于Lottie的支持程度也各不相同，uni-app对于Android以及iOS平台有着很好的支持，可以使用`animation-view`来处理。

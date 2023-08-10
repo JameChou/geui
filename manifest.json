@@ -74,7 +74,7 @@
         "title" : "GE-Ui",
         "template" : "",
         "router" : {
-            "base" : "/geui-h5"
+            "base" : ""
         }
     }
 }
